@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://2398532573-a11y.github.io/pypath/sitemap.xml

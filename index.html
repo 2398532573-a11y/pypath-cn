@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Py启航 · Python 零基础学习平台</title>
+  <meta name="description" content="Py启航是一套面向零基础的 Python 学习网站：62 节课、66 道自动判分练习、自测考试、错题本与课程讲义，浏览器里就能边学边练。">
+  <meta name="theme-color" content="#07101d">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/platform-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Py启航首页">
+        <img src="assets/img/pyqihang-logo.svg" alt="Py启航 Logo">
+        <span class="brand-text">
+          <strong data-site-name>Py启航</strong>
+          <small data-site-en>PyPath</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#features">平台特点</a>
+        <a href="#path">学习路线</a>
+        <a href="textbook.html">课程讲义</a>
+        <a class="nav-cta" href="learn.html">进入学习平台</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">从零基础到能独立写项目</span>
+        <h1>
+          把 Python 学会，<br>
+          <span class="gradient">再把它用起来。</span>
+        </h1>
+        <p class="lead">
+          Py启航把课程、练习、自测和讲义放进同一个学习空间。你不需要先配好复杂环境，打开网页就能写代码、看结果、检查答案。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="learn.html">开始学习 Python <span aria-hidden="true">→</span></a>
+          <a class="button ghost" href="textbook.html">查看完整课程讲义</a>
+        </div>
+        <ul class="hero-points">
+          <li>62 节零基础课程</li>
+          <li>66 道自动判分练习</li>
+          <li>学习进度本地保存</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-label="代码学习示例">
+        <span class="orb one"></span>
+        <span class="orb two"></span>
+        <div class="code-window">
+          <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">lesson_01.py</span>
+          </div>
+          <div class="code-body">
+            <div class="code-line"><span class="line-no">1</span><span class="tok-com"># 你的第一段 Python</span></div>
+            <div class="code-line"><span class="line-no">2</span><span class="tok-kw">def</span> <span class="tok-fn">hello</span>(name):</div>
+            <div class="code-line"><span class="line-no">3</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-kw">return</span> <span class="tok-str">f"你好，{name}！"</span></div>
+            <div class="code-line"><span class="line-no">4</span></div>
+            <div class="code-line"><span class="line-no">5</span><span class="tok-fn">print</span>(<span class="tok-fn">hello</span>(<span class="tok-str">"Py启航"</span>))</div>
+            <div class="code-line"><span class="line-no">6</span><span class="tok-kw">for</span> i <span class="tok-kw">in</span> <span class="tok-fn">range</span>(<span class="tok-num">1</span>, <span class="tok-num">4</span>):</div>
+            <div class="code-line"><span class="line-no">7</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-fn">print</span>(<span class="tok-str">f"第 {i} 步：继续前进"</span>)</div>
+          </div>
+          <div class="console">
+            <div><span class="prompt">›</span> 你好，Py启航！</div>
+            <div><span class="prompt">›</span> 第 1 步：继续前进</div>
+            <div><span class="prompt">›</span> 第 2 步：继续前进</div>
+            <div><span class="prompt">›</span> 第 3 步：继续前进</div>
+          </div>
+        </div>
+        <div class="floating-badge">
+          <strong>6 周</strong>
+          <span>一条清晰的学习路线</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats reveal" aria-label="平台数据">
+      <div class="stat-card"><strong>12</strong><span>章系统课程</span></div>
+      <div class="stat-card"><strong>62</strong><span>节课逐步进阶</span></div>
+      <div class="stat-card"><strong>66</strong><span>道自动判分练习</span></div>
+      <div class="stat-card"><strong>60</strong><span>个核心术语</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head reveal">
+        <span class="eyebrow">不是视频堆砌，是边学边练</span>
+        <h2>把“看懂”变成“写出来”</h2>
+        <p>每节课都有讲解、示例、练习和反馈。你不是在被动观看，而是在不断把知识变成能运行的代码。</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">⌘</div>
+          <h3>浏览器里直接运行</h3>
+          <p>内置 Python 运行环境，不装软件也能写代码、运行和验证结果。第一次运行需要下载引擎，之后会自动缓存。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">✓</div>
+          <h3>66 道自动判分练习</h3>
+          <p>写完直接检查答案，错误会指出问题。不是只看标准答案，而是立刻知道自己的代码哪里不对。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">↻</div>
+          <h3>错题本与自测考试</h3>
+          <p>随机抽题、交卷评分、逐题解析。答错的题目会自动进入错题本，之后可以只练错题。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">▦</div>
+          <h3>六周学习计划</h3>
+          <p>从输出、变量、条件循环，到函数、文件、面向对象、JSON 与自动化，路线清楚，不用自己猜下一步学什么。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">⌕</div>
+          <h3>速查表与术语表</h3>
+          <p>10 组常用语法速查，60 个核心术语都有解释和对应课程，写作时随手查，不用反复翻教程。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">◈</div>
+          <h3>进度保存在本机</h3>
+          <p>学习进度和练习代码保存在浏览器本地，支持导出和导入备份。你的学习记录不会被上传到服务器。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="path">
+      <div class="section-head reveal">
+        <span class="eyebrow">知道自己现在在哪，下一步去哪</span>
+        <h2>一条能走完的 Python 路线</h2>
+        <p>每章只解决一类问题，学完就有一个可以展示的小成果。下面是最精简的主线。</p>
+      </div>
+
+      <div class="path-wrap">
+        <div class="path-list">
+          <article class="path-item reveal">
+            <span class="index">01</span>
+            <div><h3>打地基：让程序听你指挥</h3><p>输出、输入、变量、类型、字符串和简单运算。</p></div>
+          </article>
+          <article class="path-item reveal">
+            <span class="index">02</span>
+            <div><h3>会思考、会重复、会装数据</h3><p>条件判断、循环、列表、字典、元组与集合。</p></div>
+          </article>
+          <article class="path-item reveal">
+            <span class="index">03</span>
+            <div><h3>写函数，做出第一个项目</h3><p>函数、模块、异常处理、文件读写和四个完整小项目。</p></div>
+          </article>
+          <article class="path-item reveal">
+            <span class="index">04</span>
+            <div><h3>写得更专业，独立完成作品</h3><p>推导式、面向对象、JSON、CSV、测试、Git 和结业大作业。</p></div>
+          </article>
+        </div>
+
+        <aside class="path-aside reveal">
+          <span class="mini-label">建议节奏</span>
+          <h3>每天 40–60 分钟，六周完成第一遍</h3>
+          <p>不需要一次学很久。每天推进一小节，运行几段代码，积累起来远比周末突击更有效。</p>
+          <ul>
+            <li>先运行示例，再自己改一遍</li>
+            <li>做错题后，关掉答案重写一次</li>
+            <li>每完成两三章，做一次自测</li>
+            <li>最后用项目把知识串起来</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button primary" href="learn.html">进入平台开始第一课</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="cta-panel reveal">
+        <span class="eyebrow">Py启航 · PyPath</span>
+        <h2>今天先写三行 Python。</h2>
+        <p>进入学习平台，选择第一课，按一次运行。剩下的，就是每天往前推进一点点。</p>
+        <div class="cta-actions">
+          <a class="button primary" href="learn.html">进入学习平台 <span aria-hidden="true">→</span></a>
+          <a class="button ghost" href="textbook.html">打开完整讲义</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span data-current-year>2026</span> Py启航 · PyPath</span>
+      <nav class="footer-links" aria-label="页脚导航">
+        <a href="learn.html">学习平台</a>
+        <a href="textbook.html">课程讲义</a>
+        <a href="platform/原平台说明.txt">使用说明</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

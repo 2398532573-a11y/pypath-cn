@@ -1,0 +1,3982 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>Python 零基础课程讲义</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAGD0lEQVR42u2bXWhbZRjHJ2xXnWuatE3SJs3393fz2bRNsyT93NR1Y6vVlVXL6roxnOyD2TEQnCiijnnhhoIItU4R12sHo1D0YjdOQRAEr11vZFUvVITH9zlNsiTnI837nuCaLPBjh+U88f//JSfZOZ53x47Hj609ImPzOwmDhEXCEuE2YfUR4XY+02I+4045i7cTroSG5+57UkfBnpgCc/QQmMIHwdg7+UiAWTATZsOMmBUzY3aW4k8QTgZzLz6w902R/9CBbQVmxuzYAbvUWr6FcMs98DwYQwe2NdgBu2CnLZcPjx5fsyWOgCH0TEOAXbBTVQn5j/2KLX4YDMGnGwrshN0kDwfy5CnXwDQZeKohwW7YUax8RzD7wkZPYD80MtgRuwoJeNMWOwQ9/n0NDXbErpXld5GfjHU92aEZwK7YuVRA2tU/DXrfRFOAXbFzqYDLlsgkeXK8KcCu2LlUwE1DYB/ovGNNAXbFzqUC7ui8o9BMYOdSAas6zwiw0OXKgqonDGp3BjT+MTZ8I6AyREDrGALWXGJg5zIB3eQvaelyZaDDkYLQiesQv/ClLETPLEF3dBLUtkFgySYGX4B7GGhR9fSS8jdkK18gdu5zaLf1A0s2MQQE5IAWtScre/kChvQsORTSwJJPCJ4APIZp0fhH6ybAlJsHjX0IWPIJwRfgzAAtdRdgSwFLPiF4ArTOvUBLvQXgFyFLPiH4AhzkCUqkBBhSM9zzUqi9uSoCBoAlnxACAtJAi5QAfA73wRIae0pwXtHllRZgJbPkU4Cw5CyFJwC/aKiREIDv7mjWBa+97IPTsx4w2jybhUrmqwkIhpzw6kkvR6jXDR2mBDDlJQgISAE1EgI++WA/wI/9RdbX+iAadXHHdWFeofWIzp97fQH++T5ZnMft2SNu6DQngCUzX0D+I0aFiICFd6+WlS+wthQBpT5UnBcTkLm0DH/e28ub//1uEnQWD7Bk5gnAY5QW/Le7UIEbn54XFPDvD/1c6cK8mID5d64JziMjGTewZOYLIMclLWICPlo+K1pAoXUX53Fb8BP03lXR+YlhN7Bk5gnotPQDLdUEfLMcgYMTTri44IW/720ez62kdGG+lVIAS2YBAUmgpZoAo8UMLUojx4dXgiUCNufpBdBn5gsw9wEtVAI07uI8buP+A4tfwWdrP8O3P/0KJ66vVhfAkJknoIP8rNCipjkENK7iPG7j/m+vfAeFx29//CUpYJwIYMnMF2CKAy1qii9BTkB+nloAQ+ZHQICzRICz5kNgPCezgHZjDGihEqB2Fudxu9YvQRTAkllAQBRoETubqy5gcx63Y+e/qFGAC1gy8wUYIkCLQueH6CtLNQnYgwIK8+RkyDvzVu0CGDLzBKgMYaBFqQtwV3DxImbpBc33r01JCHA8fI2eXmi3JiF8+uMyAccunpEUwJKZL4CEYKGt2w8qSxwMQ8c4lOY4vHHWLy2gZF6pD5JPUgD0yWfBmJmDTk8WxrIOaQEMeXkClHoMIQO6IEcbKSMpoNMh8hohMhvk/sSSUgJYcgoICIGcVBMwlnVyJaS48JK3igD6fHwB+XdOLvCQkBLACieAIR9PAL5jcqLo9tVdAEs+vgDyjskJ/rTVXQBDPgEBPpATFHDplLduAoYGnEz5eAIUXRhaXoIhe9kFTbn45es4tGntTNkEBHhBbvAsb/awGzbuJmUtn4jZueuILNn4AvAF6wBK0OhtkEvjzx4bg0kHKDQ27gIKa65KAXdaubDu5mBTQNktMjdV+gD3bjUD2LXyJqnLWmsfd4bWDGDXytvk0ubQeNMIwK6VN0ru8qdn1vEEpRnArmW3yhZultba+uDJTntDgx15N0sXbpf3pZ7b2IM7dtgaEuyGHQVvly8smDD6h8nO1oYEu4kumCgsmQmPHl/RWBOwu93SUGAn7FZ1BRkuLOodmVvTWOMNVD4O2KnWlWO3jL4c9wItKvO2BLNjB+yy5fKVCye9qekHGkuMvKAJWpTbBJIVM2N2qoWTQktn/emj902BEVCbI+SExAm7VQ//j+//DWbBTJgNM2JW5qWzjxdPN8njP7MyP/6KpocNAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAGD0lEQVR42u2bXWhbZRjHJ2xXnWuatE3SJs3393fz2bRNsyT93NR1Y6vVlVXL6roxnOyD2TEQnCiijnnhhoIItU4R12sHo1D0YjdOQRAEr11vZFUvVITH9zlNsiTnI837nuCaLPBjh+U88f//JSfZOZ53x47Hj609ImPzOwmDhEXCEuE2YfUR4XY+02I+4045i7cTroSG5+57UkfBnpgCc/QQmMIHwdg7+UiAWTATZsOMmBUzY3aW4k8QTgZzLz6w902R/9CBbQVmxuzYAbvUWr6FcMs98DwYQwe2NdgBu2CnLZcPjx5fsyWOgCH0TEOAXbBTVQn5j/2KLX4YDMGnGwrshN0kDwfy5CnXwDQZeKohwW7YUax8RzD7wkZPYD80MtgRuwoJeNMWOwQ9/n0NDXbErpXld5GfjHU92aEZwK7YuVRA2tU/DXrfRFOAXbFzqYDLlsgkeXK8KcCu2LlUwE1DYB/ovGNNAXbFzqUC7ui8o9BMYOdSAas6zwiw0OXKgqonDGp3BjT+MTZ8I6AyREDrGALWXGJg5zIB3eQvaelyZaDDkYLQiesQv/ClLETPLEF3dBLUtkFgySYGX4B7GGhR9fSS8jdkK18gdu5zaLf1A0s2MQQE5IAWtScre/kChvQsORTSwJJPCJ4APIZp0fhH6ybAlJsHjX0IWPIJwRfgzAAtdRdgSwFLPiF4ArTOvUBLvQXgFyFLPiH4AhzkCUqkBBhSM9zzUqi9uSoCBoAlnxACAtJAi5QAfA73wRIae0pwXtHllRZgJbPkU4Cw5CyFJwC/aKiREIDv7mjWBa+97IPTsx4w2jybhUrmqwkIhpzw6kkvR6jXDR2mBDDlJQgISAE1EgI++WA/wI/9RdbX+iAadXHHdWFeofWIzp97fQH++T5ZnMft2SNu6DQngCUzX0D+I0aFiICFd6+WlS+wthQBpT5UnBcTkLm0DH/e28ub//1uEnQWD7Bk5gnAY5QW/Le7UIEbn54XFPDvD/1c6cK8mID5d64JziMjGTewZOYLIMclLWICPlo+K1pAoXUX53Fb8BP03lXR+YlhN7Bk5gnotPQDLdUEfLMcgYMTTri44IW/720ez62kdGG+lVIAS2YBAUmgpZoAo8UMLUojx4dXgiUCNufpBdBn5gsw9wEtVAI07uI8buP+A4tfwWdrP8O3P/0KJ66vVhfAkJknoIP8rNCipjkENK7iPG7j/m+vfAeFx29//CUpYJwIYMnMF2CKAy1qii9BTkB+nloAQ+ZHQICzRICz5kNgPCezgHZjDGihEqB2Fudxu9YvQRTAkllAQBRoETubqy5gcx63Y+e/qFGAC1gy8wUYIkCLQueH6CtLNQnYgwIK8+RkyDvzVu0CGDLzBKgMYaBFqQtwV3DxImbpBc33r01JCHA8fI2eXmi3JiF8+uMyAccunpEUwJKZL4CEYKGt2w8qSxwMQ8c4lOY4vHHWLy2gZF6pD5JPUgD0yWfBmJmDTk8WxrIOaQEMeXkClHoMIQO6IEcbKSMpoNMh8hohMhvk/sSSUgJYcgoICIGcVBMwlnVyJaS48JK3igD6fHwB+XdOLvCQkBLACieAIR9PAL5jcqLo9tVdAEs+vgDyjskJ/rTVXQBDPgEBPpATFHDplLduAoYGnEz5eAIUXRhaXoIhe9kFTbn45es4tGntTNkEBHhBbvAsb/awGzbuJmUtn4jZueuILNn4AvAF6wBK0OhtkEvjzx4bg0kHKDQ27gIKa65KAXdaubDu5mBTQNktMjdV+gD3bjUD2LXyJqnLWmsfd4bWDGDXytvk0ubQeNMIwK6VN0ru8qdn1vEEpRnArmW3yhZultba+uDJTntDgx15N0sXbpf3pZ7b2IM7dtgaEuyGHQVvly8smDD6h8nO1oYEu4kumCgsmQmPHl/RWBOwu93SUGAn7FZ1BRkuLOodmVvTWOMNVD4O2KnWlWO3jL4c9wItKvO2BLNjB+yy5fKVCye9qekHGkuMvKAJWpTbBJIVM2N2qoWTQktn/emj902BEVCbI+SExAm7VQ//j+//DWbBTJgNM2JW5qWzjxdPN8njP7MyP/6KpocNAAAAAElFTkSuQmCC">
+<style>
+body { font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+       max-width: 840px; margin: 0 auto; padding: 32px 28px 80px; line-height: 1.78; color: #1b2330; }
+h1 { font-size: 27px; margin: 0 0 6px; }
+h2 { font-size: 21px; margin: 44px 0 8px; padding-bottom: 6px; border-bottom: 2px solid #d9dee7; }
+h3 { font-size: 17px; margin: 30px 0 6px; }
+h4 { font-size: 15px; margin: 18px 0 4px; }
+p { margin: 9px 0; }
+ul, ol { margin: 9px 0; padding-left: 24px; }
+li { margin: 3px 0; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 0.94em;
+       background: #f2f4f8; border: 1px solid #e0e4ec; border-radius: 4px; padding: 1px 4px; }
+pre.snippet { background: #f7f8fa; border: 1px solid #e0e4ec; border-radius: 8px;
+              padding: 12px 14px; overflow-x: auto; line-height: 1.6; }
+pre.snippet code { background: none; border: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+th, td { border: 1px solid #dfe3ea; padding: 6px 9px; text-align: left; vertical-align: top; }
+th { background: #f5f7fa; }
+.callout { border-left: 3px solid #7a8699; background: #f7f8fa; padding: 9px 13px; margin: 12px 0; }
+.callout.warn { border-color: #d9a441; background: #fdf7e8; }
+.callout p { margin: 0; }
+.meta { color: #5b6878; font-size: 13.5px; }
+.lesson { margin-bottom: 40px; }
+.toc { columns: 2; font-size: 14px; }
+.toc a { color: #1f6feb; text-decoration: none; }
+.answer { border: 1px dashed #c9d1de; border-radius: 8px; padding: 10px 12px; margin: 10px 0; }
+@media print {
+  body { padding: 0; max-width: none; }
+  .lesson { page-break-inside: avoid; }
+  h2 { page-break-before: always; }
+}
+</style>
+</head><body>
+<h1>Python 零基础课程讲义</h1>
+<p class="meta">共 12 章 62 节课 · 打印或用浏览器「另存为 PDF」即可离线阅读</p>
+<h2 id="toc">目录</h2><div class="toc">
+<div><a href="#c1l1">1. 写代码是怎么回事</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l2">2. print 的多种玩法</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l3">3. 注释与缩进</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l4">4. 变量：给数据取个名字</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l5">5. 数字与运算</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l6">6. 字符串与 f-string</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l7">7. input：让程序听你说话</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c1l8">8. 数据类型与转换</a>（第 1 章 · 让电脑开口说话）</div>
+<div><a href="#c2l1">9. 比较运算与 if</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c2l2">10. if / elif / else 多分支</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c2l3">11. 逻辑运算符 and / or / not</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c2l4">12. while 循环</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c2l5">13. for 循环与 range</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c2l6">14. break 与 continue</a>（第 2 章 · 让程序会思考、会重复）</div>
+<div><a href="#c3l1">15. 列表入门：一串数据装在一起</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c3l2">16. 列表的增删改查</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c3l3">17. 遍历列表与统计</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c3l4">18. 字典：用名字找数据</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c3l5">19. 元组与集合</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c3l6">20. 字符串进阶：拆分、连接与查找</a>（第 3 章 · 装数据的盒子）</div>
+<div><a href="#c4l1">21. 定义函数：给一段代码起名字</a>（第 4 章 · 函数与模块）</div>
+<div><a href="#c4l2">22. 参数的进阶用法</a>（第 4 章 · 函数与模块）</div>
+<div><a href="#c4l3">23. 作用域：变量的活动范围</a>（第 4 章 · 函数与模块）</div>
+<div><a href="#c4l4">24. 借用工具箱：import 模块</a>（第 4 章 · 函数与模块）</div>
+<div><a href="#c5l1">25. 读懂报错与 try / except</a>（第 5 章 · 面对错误和文件）</div>
+<div><a href="#c5l2">26. 文件读写</a>（第 5 章 · 面对错误和文件）</div>
+<div><a href="#c6l1">27. 项目一：猜数字游戏</a>（第 6 章 · 动手做项目）</div>
+<div><a href="#c6l2">28. 项目二：石头剪刀布</a>（第 6 章 · 动手做项目）</div>
+<div><a href="#c6l3">29. 项目三：班级成绩管理</a>（第 6 章 · 动手做项目）</div>
+<div><a href="#c6l4">30. 项目四：文章词频统计</a>（第 6 章 · 动手做项目）</div>
+<div><a href="#c6l5">31. 结业：你的下一步路线图</a>（第 6 章 · 动手做项目）</div>
+<div><a href="#c7l1">32. 列表推导式：一行搞定循环</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c7l2">33. 推导式家族：字典、集合与生成器</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c7l3">34. 参数进阶：*args 与 **kwargs</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c7l4">35. lambda 与排序的 key</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c7l5">36. 把自己的代码变成模块</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c7l6">37. 代码规范与调试技巧</a>（第 7 章 · 写得更专业）</div>
+<div><a href="#c8l1">38. 为什么需要类</a>（第 8 章 · 面向对象入门）</div>
+<div><a href="#c8l2">39. __init__ 与 self 讲透</a>（第 8 章 · 面向对象入门）</div>
+<div><a href="#c8l3">40. 方法：让对象会做事</a>（第 8 章 · 面向对象入门）</div>
+<div><a href="#c8l4">41. 继承：在别人的基础上改</a>（第 8 章 · 面向对象入门）</div>
+<div><a href="#c8l5">42. __str__ 与魔术方法初识</a>（第 8 章 · 面向对象入门）</div>
+<div><a href="#c9l1">43. 异常进阶：精确地兜住问题</a>（第 9 章 · 数据与文件进阶）</div>
+<div><a href="#c9l2">44. 路径、编码与大文件</a>（第 9 章 · 数据与文件进阶）</div>
+<div><a href="#c9l3">45. JSON：和外部世界交换数据</a>（第 9 章 · 数据与文件进阶）</div>
+<div><a href="#c9l4">46. CSV：处理表格数据</a>（第 9 章 · 数据与文件进阶）</div>
+<div><a href="#c9l5">47. 项目：生成成绩报表</a>（第 9 章 · 数据与文件进阶）</div>
+<div><a href="#c10l1">48. 把题目翻译成代码的四步法</a>（第 10 章 · 算法与解题训练）</div>
+<div><a href="#c10l2">49. 字符串与列表经典题</a>（第 10 章 · 算法与解题训练）</div>
+<div><a href="#c10l3">50. 查找与排序</a>（第 10 章 · 算法与解题训练）</div>
+<div><a href="#c10l4">51. 递归：函数调用自己</a>（第 10 章 · 算法与解题训练）</div>
+<div><a href="#c10l5">52. 算法效率直觉</a>（第 10 章 · 算法与解题训练）</div>
+<div><a href="#c11l1">53. 日期与时间：datetime</a>（第 11 章 · 日期、正则与自动化）</div>
+<div><a href="#c11l2">54. 正则表达式入门</a>（第 11 章 · 日期、正则与自动化）</div>
+<div><a href="#c11l3">55. 正则进阶：分组与替换</a>（第 11 章 · 日期、正则与自动化）</div>
+<div><a href="#c11l4">56. 项目：记账本（含分类统计）</a>（第 11 章 · 日期、正则与自动化）</div>
+<div><a href="#c11l5">57. 进阶方向：Excel、Word、邮件自动化</a>（第 11 章 · 日期、正则与自动化）</div>
+<div><a href="#c12l1">58. pip、虚拟环境与项目结构</a>（第 12 章 · 走向独立开发）</div>
+<div><a href="#c12l2">59. 写测试：让代码改不坏</a>（第 12 章 · 走向独立开发）</div>
+<div><a href="#c12l3">60. Git：给代码装上时间机器</a>（第 12 章 · 走向独立开发）</div>
+<div><a href="#c12l4">61. 独立做一个项目的完整流程</a>（第 12 章 · 走向独立开发）</div>
+<div><a href="#c12l5">62. 结业大作业与下一步</a>（第 12 章 · 走向独立开发）</div>
+</div>
+<h2>第 1 章 · 让电脑开口说话</h2>
+<p class='meta'>认识代码、学会输出，理解变量和类型，这是程序世界的字母表。</p>
+<div class="lesson">
+<h3>写代码是怎么回事</h3>
+<p class="meta">预计 10 分钟 · 入门 · 目标：搞懂代码是什么，并亲手让电脑打印一句话。</p>
+<h3>程序就是给电脑的指令清单</h3>
+<p>我们用中文说「去倒杯水」，电脑看不懂。要让电脑做事，就得用它认识的写法写出每一步：</p>
+<pre class="snippet"><code>print("你好")</code></pre>
+<p>这一行叫一条<strong>语句</strong>。<code>print</code> 的意思是打印出来，括号里引号包住的内容就是你要它说的话。</p>
+<h3>三条新手规则</h3>
+<ul><li>代码从上往下、一行一行执行。</li><li>括号和引号都要<strong>成对</strong>出现，而且必须是英文半角符号，中文的 <code>（ ）</code> 会报错。</li><li>行首的空格（缩进）在 Python 里不是排版，是语法。刚开始先记住：不要随便加空格。</li></ul>
+<h3>怎么在这个平台练习</h3>
+<ul><li>每个代码框都能直接编辑，按 <code>Ctrl + Enter</code> 或点「运行」看结果。</li><li>需要 <code>input()</code> 输入的程序，把要输入的内容填在代码框上方的「输入」框里，一行一个。</li><li>做完练习点「检查答案」，会立刻告诉你是对是错。</li></ul>
+<div class="callout warn"><p>注意：第一次打开页面需要联网下载 Python 引擎（约 10MB），稍等几秒，之后浏览器会缓存它。</p></div>
+<h4>示例：你的第一个程序</h4>
+<pre class="snippet"><code>print("Hello, Python!")
+print("我可以让电脑替我说话了")
+print(1 + 1)</code></pre>
+<p>第三行没有引号，所以 Python 不把它当文字，而是真的去算 1 加 1。</p>
+<h4>练习 1：练习：让电脑说出你的目标</h4>
+<p>让程序输出一行字：<code>我要学会 Python</code></p>
+<p>把代码框里的文字改掉就可以。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>print("我要学会 Python")</code></pre></div>
+<h4>小测验</h4>
+<p>下面哪一行写法是正确的？</p><ol>
+<li>print("你好")</li>
+<li>print（你好）</li>
+<li>print"你好"</li>
+<li>Print('你好')</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 要用英文括号和英文引号，函数名必须是小写的 print。</p>
+</div>
+<div class="lesson">
+<h3>print 的多种玩法</h3>
+<p class="meta">预计 12 分钟 · 入门 · 目标：学会一次输出多个内容，控制分隔符号和换行。</p>
+<h3>一次输出多个内容</h3>
+<pre class="snippet"><code>print("姓名", "小明", "年龄", 18)</code></pre>
+<p>用逗号分隔，Python 会自动在它们之间补一个<strong>空格</strong>。</p>
+<h3>sep 和 end：控制细节</h3>
+<pre class="snippet"><code>print("2026", "01", "01", sep="-")   # 2026-01-01
+print("正在加载", end="...")
+print("完成")</code></pre>
+<ul><li><code>sep="-"</code>：把逗号之间的空格换成短横线。</li><li><code>end="..."</code>：把结尾默认的换行换成别的字符，所以下一句会接在同一行。</li></ul>
+<table><thead><tr><th>写法</th><th>输出</th></tr></thead><tbody><tr><td><code>print("a", "b")</code></td><td>a b</td></tr><tr><td><code>print("a", "b", sep="")</code></td><td>ab</td></tr><tr><td><code>print("a", end="!")</code></td><td>a!</td></tr></tbody></table>
+<h3>引号可以嵌套，但不能打架</h3>
+<pre class="snippet"><code>print("他说：'你好'")    # 外面双引号，里面单引号，没问题</code></pre>
+<div class="callout"><p>提示：想省心就统一用双引号写字符串，需要引号时里面用单引号。</p></div>
+<h4>示例：做一个简单的成绩单</h4>
+<pre class="snippet"><code>print("== 期末成绩单 ==")
+print("语文", 92)
+print("数学", 88)
+print("单号", "2026", "A", "001", sep="-")
+print("总分", 92 + 88, "分")</code></pre>
+<p>最后一行同时用了 sep 和 end，两个参数都在引号里写。</p>
+<h4>练习 1：练习：三行自我介绍</h4>
+<p>用三行 <code>print</code> 输出下面三行，内容要完全一致：</p>
+<pre class="snippet"><code>我叫 小明
+我在学 Python
+第一天</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>print("我叫", "小明")
+print("我在学 Python")
+print("第一天")</code></pre></div>
+<h4>小测验</h4>
+<p>print("A", "B", sep="+") 的输出是什么？</p><ol>
+<li>A B</li>
+<li>A+B</li>
+<li>A"+"B</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— sep 会把多个内容之间的分隔符换成加号。</p>
+</div>
+<div class="lesson">
+<h3>注释与缩进</h3>
+<p class="meta">预计 10 分钟 · 入门 · 目标：学会给代码写备注，理解 Python 为什么对缩进这么严格。</p>
+<h3>注释：写给人看的话</h3>
+<p><code>#</code> 后面的内容会被 Python 完全忽略，用来解释你的思路：</p>
+<pre class="snippet"><code># 计算圆的面积
+radius = 3            # 半径
+area = 3.14 * radius ** 2
+print(area)           # 打印结果</code></pre>
+<p>注释的三个用处：说明<strong>为什么</strong>这么写、临时关掉某行代码来排查问题、记录你还没搞懂的地方。</p>
+<h3>缩进：Python 的门牌号</h3>
+<p>很多语言用花括号表示「这些代码属于一起」，Python 用缩进：</p>
+<pre class="snippet"><code>if 3 &gt; 2:
+    print("3 比 2 大")
+    print("这两行都属于 if")
+print("这一行不属于 if，一定会执行")</code></pre>
+<p>规则很简单：<strong>冒号后面要缩进</strong>，同一组的缩进必须一样多。业界标准是 4 个空格，不要用 Tab。</p>
+<div class="callout warn"><p>注意：<code>IndentationError: expected an indented block</code> 意思是「这里该缩进却没缩进」；<code>unexpected indent</code> 意思是「这里不该缩进」。</p></div>
+<h4>示例：注释和缩进一起用</h4>
+<pre class="snippet"><code># 这个小程序判断今天要不要带伞
+rain = True          # 假设今天下雨
+
+if rain:
+    print("出门记得带伞")
+    print("顺便穿双防水的鞋")
+print("祝你今天愉快")</code></pre>
+<p>前两行 print 缩进了 4 个空格，属于 if；最后一行没有缩进，所以无论如何都会执行。</p>
+<h4>练习 1：练习：修好这段缩进</h4>
+<p>下面这段代码运行会报错，请修好它，让它输出：</p>
+<pre class="snippet"><code>开始学习
+正在学缩进
+结束</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>print("开始学习")
+if True:
+    print("正在学缩进")
+print("结束")</code></pre></div>
+<h4>小测验</h4>
+<p>Python 里缩进的作用是什么？</p><ol>
+<li>让代码好看</li>
+<li>表示哪些代码属于同一组</li>
+<li>没有作用，可有可无</li>
+<li>加快运行速度</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 缩进是语法的一部分，它决定代码的层级关系。</p>
+</div>
+<div class="lesson">
+<h3>变量：给数据取个名字</h3>
+<p class="meta">预计 12 分钟 · 入门 · 目标：会用变量保存数据、修改变量，掌握变量命名规则。</p>
+<h3>变量就是一个贴了标签的盒子</h3>
+<pre class="snippet"><code>name = "小明"
+age = 18</code></pre>
+<p>这里的 <code>=</code> 不是数学里的相等，而是<strong>赋值</strong>：把右边的值放进左边的名字里。之后提到 <code>name</code>，Python 就会取出里面的内容。</p>
+<pre class="snippet"><code>print(name)
+name = "小红"      # 同一个名字可以装新值，旧值被覆盖
+print(name)</code></pre>
+<h3>变量名怎么起</h3>
+<ul><li>只能用字母、数字、下划线组成，而且<strong>不能以数字开头</strong>。</li><li>区分大小写：<code>age</code> 和 <code>Age</code> 是两个不同的变量。</li><li>不能用 Python 的保留字，比如 <code>if</code>、<code>for</code>、<code>class</code>、<code>True</code>。</li><li>用有意义的名字：<code>total_price</code> 比 <code>a1</code> 好得多。</li></ul>
+<h3>常用写法</h3>
+<pre class="snippet"><code>x, y = 1, 2          # 一次给多个变量赋值
+count = count + 1    # 在原来的基础上加 1</code></pre>
+<div class="callout"><p>提示：报 <code>NameError: name 'xxx' is not defined</code>，几乎总是变量名拼错，或者还没赋值就拿来用了。变量必须先赋值才能使用。</p></div>
+<h4>示例：用变量讲一个会变化的故事</h4>
+<pre class="snippet"><code>name = "小明"
+age = 8
+print(name, "今年", age, "岁")
+
+age = age + 1      # 长大一岁
+print(name, "明年", age, "岁")</code></pre>
+<p>age + 1 先算出 9，再放回 age 这个盒子里，所以第二句打印的是 9。</p>
+<h4>练习 1：练习：把信息装进变量</h4>
+<p>创建两个变量并输出一行：</p>
+<ul><li><code>city</code> 里装 <code>杭州</code></li><li><code>weather</code> 里装 <code>晴</code></li></ul>
+<p>输出：<code>杭州 今天 晴</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>city = "杭州"
+weather = "晴"
+print(city, "今天", weather)</code></pre></div>
+<h4>小测验</h4>
+<p>执行 x = 5 之后再执行 x = x + 3，x 的值是多少？</p><ol>
+<li>5</li>
+<li>3</li>
+<li>8</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 先算右边 5 + 3 = 8，再把 8 存回 x。</p>
+</div>
+<div class="lesson">
+<h3>数字与运算</h3>
+<p class="meta">预计 14 分钟 · 入门 · 目标：掌握四则运算、整除、取余、幂运算，分清整数和小数。</p>
+<h3>Python 是一台听话的计算器</h3>
+<pre class="snippet"><code>print(7 + 2)      # 9
+print(7 - 2)      # 5
+print(7 * 2)      # 14
+print(7 / 2)      # 3.5   除法一定得到小数
+print(7 // 2)     # 3     整除：只要整数部分
+print(7 % 2)      # 1     取余：只要剩下的零头
+print(7 ** 2)     # 49    幂：7 的 2 次方</code></pre>
+<h3>整数和小数</h3>
+<ul><li><code>int</code> 整数：<code>3</code>、<code>-10</code>、<code>0</code></li><li><code>float</code> 小数：<code>3.14</code>、<code>0.5</code></li><li>整数之间做 <code>+ - *</code> 还是整数；只要出现 <code>/</code> 或小数，结果就是小数。</li></ul>
+<h3>运算顺序</h3>
+<p>先乘除后加减，有括号先算括号，<code>**</code> 优先级最高。</p>
+<pre class="snippet"><code>print((1 + 2) * 3)     # 9，不是 7
+print(10 % 2)          # 0 → 偶数
+print(125 % 60)        # 5 → 125 分钟是 2 小时 5 分钟</code></pre>
+<div class="callout"><p>提示：<code>1 / 0</code> 会报 <code>ZeroDivisionError</code>，除以 0 在数学上没有意义，Python 直接拒绝执行。</p></div>
+<h4>示例：把秒数换算成时分秒</h4>
+<pre class="snippet"><code>total = 3725
+hour = total // 3600
+minute = total % 3600 // 60
+second = total % 60
+print(total, "秒 =", hour, "小时", minute, "分", second, "秒")</code></pre>
+<p>先用整除算出有几个整小时，再用取余把剩下的部分继续往下分。</p>
+<h4>练习 1：练习：算水果账单</h4>
+<p>苹果 5.5 元一个买 3 个，香蕉 2 元一个买 4 个。</p>
+<p>算出总价，输出一行：<code>总价 24.5 元</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>apple_price = 5.5
+apple_count = 3
+banana_price = 2
+banana_count = 4
+total = apple_price * apple_count + banana_price * banana_count
+print("总价", total, "元")</code></pre></div>
+<h4>小测验</h4>
+<p>17 // 5 和 17 % 5 分别是多少？</p><ol>
+<li>3.4 和 2</li>
+<li>3 和 2</li>
+<li>3 和 3</li>
+<li>2 和 3</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 17 = 5 × 3 + 2，所以整除得 3，取余得 2。</p>
+</div>
+<div class="lesson">
+<h3>字符串与 f-string</h3>
+<p class="meta">预计 14 分钟 · 入门 · 目标：会拼接字符串、量长度，并用 f-string 优雅地把变量塞进句子里。</p>
+<h3>字符串就是一段文字</h3>
+<p>引号包起来的都是字符串（str），单双引号都行，只要成对。</p>
+<pre class="snippet"><code>name = "小明"
+greeting = "你好，" + name + "！"    # 加号可以拼接两段文字
+print(greeting)                      # 你好，小明！
+print(len(greeting))                 # 7，len 数的是字符个数</code></pre>
+<h3>f-string：最推荐的写法</h3>
+<p>在引号前加一个 <code>f</code>，就能把变量直接放进花括号里：</p>
+<pre class="snippet"><code>name = "小明"
+age = 8
+print(f"{name}今年{age}岁，明年{age + 1}岁")</code></pre>
+<table><thead><tr><th>写法</th><th>代码</th><th>说明</th></tr></thead><tbody><tr><td>加号拼接</td><td><code>"你好" + name</code></td><td>只能拼字符串</td></tr><tr><td>逗号分隔</td><td><code>print("你好", name)</code></td><td>自动加空格</td></tr><tr><td>f-string</td><td><code>f"你好{name}"</code></td><td>最灵活，推荐</td></tr></tbody></table>
+<h3>字符串常用小操作</h3>
+<pre class="snippet"><code>s = "Python"
+print(s.upper())        # PYTHON
+print(s[0])             # P      下标从 0 开始数
+print(s[0:3])           # Pyt    取第 0、1、2 个字符
+print("Py" in s)        # True   判断是否包含
+print("  hi  ".strip()) # hi     去掉两头的空格</code></pre>
+<div class="callout"><p>提示：数字和字符串不能直接相加，<code>"我" + 18</code> 会报 <code>TypeError</code>。请用 f-string 或 <code>str(18)</code>。</p></div>
+<h4>示例：用 f-string 生成一句话</h4>
+<pre class="snippet"><code>name = "小红"
+score = 92.5
+print(f"{name}的期末成绩是{score}分")
+print(f"比及格线高出 {score - 60} 分")
+print(f"名字长度 {len(name)}，第一个字是 {name[0]}")</code></pre>
+<p>花括号里不只能放变量，还能直接写算式、调用 len()。</p>
+<h4>练习 1：练习：制作一行名片</h4>
+<p>已有变量 <code>name</code> 和 <code>job</code>。</p>
+<p>用一行 f-string 输出：<code>我是小明，我的职业是程序员</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>name = "小明"
+job = "程序员"
+print(f"我是{name}，我的职业是{job}")</code></pre></div>
+<h4>小测验</h4>
+<p>name = "Amy"，那么 f"你好{name}" 的结果是？</p><ol>
+<li>你好{name}</li>
+<li>你好Amy</li>
+<li>你好 name</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— f-string 会把花括号里的变量替换成它的值。</p>
+</div>
+<div class="lesson">
+<h3>input：让程序听你说话</h3>
+<p class="meta">预计 14 分钟 · 入门 · 目标：会用 input 接收输入，并记住它拿到的永远是字符串。</p>
+<h3>input 会暂停程序，等用户打字</h3>
+<pre class="snippet"><code>name = input("你叫什么名字？")
+print(f"你好，{name}！")</code></pre>
+<p>括号里的内容会先显示给用户看，用户按下回车后，输入的内容就装进了左边的变量。</p>
+<h3>在这个平台怎么测试 input 程序</h3>
+<p>代码框上方有一个「输入」框，把要输入的内容<strong>一行一个</strong>写进去，例如：</p>
+<pre class="snippet"><code>小明
+18</code></pre>
+<p>程序第一次 <code>input()</code> 拿到 <code>小明</code>，第二次拿到 <code>18</code>。如果程序还要输入但你给的不够，就会报 <code>EOFError</code>。</p>
+<div class="callout warn"><p>注意：<code>input()</code> 拿到的<strong>永远是字符串</strong>。所以输入 18 得到的是文字 "18"，不能直接做数学运算。下一课专门讲怎么转换。</p></div>
+<h4>示例：会打招呼的程序</h4>
+<pre class="snippet"><code>name = input("请输入你的名字：")
+hobby = input("你的爱好是什么？")
+print(f"{name}，原来你喜欢{hobby}，很棒！")</code></pre>
+<p>点「运行」，程序会依次从输入框读两行。试试把输入框的内容改成你自己的。</p>
+<h4>练习 1：练习：点餐机</h4>
+<p>依次问「要点什么菜？」和「要几份？」，然后输出一行：</p>
+<p><code>已下单 3 份 饺子</code></p>
+<p>（输入框里给的是 <code>饺子</code> 和 <code>3</code> 两行）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>dish = input("要点什么菜？")
+count = input("要几份？")
+print(f"已下单 {count} 份 {dish}")</code></pre></div>
+<h4>小测验</h4>
+<p>程序里有两次 input()，但输入框只填了一行，会发生什么？</p><ol>
+<li>第二行自动用第一行的内容</li>
+<li>得到空字符串</li>
+<li>报 EOFError</li>
+<li>程序卡住不动</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 输入内容用完了就没有东西可读，Python 会抛出 EOFError。</p>
+</div>
+<div class="lesson">
+<h3>数据类型与转换</h3>
+<p class="meta">预计 16 分钟 · 入门 · 目标：认识 int、float、str、bool，学会处理输入进来的数字。</p>
+<h3>四种最常见的数据类型</h3>
+<table><thead><tr><th>类型</th><th>名字</th><th>例子</th></tr></thead><tbody><tr><td><code>int</code></td><td>整数</td><td><code>3</code>、<code>-7</code></td></tr><tr><td><code>float</code></td><td>小数</td><td><code>3.14</code>、<code>0.5</code></td></tr><tr><td><code>str</code></td><td>字符串</td><td><code>"你好"</code>、<code>"3"</code></td></tr><tr><td><code>bool</code></td><td>真假值</td><td><code>True</code>、<code>False</code></td></tr></tbody></table>
+<p>用 <code>type()</code> 可以查看类型：</p>
+<pre class="snippet"><code>print(type(3), type("3"), type(3.0), type(True))</code></pre>
+<h3>转换函数</h3>
+<pre class="snippet"><code>age = int("18")         # 字符串 → 整数
+price = float("3.5")    # 字符串 → 小数
+text = str(99)          # 数字 → 字符串</code></pre>
+<h3>新手最容易踩的坑</h3>
+<pre class="snippet"><code>a = input("第一个数：")   # a 是字符串 "7"
+print(a + 1)              # 报错 TypeError</code></pre>
+<p>正确写法是把输入立刻转成数字：</p>
+<pre class="snippet"><code>a = int(input("第一个数："))
+print(a + 1)</code></pre>
+<div class="callout"><p>提示：<code>True</code> 和 <code>False</code> 本质上就是 1 和 0，<code>print(True + 1)</code> 会输出 2。</p></div>
+<div class="callout warn"><p>注意：<code>int("abc")</code> 会报 <code>ValueError</code>，因为 int 只能转换长得像整数的字符串。</p></div>
+<h4>示例：能算数的计算器</h4>
+<pre class="snippet"><code>a = int(input("第一个数："))
+b = int(input("第二个数："))
+print(f"{a} + {b} = {a + b}")
+print(f"{a} / {b} = {a / b:.2f}")   # :.2f 表示保留两位小数</code></pre>
+<p>把输入框的两个数改一改再运行。试试输入小数会怎样？会报错，因为这里用的是 int。</p>
+<h4>练习 1：练习：BMI 计算器</h4>
+<p>读取身高（米）和体重（公斤），计算 BMI，保留 1 位小数。</p>
+<p>公式：<code>BMI = 体重 / 身高²</code></p>
+<p>输出：<code>BMI 21.6</code></p>
+<p>输入框给的是 <code>1.75</code> 和 <code>66</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>height = float(input("身高(米)："))
+weight = float(input("体重(公斤)："))
+bmi = weight / height ** 2
+print(f"BMI {bmi:.1f}")</code></pre></div>
+<h4>练习 2：挑战：两位数拆开</h4>
+<p>读入一个两位数（比如 58），用整除和取余把十位、个位分开，输出：</p>
+<p><code>十位是 5，个位是 8</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>n = int(input("请输入一个两位数："))
+ten = n // 10
+one = n % 10
+print(f"十位是 {ten}，个位是 {one}")</code></pre></div>
+<h4>小测验</h4>
+<p>a = input()，输入 5 之后 type(a) 是什么？</p><ol>
+<li>int</li>
+<li>str</li>
+<li>float</li>
+<li>bool</li>
+</ol>
+<p><b>答案：第 2 个</b> —— input 永远返回字符串，要做数学运算必须先转换。</p>
+</div>
+<h2>第 2 章 · 让程序会思考、会重复</h2>
+<p class='meta'>条件判断和循环是编程的两台发动机，学会它们就能写真正的逻辑了。</p>
+<div class="lesson">
+<h3>比较运算与 if</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：会用比较运算符得到 True/False，并用 if 让程序做选择。</p>
+<h3>比较运算的结果是 True 或 False</h3>
+<pre class="snippet"><code>print(3 &gt; 2)     # True
+print(3 &lt; 2)     # False
+print(3 == 3)    # True    判断相等要用两个等号
+print(3 != 2)    # True    不等于
+print(3 &gt;= 3)    # True    大于等于</code></pre>
+<div class="callout warn"><p>注意：一个 <code>=</code> 是赋值，两个 <code>==</code> 才是比较。写成 <code>if a = 3:</code> 一定报 SyntaxError。</p></div>
+<h3>if 让程序做选择</h3>
+<pre class="snippet"><code>age = 20
+if age &gt;= 18:
+    print("你成年了")
+print("这句话一定执行")</code></pre>
+<p>读法：如果 <code>age &gt;= 18</code> 成立（结果是 True），就执行缩进的那一行；不成立就跳过。</p>
+<h3>字符串和文字也能比较</h3>
+<pre class="snippet"><code>password = "123456"
+if password == "123456":
+    print("密码正确")</code></pre>
+<div class="callout"><p>提示：条件不成立时程序什么都不做，直接往下走，这是完全正常的。</p></div>
+<h4>示例：游乐园的身高检查</h4>
+<pre class="snippet"><code>height = int(input("你的身高(cm)？"))
+if height &gt;= 140:
+    print("可以玩过山车，祝你玩得开心！")
+print("排队请拿好号码牌")</code></pre>
+<p>把输入框改成 130 再运行一次，看看哪一行不再出现。</p>
+<h4>练习 1：练习：判断奇偶</h4>
+<p>读入一个整数，偶数就输出 <code>偶数</code>，否则输出 <code>奇数</code>。</p>
+<p>输入框给的是 <code>8</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>n = int(input("请输入一个整数："))
+if n % 2 == 0:
+    print("偶数")
+else:
+    print("奇数")</code></pre></div>
+<h4>小测验</h4>
+<p>下面哪个表达式的结果是 True？</p><ol>
+<li>5 != 5</li>
+<li>5 = 5</li>
+<li>5 >= 5</li>
+<li>5 < 5</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 5 >= 5 表示大于或等于，成立；5 = 5 是语法错误。</p>
+</div>
+<div class="lesson">
+<h3>if / elif / else 多分支</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：处理三种以上的情况，理解分支只会执行其中一个。</p>
+<h3>三条以上的路</h3>
+<pre class="snippet"><code>score = 85
+if score &gt;= 90:
+    print("优秀")
+elif score &gt;= 60:
+    print("及格")
+else:
+    print("需要努力")</code></pre>
+<p><code>elif</code> 是 else if 的缩写。Python 会<strong>从上往下</strong>检查，遇到第一个成立的就把它的代码执行掉，剩下的<strong>全部跳过</strong>。</p>
+<h3>顺序很重要</h3>
+<pre class="snippet"><code># 错误示范：95 分会先撞上 &gt;= 60，永远轮不到「优秀」
+if score &gt;= 60:
+    print("及格")
+elif score &gt;= 90:
+    print("优秀")</code></pre>
+<p>所以写多分支时，把条件最严格的放最前面。</p>
+<h3>可以嵌套</h3>
+<p>分支里面还能再写 if，每一层都要缩进：</p>
+<pre class="snippet"><code>if age &gt;= 18:
+    if has_ticket:
+        print("请入场")
+    else:
+        print("请先买票")
+else:
+    print("未成年人在家长陪同下入场")</code></pre>
+<div class="callout"><p>提示：嵌套超过两层就该换个写法了，后面学完函数和逻辑运算符会发现更漂亮的写法。</p></div>
+<h4>示例：成绩等级评定</h4>
+<pre class="snippet"><code>score = int(input("请输入成绩(0-100)："))
+if score &gt;= 90:
+    level = "优秀"
+elif score &gt;= 80:
+    level = "良好"
+elif score &gt;= 60:
+    level = "及格"
+else:
+    level = "不及格"
+print(f"你的等级：{level}")</code></pre>
+<p>先把结果存进 level，最后只打印一次，代码更整洁也更容易改。</p>
+<h4>练习 1：练习：买票价格</h4>
+<p>按年龄决定票价：</p>
+<ul><li>6 岁以下：输出 <code>免费</code></li><li>6 到 17 岁：输出 <code>半价</code></li><li>18 岁及以上：输出 <code>全价</code></li></ul>
+<p>输入框给的是 <code>15</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>age = int(input("请输入年龄："))
+if age &lt; 6:
+    print("免费")
+elif age &lt; 18:
+    print("半价")
+else:
+    print("全价")</code></pre></div>
+<h4>小测验</h4>
+<p>score = 95，如果把 `if score >= 60` 写在前面，`elif score >= 90` 写在后面，会输出什么？</p><ol>
+<li>优秀</li>
+<li>及格</li>
+<li>两个都输出</li>
+<li>什么都不输出</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 95 满足第一个条件就执行并跳过后面了。分支顺序必须由严到宽。</p>
+</div>
+<div class="lesson">
+<h3>逻辑运算符 and / or / not</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：会组合多个条件，写出「同时满足」和「满足其一」的判断。</p>
+<h3>三个小词，让条件变强大</h3>
+<pre class="snippet"><code>age = 20
+has_id = True
+
+print(age &gt;= 18 and has_id)   # 两个都真 → True
+print(age &gt;= 18 or has_id)    # 有一个真 → True
+print(not has_id)             # 取反 → False</code></pre>
+<table><thead><tr><th>运算符</th><th>含义</th><th>什么时候成立</th></tr></thead><tbody><tr><td><code>and</code></td><td>并且</td><td>两边都成立</td></tr><tr><td><code>or</code></td><td>或者</td><td>至少一边成立</td></tr><tr><td><code>not</code></td><td>不是</td><td>后面的不成立</td></tr></tbody></table>
+<h3>区间判断要写完整</h3>
+<pre class="snippet"><code># 正确：两个比较都要写出来
+if 18 &lt;= age and age &lt;= 60:
+    print("劳动年龄人口")
+
+# 更短的等价写法
+if 18 &lt;= age &lt;= 60:
+    print("劳动年龄人口")</code></pre>
+<h3>短路：聪明但不总是好事</h3>
+<p><code>and</code> 左边已经是 False，右边就不会再算；<code>or</code> 左边已经是 True，右边也不会再算。利用这一点可以做保护：</p>
+<pre class="snippet"><code>if count != 0 and total / count &gt; 10:
+    print("平均值偏大")</code></pre>
+<div class="callout"><p>提示：<code>not in</code> 常用来判断「不在里面」：<code>if name not in banned:</code> 表示这个名字不在黑名单中。</p></div>
+<h4>示例：能不能进网吧</h4>
+<pre class="snippet"><code>age = int(input("年龄："))
+has_id = input("带身份证了吗(y/n)：") == "y"
+
+if age &gt;= 18 and has_id:
+    print("可以进入")
+elif age &gt;= 18 and not has_id:
+    print("年龄够了，但需要身份证")
+else:
+    print("未成年人禁止进入")</code></pre>
+<p>第二行把输入和 y 做比较，得到 True 或 False，直接存进 has_id。</p>
+<h4>练习 1：练习：闰年判断（简化版）</h4>
+<p>读入年份，是闰年输出 <code>闰年</code>，否则输出 <code>平年</code>。</p>
+<p>规则（简化版）：能被 4 整除<strong>并且</strong>不能被 100 整除。</p>
+<p>输入框给的是 <code>2024</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>year = int(input("请输入年份："))
+if year % 4 == 0 and year % 100 != 0:
+    print("闰年")
+else:
+    print("平年")</code></pre></div>
+<h4>小测验</h4>
+<p>a = 5，b = 10，(a > 3 and b < 5) or a == 5 的结果是？</p><ol>
+<li>True</li>
+<li>False</li>
+<li>报错</li>
+<li>None</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 括号里是 False，但 or 右边的 a == 5 成立，所以整体是 True。</p>
+</div>
+<div class="lesson">
+<h3>while 循环</h3>
+<p class="meta">预计 15 分钟 · 基础 · 目标：会用 while 让代码重复执行，并且不会写出死循环。</p>
+<h3>要重复一百遍？交给循环</h3>
+<pre class="snippet"><code>count = 1
+while count &lt;= 5:
+    print(count)
+    count = count + 1
+print("循环结束")</code></pre>
+<p>执行顺序：判断条件 → 成立就执行循环体 → 回到条件再判断，直到条件不成立。</p>
+<h3>循环的三个零件</h3>
+<ol><li><strong>起点</strong>：循环之前给 count 一个初值。</li><li><strong>条件</strong>：<code>while count &lt;= 5</code>。</li><li><strong>变化</strong>：循环体里必须有让条件最终不成立的操作。</li></ol>
+<p>少了第 3 步就是<strong>死循环</strong>，程序永远停不下来。</p>
+<div class="callout"><p>提示：写死循环时一定要搭配 break 才能出来：<code>while True:</code> 一定要在某处跳出。</p></div>
+<h3>复合赋值：写得更短</h3>
+<table><thead><tr><th>短写法</th><th>等于</th></tr></thead><tbody><tr><td><code>count += 1</code></td><td><code>count = count + 1</code></td></tr><tr><td><code>total -= 5</code></td><td><code>total = total - 5</code></td></tr><tr><td><code>n *= 2</code></td><td><code>n = n * 2</code></td></tr></tbody></table>
+<div class="callout warn"><p>注意：这个平台的代码在浏览器里跑。万一写出死循环页面会卡住，你的代码会自动保存，刷新页面就能恢复。</p></div>
+<h4>示例：倒计时和求和</h4>
+<pre class="snippet"><code>n = 5
+while n &gt; 0:
+    print(f"倒计时 {n}")
+    n -= 1
+print("发射！")
+
+total = 0
+i = 1
+while i &lt;= 10:
+    total += i
+    i += 1
+print(f"1 到 10 的和是 {total}")</code></pre>
+<p>两个 while 之间用空行分开，注意每个循环都有自己的变量。</p>
+<h4>练习 1：练习：累加到 n</h4>
+<p>读入一个正整数 n，用 while 算出 1 + 2 + ... + n，输出：</p>
+<p><code>和是 55</code></p>
+<p>输入框给的是 <code>10</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>n = int(input("请输入 n："))
+total = 0
+i = 1
+while i &lt;= n:
+    total += i
+    i += 1
+print(f"和是 {total}")</code></pre></div>
+<h4>小测验</h4>
+<p>下面哪段代码会变成死循环？</p><ol>
+<li>i = 0; while i < 3: i += 1</li>
+<li>i = 0; while i < 3: print(i)</li>
+<li>i = 5; while i > 0: i -= 1</li>
+<li>i = 0; while i < 3: i += 1; print(i)</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 循环体里 i 一直没变，条件永远成立，于是永远循环。</p>
+</div>
+<div class="lesson">
+<h3>for 循环与 range</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：掌握最常用的循环：遍历一串数字或一组数据。</p>
+<h3>for + range：重复固定次数</h3>
+<pre class="snippet"><code>for i in range(5):
+    print(i)          # 0 1 2 3 4，从 0 开始，不含 5</code></pre>
+<table><thead><tr><th>写法</th><th>产生的数字</th></tr></thead><tbody><tr><td><code>range(5)</code></td><td>0, 1, 2, 3, 4</td></tr><tr><td><code>range(1, 6)</code></td><td>1, 2, 3, 4, 5</td></tr><tr><td><code>range(1, 10, 2)</code></td><td>1, 3, 5, 7, 9</td></tr><tr><td><code>range(5, 0, -1)</code></td><td>5, 4, 3, 2, 1</td></tr></tbody></table>
+<p>口诀：<strong>含头不含尾</strong>。<code>range(1, 6)</code> 里面没有 6。</p>
+<h3>for 和 while 怎么选</h3>
+<ul><li>知道要重复几次，或者要挨个处理一串东西，用 <code>for</code>。</li><li>不知道要循环多久，要等条件变化，用 <code>while</code>。</li></ul>
+<h3>循环里也能写 if</h3>
+<pre class="snippet"><code>for i in range(1, 11):
+    if i % 2 == 0:
+        print(f"{i} 是偶数")</code></pre>
+<div class="callout"><p>提示：第 3 章会学到 <code>for 名字 in 列表:</code>，那才是 for 最强大的用法。</p></div>
+<h4>示例：乘法口诀和求和</h4>
+<pre class="snippet"><code>for i in range(1, 10):
+    print(f"7 x {i} = {7 * i}")
+
+total = 0
+for i in range(1, 101):
+    total += i
+print(f"1 到 100 的和是 {total}")</code></pre>
+<p>第二个循环是 for 最经典的用法：求和。</p>
+<h4>练习 1：练习：数出偶数的个数</h4>
+<p>用 for 循环统计 1 到 50 之间有多少个偶数，输出：</p>
+<p><code>1 到 50 之间有 25 个偶数</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>count = 0
+for i in range(1, 51):
+    if i % 2 == 0:
+        count += 1
+print(f"1 到 50 之间有 {count} 个偶数")</code></pre></div>
+<h4>小测验</h4>
+<p>range(2, 8) 会产生哪些数字？</p><ol>
+<li>2 到 8（含 8）</li>
+<li>2 到 7</li>
+<li>3 到 8</li>
+<li>0 到 7</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 含头不含尾，从 2 开始，到 8 之前停止。</p>
+</div>
+<div class="lesson">
+<h3>break 与 continue</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：会用 break 提前结束循环，用 continue 跳过某一次。</p>
+<h3>break：立刻跳出整个循环</h3>
+<pre class="snippet"><code>for i in range(1, 100):
+    if i * i &gt; 50:
+        print(i)      # 8
+        break         # 找到就停，后面的数字不再检查</code></pre>
+<h3>continue：跳过这一次，继续下一次</h3>
+<pre class="snippet"><code>for i in range(1, 6):
+    if i == 3:
+        continue      # 3 被跳过，不打印
+    print(i)</code></pre>
+<table><thead><tr><th>语句</th><th>作用</th></tr></thead><tbody><tr><td><code>break</code></td><td>整个循环结束，直接执行循环后面的代码</td></tr><tr><td><code>continue</code></td><td>只结束这一轮，马上开始下一轮</td></tr></tbody></table>
+<h3>经典组合</h3>
+<pre class="snippet"><code>while True:
+    answer = input("输入 quit 退出：")
+    if answer == "quit":
+        break
+    print(f"你输入了 {answer}")</code></pre>
+<div class="callout"><p>提示：break 和 continue 只对<strong>它们所在的那一层</strong>循环有效，多层嵌套时要特别小心。</p></div>
+<h4>示例：找第一个能被 7 整除的数</h4>
+<pre class="snippet"><code>for i in range(20, 100):
+    if i % 7 != 0:
+        continue          # 不是 7 的倍数就跳过
+    print(f"第一个能被 7 整除的数是 {i}")
+    break</code></pre>
+<p>continue 让不满足条件的数字快速跳过，break 让找到之后马上停下。</p>
+<h4>练习 1：练习：累加到超过 100</h4>
+<p>从 1 开始一直累加，总和<strong>超过</strong> 100 就停止，输出：</p>
+<p><code>加到 14 时总和是 105</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>total = 0
+i = 0
+while True:
+    i += 1
+    total += i
+    if total &gt; 100:
+        break
+print(f"加到 {i} 时总和是 {total}")</code></pre></div>
+<h4>小测验</h4>
+<p>循环里遇到 continue 会发生什么？</p><ol>
+<li>退出整个循环</li>
+<li>跳过本轮剩下的代码，进入下一轮</li>
+<li>结束程序</li>
+<li>重新开始程序</li>
+</ol>
+<p><b>答案：第 2 个</b> —— continue 只是跳过当前这一轮的剩余部分，循环本身还会继续。</p>
+</div>
+<h2>第 3 章 · 装数据的盒子</h2>
+<p class='meta'>列表、字典、元组、集合——学会一次处理一大批数据。</p>
+<div class="lesson">
+<h3>列表入门：一串数据装在一起</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会创建列表、用下标取值、切片，并知道下标从 0 开始。</p>
+<h3>列表就是一排编了号的格子</h3>
+<pre class="snippet"><code>fruits = ["苹果", "香蕉", "橘子"]
+print(fruits)        # ['苹果', '香蕉', '橘子']
+print(len(fruits))   # 3，一共几个
+print(fruits[0])     # 苹果   第 0 个（第一个）
+print(fruits[2])     # 橘子   第 2 个（第三个）
+print(fruits[-1])    # 橘子   负数表示从后往前数</code></pre>
+<h3>切片：一次取一段</h3>
+<pre class="snippet"><code>nums = [10, 20, 30, 40, 50]
+print(nums[1:3])     # [20, 30]   含头不含尾
+print(nums[:2])      # [10, 20]   从头开始
+print(nums[2:])      # [30, 40, 50]  一直取到最后</code></pre>
+<h3>列表里可以放任何东西</h3>
+<pre class="snippet"><code>mixed = ["小明", 18, True, 92.5]
+scores = [88, 92, 79]
+print(scores[1] + 1)     # 93</code></pre>
+<div class="callout warn"><p>注意：<code>IndexError: list index out of range</code> 意思是下标超出范围了。三个元素的列表，最大下标是 2，写 <code>fruits[3]</code> 就会报这个错。</p></div>
+<h4>示例：我的播放列表</h4>
+<pre class="snippet"><code>songs = ["稻香", "晴天", "夜曲", "告五人"]
+print(len(songs))
+print(songs[0])
+print(songs[-1])
+print(songs[:2])
+print(f"最后一首是 {songs[-1]}")</code></pre>
+<p>试试把 songs 换成你自己的歌单，再运行看看。</p>
+<h4>练习 1：练习：取出想要的内容</h4>
+<p>已有列表 <code>nums = [10, 20, 30, 40, 50]</code>，输出三行：</p>
+<pre class="snippet"><code>第一个是 10
+最后一个是 50
+中间两个是 [20, 30]</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>nums = [10, 20, 30, 40, 50]
+print(f"第一个是 {nums[0]}")
+print(f"最后一个是 {nums[-1]}")
+print(f"中间两个是 {nums[1:3]}")</code></pre></div>
+<h4>小测验</h4>
+<p>列表 a = [1, 2, 3]，a[-1] 是多少？</p><ol>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 3 个</b> —— -1 表示倒数第一个元素，也就是 3。</p>
+</div>
+<div class="lesson">
+<h3>列表的增删改查</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会用 append、insert、remove、pop、sort，以及判断元素是否存在。</p>
+<h3>常用操作一览</h3>
+<pre class="snippet"><code>todo = ["买菜", "写作业"]
+
+todo.append("运动")        # 末尾加一个
+todo.insert(0, "起床")     # 插到第 0 位
+todo.remove("买菜")        # 删掉指定的内容
+last = todo.pop()          # 取出并删掉最后一个
+todo[0] = "早睡"           # 改第 0 个
+
+print(todo)
+print(last)</code></pre>
+<table><thead><tr><th>操作</th><th>作用</th></tr></thead><tbody><tr><td><code>列表.append(x)</code></td><td>末尾添加 x</td></tr><tr><td><code>列表.insert(i, x)</code></td><td>插入到下标 i</td></tr><tr><td><code>列表.remove(x)</code></td><td>删除第一个等于 x 的元素</td></tr><tr><td><code>列表.pop()</code></td><td>取出并删除最后一个（可指定下标）</td></tr><tr><td><code>列表.sort()</code></td><td>从小到大排序</td></tr><tr><td><code>x in 列表</code></td><td>判断 x 在不在列表里</td></tr></tbody></table>
+<h3>排序和反转</h3>
+<pre class="snippet"><code>scores = [88, 92, 79]
+scores.sort()                # 原地从小到大
+print(scores)                # [79, 88, 92]
+print(max(scores), min(scores), sum(scores))
+scores.sort(reverse=True)    # 从大到小</code></pre>
+<div class="callout"><p>提示：<code>remove</code> 删除的是<strong>内容</strong>，<code>pop</code> 删除的是<strong>位置</strong>。删不存在的元素会报错，所以删除前常先判断 <code>if x in 列表:</code>。</p></div>
+<h4>示例：管理一张待办清单</h4>
+<pre class="snippet"><code>todo = ["买菜", "写作业"]
+todo.append("运动")
+todo.insert(0, "起床")
+print("现在有：", todo)
+
+if "写作业" in todo:
+    todo.remove("写作业")
+    print("作业做完了，删掉它")
+
+todo.sort()
+print("整理后：", todo)
+print(f"还剩 {len(todo)} 件事")</code></pre>
+<p>注意 if 里面既能写 print 也能写 remove，缩进保持一致就可以。</p>
+<h4>练习 1：练习：整理购物清单</h4>
+<p>已有 <code>cart = ["牛奶", "面包"]</code>，请：</p>
+<ol><li>在末尾加入 <code>"鸡蛋"</code></li><li>把第一项改成 <code>"酸奶"</code></li><li>排序后打印整个列表，再打印一行个数</li></ol>
+<p>输出：</p>
+<pre class="snippet"><code>['酸奶', '面包', '鸡蛋']
+一共 3 件</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>cart = ["牛奶", "面包"]
+cart.append("鸡蛋")
+cart[0] = "酸奶"
+cart.sort()
+print(cart)
+print(f"一共 {len(cart)} 件")</code></pre></div>
+<h4>小测验</h4>
+<p>scores = [70, 80, 90]，执行 scores.pop() 之后 scores 是什么？</p><ol>
+<li>[70, 80, 90]</li>
+<li>[70, 80]</li>
+<li>[80, 90]</li>
+<li>[90]</li>
+</ol>
+<p><b>答案：第 2 个</b> —— pop() 会把最后一个元素取出来并删掉，所以剩下 [70, 80]。</p>
+</div>
+<div class="lesson">
+<h3>遍历列表与统计</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会用 for 遍历列表，算出总和、平均值、最大值，并学会筛选。</p>
+<h3>for 直接遍历列表</h3>
+<pre class="snippet"><code>scores = [88, 92, 79]
+for s in scores:
+    print(s)</code></pre>
+<p>读作：「对 scores 里的每一个元素，把它叫做 s，然后执行下面的代码。」</p>
+<h3>累加和平均</h3>
+<pre class="snippet"><code>scores = [88, 92, 79]
+total = 0
+for s in scores:
+    total += s
+print(f"总分 {total}，平均 {total / len(scores)}")</code></pre>
+<h3>同时拿到下标和内容：enumerate</h3>
+<pre class="snippet"><code>for i, s in enumerate(scores):
+    print(f"第 {i + 1} 位同学：{s} 分")</code></pre>
+<h3>筛选</h3>
+<pre class="snippet"><code>passed = []
+for s in scores:
+    if s &gt;= 80:
+        passed.append(s)
+print(passed)</code></pre>
+<div class="callout"><p>提示：如果只想知道总和、最大、最小，Python 已经准备好了：<code>sum(scores)</code>、<code>max(scores)</code>、<code>min(scores)</code>。自己写循环是为了理解原理。</p></div>
+<h4>示例：班级成绩小统计</h4>
+<pre class="snippet"><code>scores = [88, 92, 79, 95, 60]
+total = 0
+for s in scores:
+    total += s
+average = total / len(scores)
+print(f"平均分 {average:.1f}")
+print(f"最高 {max(scores)}，最低 {min(scores)}")
+
+for i, s in enumerate(scores):
+    mark = "及格" if s &gt;= 60 else "不及格"
+    print(f"第 {i + 1} 位：{s} 分 {mark}")</code></pre>
+<p>倒数第二行是一种简写：把 if 和 else 写在一行里给变量赋值。</p>
+<h4>练习 1：练习：统计及格人数</h4>
+<p>已有列表 <code>scores = [45, 88, 72, 90, 55, 99]</code>。</p>
+<p>统计及格（大于等于 60）的人数，并输出：</p>
+<pre class="snippet"><code>及格 4 人
+平均分 74.8</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>scores = [45, 88, 72, 90, 55, 99]
+count = 0
+for s in scores:
+    if s &gt;= 60:
+        count += 1
+print(f"及格 {count} 人")
+print(f"平均分 {sum(scores) / len(scores):.1f}")</code></pre></div>
+<h4>小测验</h4>
+<p>想同时拿到下标和元素，应该用哪个函数？</p><ol>
+<li>range</li>
+<li>enumerate</li>
+<li>len</li>
+<li>index</li>
+</ol>
+<p><b>答案：第 2 个</b> —— enumerate(列表) 每次给出 (下标, 元素)。</p>
+</div>
+<div class="lesson">
+<h3>字典：用名字找数据</h3>
+<p class="meta">预计 15 分钟 · 基础 · 目标：会用字典存成对的「键和值」，并做增删改查。</p>
+<h3>字典是带标签的储物柜</h3>
+<p>列表用 0、1、2 找东西，字典用<strong>名字（键）</strong>找东西：</p>
+<pre class="snippet"><code>student = {"name": "小明", "age": 18, "score": 92}
+print(student["name"])       # 小明
+print(student.get("score"))  # 92
+print("age" in student)      # True</code></pre>
+<h3>增、改、删</h3>
+<pre class="snippet"><code>student["city"] = "杭州"     # 新增
+student["age"] = 19          # 修改
+del student["city"]          # 删除</code></pre>
+<h3>遍历字典</h3>
+<pre class="snippet"><code>for k in student:                 # 默认遍历键
+    print(k, student[k])
+
+for k, v in student.items():      # 同时拿到键和值
+    print(f"{k} → {v}")</code></pre>
+<table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td><code>d["key"]</code></td><td>取值，键不存在会报 KeyError</td></tr><tr><td><code>d.get("key")</code></td><td>取值，键不存在返回 None（更安全）</td></tr><tr><td><code>d.keys()</code> / <code>d.values()</code> / <code>d.items()</code></td><td>所有键 / 所有值 / 所有键值对</td></tr></tbody></table>
+<div class="callout"><p>提示：字典的键必须是不可变的，一般用字符串或数字。列表不能当键。</p></div>
+<h4>示例：一本小通讯录</h4>
+<pre class="snippet"><code>contacts = {"小明": "13800000001", "小红": "13900000002"}
+print(contacts["小明"])
+
+contacts["小刚"] = "13700000003"     # 新增
+contacts["小明"] = "13800000009"     # 修改
+
+name = "小红"
+if name in contacts:
+    print(f"{name}的电话是 {contacts[name]}")
+else:
+    print("通讯录里没有这个人")
+
+for k, v in contacts.items():
+    print(f"{k}: {v}")</code></pre>
+<p>字典最常用的场景就是这种「名字 → 信息」的查表操作。</p>
+<h4>练习 1：练习：学生档案</h4>
+<p>创建字典 <code>student</code>，包含：</p>
+<ul><li><code>name</code> 是 <code>小明</code></li><li><code>age</code> 是 <code>18</code></li></ul>
+<p>然后新增 <code>score</code> 为 <code>92</code>，并把 age 改成 <code>19</code>，最后按下面的格式打印：</p>
+<pre class="snippet"><code>小明 19 岁，成绩 92</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>student = {"name": "小明", "age": 18}
+student["score"] = 92
+student["age"] = 19
+name = student["name"]
+print(f"{name} {student['age']} 岁，成绩 {student['score']}")</code></pre></div>
+<h4>小测验</h4>
+<p>访问字典里不存在的键，想避免程序报错，应该用？</p><ol>
+<li>d[key]</li>
+<li>d.get(key)</li>
+<li>d.find(key)</li>
+<li>d.index(key)</li>
+</ol>
+<p><b>答案：第 2 个</b> —— get 在键不存在时返回 None，不会抛出 KeyError。</p>
+</div>
+<div class="lesson">
+<h3>元组与集合</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：知道什么时候用不可变的元组，以及怎么用集合去重。</p>
+<h3>元组：不能改的列表</h3>
+<pre class="snippet"><code>point = (3, 5)
+print(point[0])       # 3
+point[0] = 9          # 报错！元组不能修改</code></pre>
+<p>元组用圆括号，适合表示<strong>天生一组、不该被改</strong>的数据，比如坐标、日期、一条数据库记录：</p>
+<pre class="snippet"><code>birthday = (2008, 5, 12)
+year, month, day = birthday      # 拆包：一次分给三个变量
+print(f"生日是 {year} 年 {month} 月 {day} 日")</code></pre>
+<h3>集合：自动去重、能快速查</h3>
+<pre class="snippet"><code>nums = {1, 2, 2, 3, 3, 3}
+print(nums)              # {1, 2, 3}  自动去掉重复
+print(2 in nums)         # True
+
+a = {1, 2, 3}
+b = {3, 4}
+print(a &amp; b)             # {3}      交集
+print(a | b)             # {1,2,3,4} 并集
+print(a - b)             # {1, 2}   差集</code></pre>
+<h3>列表去重的常用技巧</h3>
+<pre class="snippet"><code>names = ["小明", "小红", "小明"]
+unique = list(set(names))</code></pre>
+<table><thead><tr><th>类型</th><th>括号</th><th>能改吗</th><th>有序吗</th><th>用途</th></tr></thead><tbody><tr><td>列表 list</td><td><code>[ ]</code></td><td>能</td><td>有顺序</td><td>通用容器</td></tr><tr><td>元组 tuple</td><td><code>( )</code></td><td>不能</td><td>有顺序</td><td>固定的一组数据</td></tr><tr><td>集合 set</td><td><code>{ }</code></td><td>能</td><td>无顺序</td><td>去重、集合运算</td></tr><tr><td>字典 dict</td><td><code>{k: v}</code></td><td>能</td><td>有顺序</td><td>按键查值</td></tr></tbody></table>
+<div class="callout"><p>提示：<code>list(set(...))</code> 之后顺序是随机的；如果要求排序，再补一句 <code>sort()</code>。</p></div>
+<h4>示例：点名去重</h4>
+<pre class="snippet"><code>names = ["小明", "小红", "小明", "小刚", "小红"]
+unique = list(set(names))
+unique.sort()
+print(f"一共有 {len(unique)} 个人：{unique}")
+
+point = (3, 5)
+x, y = point
+print(f"x 坐标 {x}，y 坐标 {y}")</code></pre>
+<p>集合负责去重，list() 负责变回列表，sort() 负责排序，三步走。</p>
+<h4>练习 1：练习：两个班的共同成员</h4>
+<p>班级 A 和班级 B 的名单如下，找出<strong>同时参加</strong>两个班的人（交集），排序后输出：</p>
+<pre class="snippet"><code>共同成员 2 人：小明, 小红</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class_a = {"小明", "小红", "小刚"}
+class_b = {"小红", "小明", "小李"}
+both = list(class_a &amp; class_b)
+both.sort()
+sep = ", "
+print(f"共同成员 {len(both)} 人：{sep.join(both)}")</code></pre></div>
+<h4>小测验</h4>
+<p>想快速去掉一列数据里的重复项，最方便的是？</p><ol>
+<li>list</li>
+<li>tuple</li>
+<li>set</li>
+<li>int</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 集合自动去重，所以 list(set(数据)) 是最常见的写法。</p>
+</div>
+<div class="lesson">
+<h3>字符串进阶：拆分、连接与查找</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会用 split、join、replace 处理文本，为后面的项目打基础。</p>
+<h3>split：把一句话拆成列表</h3>
+<pre class="snippet"><code>line = "小明,18,92"
+parts = line.split(",")
+print(parts)         # ['小明', '18', '92']
+print(parts[0])      # 小明</code></pre>
+<p>不写参数时会按空白（空格、换行）拆分：</p>
+<pre class="snippet"><code>print("我爱 学 Python".split())    # ['我爱', '学', 'Python']</code></pre>
+<h3>join：把列表拼回字符串</h3>
+<pre class="snippet"><code>words = ["我", "爱", "Python"]
+print("-".join(words))    # 我-爱-Python
+print(" ".join(words))    # 我 爱 Python</code></pre>
+<div class="callout warn"><p>注意：join 的括号里必须是<strong>字符串列表</strong>。如果列表里是数字，要先用 str() 转换，否则报 TypeError。</p></div>
+<h3>查找与替换</h3>
+<pre class="snippet"><code>s = "今天天气不错，心情也不错"
+print(s.replace("不错", "很好"))   # 今天天气很好，心情也很好
+print(s.count("不错"))             # 2
+print(s.find("心情"))              # 8（下标）
+print("天气" in s)                 # True
+print(s.startswith("今天"))        # True</code></pre>
+<h3>去掉多余空白</h3>
+<pre class="snippet"><code>print("   hello   ".strip())    # hello      两头
+print("   hello   ".lstrip())   # 只去左边
+print("   hello   ".rstrip())   # 只去右边</code></pre>
+<div class="callout"><p>提示：处理用户输入时先 <code>.strip()</code> 是好习惯，能避开「多了个空格就判断失败」的问题。</p></div>
+<h4>示例：解析一行数据</h4>
+<pre class="snippet"><code>line = "小明,18,92"
+parts = line.split(",")
+print(parts)
+
+name = parts[0]
+age = int(parts[1])
+score = int(parts[2])
+print(f"{name} 今年 {age} 岁，成绩 {score} 分")
+
+print(" / ".join(parts))</code></pre>
+<p>split 出来的都是字符串，所以数字要用 int() 转换才能计算。</p>
+<h4>练习 1：练习：统计单词</h4>
+<p>给出句子 <code>text = "python is fun and python is easy"</code>。</p>
+<p>用 split 把它变成单词列表，输出：</p>
+<pre class="snippet"><code>一共 7 个单词
+单词里有 python 吗？True</code></pre>
+<p>（第二行要用 <code>in</code> 判断）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>text = "python is fun and python is easy"
+words = text.split()
+print(f"一共 {len(words)} 个单词")
+found = "python" in words
+print(f"单词里有 python 吗？{found}")</code></pre></div>
+<h4>小测验</h4>
+<p>"a,b,c".split(",") 的结果是？</p><ol>
+<li>'a,b,c'</li>
+<li>['a', 'b', 'c']</li>
+<li>'abc'</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— split 会按指定字符切开，返回一个列表。</p>
+</div>
+<h2>第 4 章 · 函数与模块</h2>
+<p class='meta'>把代码打包成可以重复使用的积木，再学会借用 Python 自带的工具箱。</p>
+<div class="lesson">
+<h3>定义函数：给一段代码起名字</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会用 def 定义函数、用 return 返回结果，理解参数的作用。</p>
+<h3>为什么要写函数</h3>
+<p>同一段计算写三遍，日后改就要改三处。函数把一段逻辑打包起来，起个名字，之后随时调用：</p>
+<pre class="snippet"><code>def area(width, height):
+    return width * height
+
+print(area(3, 4))     # 12
+print(area(5, 2))     # 10</code></pre>
+<h3>读懂这几行</h3>
+<ul><li><code>def</code> 表示「定义函数」。</li><li><code>area</code> 是函数名，<code>width</code>、<code>height</code> 是<strong>参数</strong>（占位用的名字）。</li><li><code>return</code> 把结果交回给调用它的地方。</li><li>调用时把真正的值传进去，这叫<strong>实参</strong>。</li></ul>
+<h3>print 和 return 的区别（新手最容易混）</h3>
+<pre class="snippet"><code>def add_print(a, b):
+    print(a + b)          # 只是显示出来，外面拿不到结果
+
+def add_return(a, b):
+    return a + b          # 把结果交出去
+
+x = add_print(1, 2)       # 屏幕上显示 3，但 x 是 None
+y = add_return(1, 2)      # y 是 3
+print(y + 10)             # 13</code></pre>
+<div class="callout"><p>提示：一个函数没有写 return 时，它的返回值是 <code>None</code>（表示「什么都没有」）。</p></div>
+<div class="callout warn"><p>注意：小数计算会出现长尾巴，比如 <code>100 * 1.1</code> 得到的是 <code>110.00000000000001</code>（这是所有编程语言的通病）。显示时用 <code>round(值, 2)</code> 或 f-string 的 <code>:.2f</code> 处理一下就好。</p></div>
+<h3>函数里也可以有 if 和循环</h3>
+<pre class="snippet"><code>def grade(score):
+    if score &gt;= 90:
+        return "优秀"
+    elif score &gt;= 60:
+        return "及格"
+    return "不及格"        # 前面的条件都不满足时才会走到这里</code></pre>
+<h4>示例：把计算打包成函数</h4>
+<pre class="snippet"><code>def area(width, height):
+    return width * height
+
+def greeting(name):
+    return f"你好，{name}！"
+
+print(area(3, 4))
+print(area(5, 2))
+print(greeting("小明"))</code></pre>
+<p>定义函数时缩进的两行属于函数体；不缩进的代码才是「主程序」。</p>
+<h4>练习 1：练习：写一个加税函数</h4>
+<p>定义函数 <code>with_tax(price)</code>，返回价格加上 10% 税之后的金额。</p>
+<p>然后打印 <code>with_tax(100)</code>，输出：<code>含税价 110.0 元</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def with_tax(price):
+    return round(price * 1.1, 2)
+
+print(f"含税价 {with_tax(100)} 元")</code></pre></div>
+<h4>小测验</h4>
+<p>函数里只写了 print 没有写 return，调用它的结果是？</p><ol>
+<li>报错</li>
+<li>None</li>
+<li>空字符串</li>
+<li>上一次的结果</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 没有 return 的函数返回 None，表示没有结果。</p>
+</div>
+<div class="lesson">
+<h3>参数的进阶用法</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会用默认参数、关键字参数，返回多个值。</p>
+<h3>默认参数：不传也能用</h3>
+<pre class="snippet"><code>def greet(name, greeting="你好"):
+    return f"{greeting}，{name}"
+
+print(greet("小明"))                  # 你好，小明
+print(greet("Tom", "Hello"))          # Hello，Tom</code></pre>
+<div class="callout warn"><p>注意：有默认值的参数必须放在没有默认值的参数<strong>后面</strong>，否则报语法错误。</p></div>
+<h3>关键字参数：顺序随便，看得更清楚</h3>
+<pre class="snippet"><code>def order(item, count=1, size="中杯"):
+    return f"{size} {item} x {count}"
+
+print(order("奶茶", count=3, size="大杯"))</code></pre>
+<h3>返回多个值</h3>
+<pre class="snippet"><code>def min_max(nums):
+    return min(nums), max(nums)
+
+low, high = min_max([3, 9, 1])
+print(low, high)    # 1 9</code></pre>
+<p>其实返回的是元组 <code>(1, 9)</code>，拆包写法一次分给两个变量。</p>
+<h3>参数也可以是列表和字典</h3>
+<pre class="snippet"><code>def total_price(prices):
+    return sum(prices)
+
+print(total_price([10, 20, 30]))    # 60</code></pre>
+<div class="callout"><p>提示：参数名起得清楚，函数就好用。<code>def f(a, b)</code> 谁也看不懂，<code>def f(price, count)</code> 一眼就明白。</p></div>
+<h4>示例：带默认值的小工具</h4>
+<pre class="snippet"><code>def line(text, repeat=1, end="\n"):
+    return text * repeat + end
+
+print(line("=", 20))
+print(line("好", 3, end="！\n"))
+
+def stats(nums):
+    return min(nums), max(nums), sum(nums) / len(nums)
+
+low, high, avg = stats([88, 92, 79])
+print(f"最低 {low}，最高 {high}，平均 {avg:.1f}")</code></pre>
+<p>函数一次返回三个值，用三个变量接住，这就是拆包。</p>
+<h4>练习 1：练习：写一个评分函数</h4>
+<p>定义 <code>describe(score, full=100)</code>：返回一段文字 <code>92 / 100</code>。</p>
+<p>然后输出两行：</p>
+<pre class="snippet"><code>92 / 100
+45 / 50</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def describe(score, full=100):
+    return f"{score} / {full}"
+
+print(describe(92))
+print(describe(45, 50))</code></pre></div>
+<h4>小测验</h4>
+<p>def f(a, b=2) 这样定义，调用 f(1) 时 b 是多少？</p><ol>
+<li>报错</li>
+<li>None</li>
+<li>2</li>
+<li>1</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 没有传值时就使用默认值 2。</p>
+</div>
+<div class="lesson">
+<h3>作用域：变量的活动范围</h3>
+<p class="meta">预计 12 分钟 · 基础 · 目标：理解局部变量和全局变量，能解释 UnboundLocalError 的原因。</p>
+<h3>函数里面的变量，外面看不到</h3>
+<pre class="snippet"><code>def f():
+    secret = 42        # 局部变量，出了函数就消失
+
+f()
+print(secret)          # 报 NameError</code></pre>
+<h3>外面定义的变量，函数里可以读</h3>
+<pre class="snippet"><code>rate = 1.1
+
+def with_tax(price):
+    return price * rate    # 能读到外面的 rate</code></pre>
+<h3>但函数里直接改外面的变量会出问题</h3>
+<pre class="snippet"><code>total = 0
+
+def add(x):
+    total = total + x    # 报 UnboundLocalError</code></pre>
+<p>只要函数里出现了对 <code>total</code> 的<strong>赋值</strong>，Python 就认为它是局部变量，而局部变量在赋值前不能读，于是报错。</p>
+<p>正确做法有两种：</p>
+<pre class="snippet"><code># 方法一（推荐）：用 return 把结果交出来
+def add(total, x):
+    return total + x
+
+total = add(total, 5)</code></pre>
+<pre class="snippet"><code># 方法二：声明成全局变量（少用，容易把代码搞乱）
+def add(x):
+    global total
+    total = total + x</code></pre>
+<div class="callout"><p>提示：函数的理想状态是「给什么算出来什么，不偷偷改外面的东西」，这样的函数最好测试和维护。</p></div>
+<h4>示例：两种做法的对比</h4>
+<pre class="snippet"><code>hits = 0
+
+def hit_bad():
+    global hits        # 直接改外面的变量
+    hits += 1
+
+def hit_good(hits):
+    return hits + 1    # 把新值交出来
+
+hit_bad()
+hit_bad()
+print("坏写法的结果：", hits)
+
+hits = hit_good(hits)
+print("好写法的结果：", hits)</code></pre>
+<p>两种写法结果一样，但第二种更容易看懂、也更好复用到别的地方。</p>
+<h4>练习 1：练习：修好这个计分函数</h4>
+<p>下面这段代码会报 <code>UnboundLocalError</code>，请用 <code>return</code> 的方式修好它，让它输出：</p>
+<pre class="snippet"><code>得分 15</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>score = 0
+
+def add_points(score, points):
+    return score + points
+
+score = add_points(score, 10)
+score = add_points(score, 5)
+print(f"得分 {score}")</code></pre></div>
+<h4>小测验</h4>
+<p>函数内部的变量，函数执行完之后还能访问吗？</p><ol>
+<li>能，一直存在</li>
+<li>不能，作用域已经结束</li>
+<li>只有数字能</li>
+<li>要看变量名长短</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 局部变量的生命只到函数结束，外面访问会报 NameError。</p>
+</div>
+<div class="lesson">
+<h3>借用工具箱：import 模块</h3>
+<p class="meta">预计 14 分钟 · 基础 · 目标：会 import 模块，使用 math 和 random 里的功能。</p>
+<h3>用别人写好的代码</h3>
+<p>Python 自带大量模块，导入就能用：</p>
+<pre class="snippet"><code>import math
+
+print(math.sqrt(16))     # 4.0  平方根
+print(math.pi)           # 3.141592653589793
+print(math.floor(3.7))   # 3    向下取整
+print(math.ceil(3.2))    # 4    向上取整</code></pre>
+<h3>随机数：random</h3>
+<pre class="snippet"><code>import random
+
+print(random.randint(1, 6))       # 1~6 之间的整数，含两端
+print(random.choice(["石头", "剪刀", "布"]))   # 随机挑一个
+nums = [1, 2, 3, 4]
+random.shuffle(nums)              # 打乱顺序（原地修改）
+print(nums)</code></pre>
+<h3>只导入需要的部分</h3>
+<pre class="snippet"><code>from math import sqrt, pi
+print(sqrt(9), pi)</code></pre>
+<h3>给模块起个短名字</h3>
+<pre class="snippet"><code>import random as rd
+print(rd.randint(1, 10))</code></pre>
+<table><thead><tr><th>常用模块</th><th>能干什么</th></tr></thead><tbody><tr><td><code>math</code></td><td>平方根、三角函数、取整</td></tr><tr><td><code>random</code></td><td>随机数、随机选择、洗牌</td></tr><tr><td><code>datetime</code></td><td>日期和时间</td></tr><tr><td><code>json</code></td><td>读写 JSON 数据</td></tr><tr><td><code>collections</code></td><td>Counter 计数、defaultdict 等好用的容器</td></tr></tbody></table>
+<div class="callout"><p>提示：函数名前面要带上模块名，写 <code>math.sqrt(16)</code> 而不是 <code>sqrt(16)</code>（除非用了 from 导入）。</p></div>
+<div class="callout warn"><p>注意：<code>random</code> 每次结果都不一样，所以测试程序时别把随机结果写死在判断里。</p></div>
+<h4>示例：掷骰子小程序</h4>
+<pre class="snippet"><code>import math
+import random
+
+print(f"16 的平方根是 {math.sqrt(16)}")
+
+dice = random.randint(1, 6)
+print(f"你掷出了 {dice} 点")
+
+colors = ["红", "黄", "蓝"]
+print(random.choice(colors))</code></pre>
+<p>多运行几次，random 的结果每次都不一样；math 的结果永远是确定的。</p>
+<h4>练习 1：练习：四舍五入小助手</h4>
+<p>导入 <code>math</code>，用 <code>math.ceil</code> 和 <code>math.floor</code> 处理数字 <code>3.7</code>，输出两行：</p>
+<pre class="snippet"><code>向上取整 4
+向下取整 3</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import math
+
+n = 3.7
+print(f"向上取整 {math.ceil(n)}")
+print(f"向下取整 {math.floor(n)}")</code></pre></div>
+<h4>小测验</h4>
+<p>导入 math 后，求 9 的平方根应该写？</p><ol>
+<li>sqrt(9)</li>
+<li>math.sqrt(9)</li>
+<li>math(sqrt, 9)</li>
+<li>import.sqrt(9)</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 用 import math 时，要带上模块名 math. 才能调用。</p>
+</div>
+<h2>第 5 章 · 面对错误和文件</h2>
+<p class='meta'>看懂报错信息、学会兜住错误，并让程序把数据存进文件。</p>
+<div class="lesson">
+<h3>读懂报错与 try / except</h3>
+<p class="meta">预计 15 分钟 · 基础 · 目标：会读 Python 的错误信息，并用 try/except 让程序不崩溃。</p>
+<h3>报错信息要从下往上看</h3>
+<pre class="snippet"><code>Traceback (most recent call last):
+  File "main.py", line 3, in &lt;module&gt;
+    print(10 / 0)
+ZeroDivisionError: division by zero</code></pre>
+<ul><li>最后一行：<strong>错误类型 + 原因</strong>，这是最重要的信息。</li><li>上面几行：出错的位置（文件和行号）。</li></ul>
+<table><thead><tr><th>报错</th><th>中文含义</th><th>常见原因</th></tr></thead><tbody><tr><td><code>SyntaxError</code></td><td>语法错误</td><td>括号/引号没配对、漏了冒号</td></tr><tr><td><code>IndentationError</code></td><td>缩进错误</td><td>该缩进没缩，或缩进不一致</td></tr><tr><td><code>NameError</code></td><td>名字不存在</td><td>变量名拼错、还没赋值</td></tr><tr><td><code>TypeError</code></td><td>类型不对</td><td>字符串和数字相加、参数个数不对</td></tr><tr><td><code>ValueError</code></td><td>值不对</td><td><code>int("abc")</code></td></tr><tr><td><code>IndexError</code></td><td>下标越界</td><td>列表只有 3 个元素却取第 5 个</td></tr><tr><td><code>KeyError</code></td><td>键不存在</td><td>字典里没有这个键</td></tr><tr><td><code>ZeroDivisionError</code></td><td>除以零</td><td>除数是 0</td></tr></tbody></table>
+<h3>try / except：把错误兜住</h3>
+<pre class="snippet"><code>try:
+    n = int(input("请输入一个数字："))
+    print(f"两倍是 {n * 2}")
+except ValueError:
+    print("这不是一个数字，请输入数字")</code></pre>
+<p>程序先尝试执行 try 里的代码；一旦出错，就跳到 except 里，而不是直接崩溃。</p>
+<h3>常用配套：else 和 finally</h3>
+<pre class="snippet"><code>try:
+    n = int("12")
+except ValueError:
+    print("转换失败")
+else:
+    print("转换成功", n)     # 没出错才执行
+finally:
+    print("无论如何都会执行")</code></pre>
+<div class="callout"><p>提示：不要用 try 包住一大片代码。只包住<strong>你预想到会出错的那一句</strong>，出问题才容易定位。</p></div>
+<h4>示例：安全地读数字</h4>
+<pre class="snippet"><code>text = input("请输入一个整数：")
+
+try:
+    n = int(text)
+    print(f"你输入的是 {n}，两倍是 {n * 2}")
+except ValueError:
+    print(f"'{text}' 不是整数，请重新运行并输入数字")</code></pre>
+<p>把输入框改成 abc 再运行，看看程序怎样优雅地应对错误。</p>
+<h4>练习 1：练习：不崩的除法</h4>
+<p>读入两个数（可能是 0），用 try/except 处理除以 0 的情况。</p>
+<p>输入框是 <code>10</code> 和 <code>0</code>，要求输出：</p>
+<pre class="snippet"><code>不能除以 0</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>a = int(input("被除数："))
+b = int(input("除数："))
+try:
+    print(a / b)
+except ZeroDivisionError:
+    print("不能除以 0")</code></pre></div>
+<h4>小测验</h4>
+<p>报错信息里最该先看的是哪一行？</p><ol>
+<li>第一行</li>
+<li>中间的行号</li>
+<li>最后一行</li>
+<li>文件路径</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 最后一行同时包含错误类型和原因，是解决问题的关键线索。</p>
+</div>
+<div class="lesson">
+<h3>文件读写</h3>
+<p class="meta">预计 15 分钟 · 基础 · 目标：会用 with open 读写文本文件，知道几种打开模式的区别。</p>
+<h3>写文件</h3>
+<pre class="snippet"><code>with open("note.txt", "w", encoding="utf-8") as f:
+    f.write("第一行\n")
+    f.write("第二行\n")</code></pre>
+<ul><li><code>"w"</code> 表示写入，会<strong>清空</strong>原文件再写。</li><li><code>"a"</code> 表示追加，在原内容后面接着写。</li><li><code>encoding="utf-8"</code> 让中文正常保存，强烈建议每次都写。</li><li><code>with</code> 会在代码块结束时自动关闭文件，不用手动 close。</li></ul>
+<h3>读文件</h3>
+<pre class="snippet"><code>with open("note.txt", "r", encoding="utf-8") as f:
+    text = f.read()          # 一次性读全部
+print(text)
+
+with open("note.txt", encoding="utf-8") as f:
+    for line in f:           # 一行一行读（大文件推荐）
+        print(line.strip())</code></pre>
+<table><thead><tr><th>模式</th><th>含义</th></tr></thead><tbody><tr><td><code>"r"</code></td><td>只读（默认），文件不存在会报错</td></tr><tr><td><code>"w"</code></td><td>写入，清空原有内容</td></tr><tr><td><code>"a"</code></td><td>追加到末尾</td></tr><tr><td><code>"r+"</code></td><td>可读可写</td></tr></tbody></table>
+<h3>文件不存在怎么办</h3>
+<pre class="snippet"><code>try:
+    with open("missing.txt", encoding="utf-8") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("文件还没创建")</code></pre>
+<div class="callout"><p>提示：在这个网页平台里，文件保存在浏览器的虚拟文件系统里，刷新页面就会消失。要在自己电脑上长期保存，请用本地安装的 Python 运行。</p></div>
+<h4>示例：写进去再读出来</h4>
+<pre class="snippet"><code>with open("note.txt", "w", encoding="utf-8") as f:
+    f.write("今天学了文件读写\n")
+    f.write("这是我写进文件的第一句话\n")
+
+with open("note.txt", encoding="utf-8") as f:
+    for line in f:
+        print("读到：", line.strip())
+
+with open("note.txt", "a", encoding="utf-8") as f:
+    f.write("这行是追加的\n")
+
+with open("note.txt", encoding="utf-8") as f:
+    print(f.read())</code></pre>
+<p>先写入、再按行读、再追加，最后一次性读出全部内容对比。</p>
+<h4>练习 1：练习：写一个待办文件</h4>
+<p>把两件事写进 <code>todo.txt</code>，再读出来打印：</p>
+<pre class="snippet"><code>1. 学 Python
+2. 写代码</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>with open("todo.txt", "w", encoding="utf-8") as f:
+    f.write("1. 学 Python\n")
+    f.write("2. 写代码\n")
+
+with open("todo.txt", encoding="utf-8") as f:
+    print(f.read(), end="")</code></pre></div>
+<h4>小测验</h4>
+<p>用 "w" 模式打开一个已有内容的文件会怎样？</p><ol>
+<li>原内容保留，新内容加在后面</li>
+<li>原内容被清空</li>
+<li>报错</li>
+<li>变成只读</li>
+</ol>
+<p><b>答案：第 2 个</b> —— w 模式会先清空文件。想保留原内容请用 a 模式追加。</p>
+</div>
+<h2>第 6 章 · 动手做项目</h2>
+<p class='meta'>把前面学的东西拼起来，做出四个能拿给朋友玩的小程序。</p>
+<div class="lesson">
+<h3>项目一：猜数字游戏</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：用 input、while、if、random 写一个完整的互动小程序。</p>
+<h3>第一步：先想清楚要做什么</h3>
+<ol><li>电脑随机想一个 1~100 的数。</li><li>玩家猜一个数，电脑告诉他是大了还是小了。</li><li>猜对就结束，并告诉他一共猜了几次。</li></ol>
+<h3>第二步：把它写成中文步骤（伪代码）</h3>
+<pre class="snippet"><code>生成随机答案
+次数 = 0
+只要还没猜对:
+    读入一个猜测
+    次数加一
+    如果猜大了 → 提示小了
+    如果猜小了 → 提示大了
+    否则 → 恭喜，报出次数，结束</code></pre>
+<h3>第三步：翻成 Python</h3>
+<pre class="snippet"><code>import random
+
+secret = random.randint(1, 100)
+count = 0
+
+while True:
+    guess = int(input("猜一个 1~100 的数字："))
+    count += 1
+    if guess &gt; secret:
+        print("大了，再试试")
+    elif guess &lt; secret:
+        print("小了，再试试")
+    else:
+        print(f"猜对啦！你一共猜了 {count} 次")
+        break</code></pre>
+<h3>想法升级（做完练习后可以试试）</h3>
+<ul><li>限制最多猜 7 次，超过就公布答案。</li><li>猜的期间如果输入的不是数字，用 try/except 提示重来。</li><li>玩完问一句「再来一局吗？」，再套一层 while。</li></ul>
+<div class="callout"><p>提示：把大问题拆成小步骤，再一步步翻译成代码，这就是程序员解决问题的方式。这个思路比记住语法更重要。</p></div>
+<h4>示例：完整的猜数字游戏</h4>
+<pre class="snippet"><code># 真正玩游戏时用这一行：secret = random.randint(1, 100)
+secret = 42        # 为了让你能复现结果，这里先把答案固定住
+count = 0
+
+while True:
+    guess = int(input("猜一个 1~100 的数字："))
+    count += 1
+    if guess &gt; secret:
+        print("大了，再试试")
+    elif guess &lt; secret:
+        print("小了，再试试")
+    else:
+        print(f"猜对啦！答案是 {secret}，你一共猜了 {count} 次")
+        break</code></pre>
+<p>答案每次都不一样，所以输入框里的数字只是用来试玩。多运行几次体会一下。</p>
+<h4>练习 1：练习：把判断逻辑抽成函数</h4>
+<p>定义 <code>check_guess(secret, guess)</code>，返回：</p>
+<ul><li>猜大了 → <code>"太大了"</code></li><li>猜小了 → <code>"太小了"</code></li><li>猜对了 → <code>"猜对了"</code></li></ul>
+<p>这个函数会让游戏主体更清晰，也方便自动测试。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def check_guess(secret, guess):
+    if guess &gt; secret:
+        return "太大了"
+    elif guess &lt; secret:
+        return "太小了"
+    else:
+        return "猜对了"</code></pre></div>
+<h4>小测验</h4>
+<p>游戏循环写成 `while True:` 却忘了 break，会发生什么？</p><ol>
+<li>正常结束</li>
+<li>无限循环</li>
+<li>报语法错误</li>
+<li>自动跳出</li>
+</ol>
+<p><b>答案：第 2 个</b> —— while True 永远成立，必须有 break 或 return 才能结束循环。</p>
+</div>
+<div class="lesson">
+<h3>项目二：石头剪刀布</h3>
+<p class="meta">预计 18 分钟 · 综合 · 目标：用 random.choice、字典和函数写一个对战小游戏。</p>
+<h3>游戏规则怎么变成代码</h3>
+<p>三种手势之间的关系，用文字描述最容易错，所以先列成表：</p>
+<table><thead><tr><th>玩家</th><th>电脑</th><th>结果</th></tr></thead><tbody><tr><td>石头</td><td>剪刀</td><td>玩家赢</td></tr><tr><td>剪刀</td><td>布</td><td>玩家赢</td></tr><tr><td>布</td><td>石头</td><td>玩家赢</td></tr><tr><td>两个一样</td><td>两个一样</td><td>平局</td></tr><tr><td>其他</td><td>其他</td><td>玩家输</td></tr></tbody></table>
+<h3>用字典描述「谁赢谁」更聪明</h3>
+<pre class="snippet"><code>beats = {"石头": "剪刀", "剪刀": "布", "布": "石头"}
+
+def judge(player, computer):
+    if player == computer:
+        return "平局"
+    if beats[player] == computer:
+        return "你赢了"
+    return "你输了"</code></pre>
+<p>这样的好处是：新增一种手势只需要改字典，不用改一堆 if。</p>
+<h3>主程序</h3>
+<pre class="snippet"><code>import random
+
+choices = ["石头", "剪刀", "布"]
+player = input("请出拳（石头/剪刀/布）：")
+computer = random.choice(choices)
+print(f"电脑出的是 {computer}")
+print(judge(player, computer))</code></pre>
+<div class="callout"><p>提示：判断输入是否合法也很重要：<code>if player not in choices:</code> 就提示用户重新输入。</p></div>
+<h4>示例：一局定胜负</h4>
+<pre class="snippet"><code>import random
+
+beats = {"石头": "剪刀", "剪刀": "布", "布": "石头"}
+
+def judge(player, computer):
+    if player == computer:
+        return "平局"
+    if beats[player] == computer:
+        return "你赢了"
+    return "你输了"
+
+choices = ["石头", "剪刀", "布"]
+player = input("请出拳（石头/剪刀/布）：")
+computer = random.choice(choices)
+print(f"你出 {player}，电脑出 {computer}")
+print(judge(player, computer))</code></pre>
+<p>把输入框改成「剪刀」再运行，看看结果怎么变化。</p>
+<h4>练习 1：练习：写对战裁判函数</h4>
+<p>实现 <code>judge(player, computer)</code>，返回 <code>"你赢了"</code>、<code>"你输了"</code> 或 <code>"平局"</code>。</p>
+<p>可以自己写多个 if，也可以用字典描述胜负关系（推荐）。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>beats = {"石头": "剪刀", "剪刀": "布", "布": "石头"}
+
+def judge(player, computer):
+    if player == computer:
+        return "平局"
+    if beats[player] == computer:
+        return "你赢了"
+    return "你输了"</code></pre></div>
+<h4>小测验</h4>
+<p>beats = {"石头": "剪刀"}，那么 beats["石头"] 是什么？</p><ol>
+<li>石头</li>
+<li>剪刀</li>
+<li>布</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 字典里键是石头，对应的值是剪刀，表示石头能赢剪刀。</p>
+</div>
+<div class="lesson">
+<h3>项目三：班级成绩管理</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：用列表套字典的组合，练习函数化的数据处理。</p>
+<h3>真实的数据长什么样</h3>
+<p>一个班里很多学生，每个学生有名字和分数，最自然的表示方式是<strong>列表里装字典</strong>：</p>
+<pre class="snippet"><code>students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 72},
+]</code></pre>
+<h3>遍历这种结构</h3>
+<pre class="snippet"><code>for s in students:
+    print(f"{s['name']}：{s['score']} 分")</code></pre>
+<p><code>s</code> 是其中一本字典，<code>s["name"]</code> 取名字，<code>s["score"]</code> 取分数。</p>
+<h3>拆成小函数更好维护</h3>
+<pre class="snippet"><code>def average(students):
+    total = 0
+    for s in students:
+        total += s["score"]
+    return total / len(students)
+
+def top_student(students):
+    best = students[0]
+    for s in students:
+        if s["score"] &gt; best["score"]:
+            best = s
+    return best["name"]</code></pre>
+<h3>打印一张成绩单</h3>
+<pre class="snippet"><code>print(f"平均分 {average(students):.1f}")
+print(f"第一名 {top_student(students)}")
+for s in students:
+    print(f"{s['name']}: {s['score']}")</code></pre>
+<div class="callout"><p>提示：<code>list.sort(key=...)</code> 可以实现按分数排序，等你想升级时再研究：</p></div>
+<pre class="snippet"><code>students.sort(key=lambda s: s["score"], reverse=True)</code></pre>
+<h4>示例：一份完整的成绩单</h4>
+<pre class="snippet"><code>students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 72},
+]
+
+def average(students):
+    total = 0
+    for s in students:
+        total += s["score"]
+    return total / len(students)
+
+def top_student(students):
+    best = students[0]
+    for s in students:
+        if s["score"] &gt; best["score"]:
+            best = s
+    return best["name"]
+
+print(f"平均分 {average(students):.1f}")
+print(f"第一名 {top_student(students)}")
+for s in students:
+    print(f"{s['name']}: {s['score']}")</code></pre>
+<p>注意函数只负责计算，打印交给主程序，这样每个函数都很短、很好测试。</p>
+<h4>练习 1：练习：写两个统计函数</h4>
+<p>实现两个函数，对 <code>students</code> 这种数据（列表里装字典）工作：</p>
+<ol><li><code>average(students)</code> 返回平均分（一个数字）</li><li><code>top_student(students)</code> 返回分数最高的学生名字</li></ol>
+<p>如果分数相同，返回先出现的那一个。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 72},
+]
+
+def average(students):
+    total = 0
+    for s in students:
+        total += s["score"]
+    return total / len(students)
+
+def top_student(students):
+    best = students[0]
+    for s in students:
+        if s["score"] &gt; best["score"]:
+            best = s
+    return best["name"]</code></pre></div>
+<h4>小测验</h4>
+<p>students = [{"name": "小明", "score": 88}]，students[0]["score"] 是多少？</p><ol>
+<li>88</li>
+<li>小明</li>
+<li>报错</li>
+<li>[]</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 先取列表的第 0 个（一本字典），再从字典里取 score。</p>
+</div>
+<div class="lesson">
+<h3>项目四：文章词频统计</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：用 split、字典和排序做一次真实的数据分析。</p>
+<h3>要解决的问题</h3>
+<p>给一段英文，数一数每个单词出现了几次，找出出现最多的词。这就是最基础的文本分析。</p>
+<h3>核心思路：用字典当计数器</h3>
+<pre class="snippet"><code>text = "python is fun python is easy"
+counts = {}
+for word in text.split():
+    if word in counts:
+        counts[word] += 1        # 见过，加一
+    else:
+        counts[word] = 1         # 第一次见，记为 1
+print(counts)                    # {'python': 2, 'is': 2, 'fun': 1, 'easy': 1}</code></pre>
+<p>这个模式叫「计数」，以后做统计、投票、日志分析都会用到。</p>
+<h3>按次数排序</h3>
+<pre class="snippet"><code>items = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
+print(items[0])      # ('python', 2) 出现最多的词</code></pre>
+<h3>让统计更干净</h3>
+<pre class="snippet"><code>import string
+
+word = word.strip(string.punctuation).lower()</code></pre>
+<p>这样 <code>Python,</code> 和 <code>python</code> 就会被算成同一个词。</p>
+<div class="callout"><p>提示：标准库里的 <code>collections.Counter</code> 三行就能搞定计数，等你把这版手写代码写熟之后再用它：</p></div>
+<pre class="snippet"><code>from collections import Counter
+print(Counter(text.split()).most_common(3))</code></pre>
+<h4>示例：统计并排出前几名</h4>
+<pre class="snippet"><code>text = "python is fun and python is powerful"
+
+counts = {}
+for word in text.split():
+    if word in counts:
+        counts[word] += 1
+    else:
+        counts[word] = 1
+
+items = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
+print(f"一共 {len(counts)} 个不同的单词")
+for word, n in items:
+    print(f"{word}: {n}")</code></pre>
+<p>sorted 加上 key 和 reverse，就能按出现次数从多到少排列。</p>
+<h4>练习 1：练习：词频统计函数</h4>
+<p>实现两个函数：</p>
+<ol><li><code>word_count(text)</code>：返回一个字典，记录每个单词出现的次数</li><li><code>most_common(counts)</code>：返回出现次数最多的单词</li></ol>
+<p>（把单词先 <code>lower()</code> 转成小写，这样 Python 和 python 算同一个）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def word_count(text):
+    counts = {}
+    for word in text.lower().split():
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    return counts
+
+def most_common(counts):
+    return max(counts, key=counts.get)</code></pre></div>
+<h4>小测验</h4>
+<p>counts = {}，执行 counts["a"] = counts.get("a", 0) + 1 两次后 counts 是什么？</p><ol>
+<li>{"a": 1}</li>
+<li>{"a": 2}</li>
+<li>{}</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— get 在键不存在时返回默认值 0，所以第一次得到 1，第二次得到 2。</p>
+</div>
+<div class="lesson">
+<h3>结业：你的下一步路线图</h3>
+<p class="meta">预计 18 分钟 · 综合 · 目标：完成毕业小测，知道接下来该学什么、去哪儿练。</p>
+<h3>你已经掌握的东西</h3>
+<ul><li>输出、输入、变量、四种数据类型和它们之间的转换</li><li>条件判断、逻辑运算、while 和 for 循环</li><li>列表、字典、元组、集合，以及遍历和统计</li><li>自己定义函数、参数、返回值、作用域</li><li>导入模块、看懂报错、处理异常、读写文件</li><li>用上面这些写完了四个完整小程序</li></ul>
+<p>这已经是一个能真正干活的 Python 入门水平了。</p>
+<h3>接下来学什么的建议顺序</h3>
+<ol><li><strong>面向对象（class）</strong>：把「数据 + 操作」打包在一起，适合写大一点的项目。</li><li><strong>标准库进阶</strong>：<code>collections</code>、<code>datetime</code>、<code>pathlib</code>、<code>re</code>（正则表达式）。</li><li><strong>第三方库</strong>：用 <code>pip install</code> 安装别人的库，比如 <code>requests</code> 抓网页、<code>pandas</code> 处理表格。</li><li><strong>做项目</strong>：命令行记账本、爬取天气、自动整理文件、简单的网页（Flask / FastAPI）。</li><li><strong>算法练习</strong>：从简单题开始，每天 1 题，重点是把题目翻译成代码的过程。</li></ol>
+<h3>三条长期有效的建议</h3>
+<ul><li><strong>每天写一点</strong>，20 分钟胜过周末突击 5 小时。</li><li><strong>不要抄完就跑</strong>：看懂答案之后，关掉答案自己重写一遍。</li><li><strong>报错先自己读三遍</strong>，再用搜索引擎搜「报错信息 + Python」，你会看到很多和你一样的人。</li></ul>
+<h3>常用调试三步法</h3>
+<ol><li>把变量 <code>print</code> 出来，看它到底是多少。</li><li>缩小范围：把一半代码注释掉，看错误是否还在。</li><li>一次只改一个地方，改完马上运行。</li></ol>
+<div class="callout"><p>提示：学完不代表记住。回头把每节课的练习再做一遍，速度会快很多，收获也会更大。</p></div>
+<h4>示例：毕业作品：打印 20 以内的质数</h4>
+<pre class="snippet"><code>def is_prime(n):
+    if n &lt; 2:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+primes = []
+for n in range(1, 21):
+    if is_prime(n):
+        primes.append(n)
+
+print(f"20 以内的质数：{primes}")</code></pre>
+<p>这个程序把循环、条件、列表、函数全用上了，是很好的总结练习。</p>
+<h4>练习 1：毕业小测：给质数判断加个上限参数</h4>
+<p>实现 <code>primes_upto(limit)</code>，返回不超过 limit 的所有质数列表。</p>
+<p>然后打印 <code>primes_upto(20)</code>，输出：</p>
+<pre class="snippet"><code>20 以内的质数：[2, 3, 5, 7, 11, 13, 17, 19]</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def is_prime(n):
+    if n &lt; 2:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+def primes_upto(limit):
+    result = []
+    for n in range(2, limit + 1):
+        if is_prime(n):
+            result.append(n)
+    return result
+
+print(f"20 以内的质数：{primes_upto(20)}")</code></pre></div>
+<h4>小测验</h4>
+<p>想让 Python 更上一层楼，下面哪种做法最有效？</p><ol>
+<li>每天写 20 分钟，并动手做小项目</li>
+<li>把语法书从头背到尾</li>
+<li>只看视频不动手</li>
+<li>等全部学完再开始写代码</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 编程是手上功夫，持续练习加上做真实的小项目，进步最快。</p>
+</div>
+<h2>第 7 章 · 写得更专业</h2>
+<p class='meta'>推导式、可变参数、lambda、写自己的模块、代码规范与调试——从「能跑」到「好看好维护」。</p>
+<div class="lesson">
+<h3>列表推导式：一行搞定循环</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：会用列表推导式生成、筛选列表，并知道什么时候该换回普通循环。</p>
+<h3>从三行变成一行</h3>
+<pre class="snippet"><code>squares = []
+for x in range(1, 6):
+    squares.append(x * x)
+print(squares)          # [1, 4, 9, 16, 25]</code></pre>
+<p>同样的事情，一行就能写完：</p>
+<pre class="snippet"><code>squares = [x * x for x in range(1, 6)]
+print(squares)</code></pre>
+<p>读法：先把「要放进去的东西」写在最前面，再把 <code>for</code> 写在后面。</p>
+<h3>加条件筛选</h3>
+<pre class="snippet"><code>evens = [x for x in range(1, 11) if x % 2 == 0]      # [2, 4, 6, 8, 10]
+words = ["hi", "hello", "ok"]
+long_words = [w for w in words if len(w) &gt; 2]        # ['hello']</code></pre>
+<h3>什么时候不要用</h3>
+<p>出现两层循环、或者条件特别绕的时候，请换回普通循环。代码是给人看的，一行写太满反而是负担。</p>
+<div class="callout warn"><p>注意：方括号最前面写的是「表达式」，不是「动作」。<code>[print(x) for x in range(3)]</code> 会生成一串 <code>None</code>，想输出就老老实实写 for 循环。</p></div>
+<h4>示例：筛选、加工、拼接一次完成</h4>
+<pre class="snippet"><code>scores = [55, 88, 92, 60, 73]
+
+passed = [s for s in scores if s &gt;= 60]
+print("及格分数：", passed)
+
+doubled = [s * 2 for s in scores]
+print("全部翻倍：", doubled)
+
+names = ["小明", "小红", "小刚"]
+greetings = [f"你好，{n}" for n in names]
+print(greetings)</code></pre>
+<p>第三段把 f-string 放进推导式，一次生成整份问候语。</p>
+<h4>练习 1：练习：生成平方数列表</h4>
+<p>用<strong>一行</strong>列表推导式生成 1 到 10 的平方数，然后打印出来，输出：</p>
+<pre class="snippet"><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>squares = [x * x for x in range(1, 11)]
+print(squares)</code></pre></div>
+<h4>练习 2：挑战：筛选并转大写</h4>
+<p>已有 <code>words = ["python", "is", "hello", "ok"]</code>。</p>
+<p>用一行列表推导式，挑出长度大于 3 的单词并转成大写，输出：</p>
+<pre class="snippet"><code>['PYTHON', 'HELLO']</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>words = ["python", "is", "hello", "ok"]
+result = [w.upper() for w in words if len(w) &gt; 3]
+print(result)</code></pre></div>
+<h4>小测验</h4>
+<p>[x for x in range(4)] 的结果是？</p><ol>
+<li>[1, 2, 3, 4]</li>
+<li>[0, 1, 2, 3]</li>
+<li>[0, 1, 2, 3, 4]</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— range(4) 从 0 开始，含头不含尾，所以是 0 到 3。</p>
+</div>
+<div class="lesson">
+<h3>推导式家族：字典、集合与生成器</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：会用字典推导、集合推导和生成器表达式处理数据。</p>
+<h3>字典推导式：一边遍历一边造字典</h3>
+<pre class="snippet"><code>prices = {"苹果": 5, "香蕉": 2}
+with_tax = {name: round(p * 1.1, 2) for name, p in prices.items()}
+print(with_tax)          # {'苹果': 5.5, '香蕉': 2.2}</code></pre>
+<h3>集合推导式：自动去重</h3>
+<pre class="snippet"><code>students = [{"name": "小明"}, {"name": "小红"}, {"name": "小明"}]
+names = {s["name"] for s in students}
+print(names)             # {'小明', '小红'}</code></pre>
+<p>注意用的是花括号，而且没有冒号，这就是集合。</p>
+<h3>生成器表达式：省内存的懒加载</h3>
+<pre class="snippet"><code>total = sum(x * x for x in range(1, 101))
+print(total)             # 338350</code></pre>
+<p>把方括号换成圆括号就是生成器表达式：它不一次性把所有结果算出来，而是边用边算。数据量大时非常有用。</p>
+<table><thead><tr><th>写法</th><th>结果类型</th><th>说明</th></tr></thead><tbody><tr><td><code>[x for x in ...]</code></td><td>列表</td><td>全部算出来存起来</td></tr><tr><td><code>{x for x in ...}</code></td><td>集合</td><td>自动去重</td></tr><tr><td><code>{k: v for ...}</code></td><td>字典</td><td>键值对</td></tr><tr><td><code>(x for x in ...)</code></td><td>生成器</td><td>惰性求值，只能遍历一次</td></tr></tbody></table>
+<div class="callout warn"><p>注意：生成器只能遍历一次。第二次再遍历就是空的，需要重新生成。</p></div>
+<h4>示例：三种推导式对比</h4>
+<pre class="snippet"><code>prices = {"苹果": 5, "香蕉": 2, "橘子": 4}
+with_tax = {k: round(v * 1.1, 2) for k, v in prices.items()}
+print(with_tax)
+
+nums = [1, 2, 2, 3, 3, 3]
+unique = {n for n in nums}
+print(unique)
+
+total = sum(n * n for n in range(1, 11))
+print(f"1 到 10 的平方和是 {total}")</code></pre>
+<p>集合的打印顺序在 Python 里是插入顺序去重后的结果，不用纠结顺序。</p>
+<h4>练习 1：练习：造一个平方字典</h4>
+<p>用字典推导式把 <code>nums = [1, 2, 3, 4]</code> 变成「数字 → 它的平方」的字典，打印结果：</p>
+<pre class="snippet"><code>{1: 1, 2: 4, 3: 9, 4: 16}</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>nums = [1, 2, 3, 4]
+squares = {n: n * n for n in nums}
+print(squares)</code></pre></div>
+<h4>小测验</h4>
+<p>{x for x in [1, 1, 2]} 的结果是？</p><ol>
+<li>[1, 1, 2]</li>
+<li>{1, 2}</li>
+<li>{1: 2}</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 花括号且没有冒号就是集合，集合会自动去重。</p>
+</div>
+<div class="lesson">
+<h3>参数进阶：*args 与 **kwargs</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会写能接收任意个参数的函数，并会解包列表和字典来调用函数。</p>
+<h3>*args：接收任意多个位置参数</h3>
+<pre class="snippet"><code>def total(*nums):
+    return sum(nums)
+
+print(total())            # 0
+print(total(1, 2, 3))     # 6</code></pre>
+<p>函数里的 <code>nums</code> 是一个<strong>元组</strong>，装着你传进来的所有值。</p>
+<h3>**kwargs：接收任意多个关键字参数</h3>
+<pre class="snippet"><code>def describe(**info):
+    for k, v in info.items():
+        print(f"{k}: {v}")
+
+describe(name="小明", age=18)</code></pre>
+<p><code>info</code> 是一个<strong>字典</strong>。名字 <code>args</code>、<code>kwargs</code> 只是习惯用法，重点在 <code>*</code> 和 <code>**</code>。</p>
+<h3>参数的排列顺序</h3>
+<pre class="snippet"><code>def f(a, b=1, *args, key=None, **kwargs):
+    ...</code></pre>
+<p>顺序固定为：普通参数 → 默认参数 → <code>*args</code> → 关键字专用参数 → <code>**kwargs</code>。</p>
+<h3>解包：把列表和字典摊开传进去</h3>
+<pre class="snippet"><code>nums = [3, 1, 2]
+print(total(*nums))        # 6，等于 total(3, 1, 2)
+
+config = {"name": "小红", "age": 20}
+describe(**config)         # 等于 describe(name="小红", age=20)</code></pre>
+<div class="callout"><p>提示：写工具函数时常用这个技巧，比如日志函数的 <code>log(msg, *tags)</code>。</p></div>
+<h4>示例：万能汇总函数</h4>
+<pre class="snippet"><code>def total(*nums):
+    return sum(nums)
+
+def report(title, *items, sep=" | "):
+    return f"{title}: " + sep.join(items)
+
+def config(**info):
+    for k, v in info.items():
+        print(f"  {k} = {v}")
+
+print(total(1, 2, 3, 4))
+print(report("本周任务", "学函数", "做练习", "写笔记"))
+print(report("本周任务", "学函数", "做练习", sep=" -&gt; "))
+config(语言="Python", 等级="入门")</code></pre>
+<p>sep 是关键字专用参数（写在 *items 后面），调用时只能用 sep= 传值。</p>
+<h4>练习 1：练习：写两个可变参数函数</h4>
+<p>实现两个函数：</p>
+<ol><li><code>total(*nums)</code>：返回所有数字的和，一个都不传时返回 0</li><li><code>join_words(*words, sep="-")</code>：用 sep 把单词拼起来，默认用短横线</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def total(*nums):
+    return sum(nums)
+
+def join_words(*words, sep="-"):
+    return sep.join(words)</code></pre></div>
+<h4>小测验</h4>
+<p>函数里 def f(*args) 的 args 是什么类型？</p><ol>
+<li>列表</li>
+<li>元组</li>
+<li>字典</li>
+<li>集合</li>
+</ol>
+<p><b>答案：第 2 个</b> —— *args 收集成元组，**kwargs 收集成字典。</p>
+</div>
+<div class="lesson">
+<h3>lambda 与排序的 key</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：会用 key 函数按规则排序，会写简单的 lambda。</p>
+<h3>sorted 的 key 参数</h3>
+<pre class="snippet"><code>nums = [3, 1, 2]
+print(sorted(nums))                          # [1, 2, 3]
+
+words = ["pear", "fig", "apple"]
+print(sorted(words, key=len))                # ['fig', 'pear', 'apple']</code></pre>
+<p><code>key</code> 接收一个函数，<code>sorted</code> 会先把每个元素交给它算出一个「排序依据」，再按依据排序。</p>
+<h3>lambda：用完就扔的小函数</h3>
+<pre class="snippet"><code>double = lambda x: x * 2        # 等价于 def double(x): return x * 2
+print(double(5))</code></pre>
+<p>lambda 只能写一个表达式，适合当场用一次的场景，最典型就是排序：</p>
+<pre class="snippet"><code>students = [{"name": "小明", "score": 88}, {"name": "小红", "score": 95}]
+students.sort(key=lambda s: s["score"], reverse=True)
+print(students[0]["name"])      # 小红</code></pre>
+<h3>多级排序：key 返回元组</h3>
+<pre class="snippet"><code># 先按分数从高到低，分数一样就按名字升序
+students.sort(key=lambda s: (-s["score"], s["name"]))</code></pre>
+<p>加负号就是把「升序」变成「降序」。</p>
+<h3>其他常用组合</h3>
+<pre class="snippet"><code>data = {"a": 3, "b": 9, "c": 5}
+print(sorted(data.items(), key=lambda kv: kv[1], reverse=True))
+print(max(data, key=data.get))      # 值最大的键：b</code></pre>
+<div class="callout"><p>提示：<code>key=len</code>、<code>key=str.lower</code>、<code>key=abs</code> 这类现成函数直接用就好，不用非套 lambda。</p></div>
+<h4>示例：做一张排行榜</h4>
+<pre class="snippet"><code>students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 88},
+]
+
+students.sort(key=lambda s: (-s["score"], s["name"]))
+
+for i, s in enumerate(students, start=1):
+    print(f"{i}. {s['name']} {s['score']} 分")</code></pre>
+<p>enumerate(列表, start=1) 让编号从 1 开始，比手写 i + 1 更清楚。</p>
+<h4>练习 1：练习：按长度和字母排序</h4>
+<p>已有 <code>words = ["pear", "fig", "apple", "kiwi", "date"]</code>。</p>
+<p>按<strong>长度从长到短</strong>排序，长度相同时按<strong>字母从小到大的顺序</strong>，输出：</p>
+<pre class="snippet"><code>['apple', 'date', 'kiwi', 'pear', 'fig']</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>words = ["pear", "fig", "apple", "kiwi", "date"]
+result = sorted(words, key=lambda w: (-len(w), w))
+print(result)</code></pre></div>
+<h4>小测验</h4>
+<p>sorted(words, key=len) 表示什么？</p><ol>
+<li>按单词内容排序</li>
+<li>按单词长度排序</li>
+<li>反转顺序</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— key 指定排序依据，len 表示用每个元素的长度作为依据。</p>
+</div>
+<div class="lesson">
+<h3>把自己的代码变成模块</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：理解模块和包，会用 if __name__ == "__main__" 让文件既能运行又能被导入。</p>
+<h3>一个 .py 文件就是一个模块</h3>
+<p>假设你写了 <code>mytool.py</code>：</p>
+<pre class="snippet"><code>def double(x):
+    return x * 2
+
+def shout(text):
+    return text.upper() + "!"</code></pre>
+<p>在同一个文件夹的 <code>main.py</code> 里就能这样用：</p>
+<pre class="snippet"><code>import mytool
+print(mytool.double(21))
+
+from mytool import shout
+print(shout("hello"))</code></pre>
+<p>三种导入方式：</p>
+<table><thead><tr><th>写法</th><th>用法</th><th>适合</th></tr></thead><tbody><tr><td><code>import mytool</code></td><td><code>mytool.double(3)</code></td><td>想看清来源</td></tr><tr><td><code>from mytool import double</code></td><td><code>double(3)</code></td><td>用得最多的函数</td></tr><tr><td><code>import mytool as t</code></td><td><code>t.double(3)</code></td><td>名字太长时</td></tr></tbody></table>
+<h3>if __name__ == "__main__"：这段只在直接运行时执行</h3>
+<pre class="snippet"><code>def double(x):
+    return x * 2
+
+if __name__ == "__main__":
+    print(double(21))      # 直接运行本文件时才打印</code></pre>
+<p>当这个文件<strong>被别人导入</strong>时，<code>__name__</code> 不是 <code>"__main__"</code>，这段就不会执行——这样就不会在你导入模块时莫名其妙地打印一堆东西。</p>
+<h3>包：文件夹装的模块</h3>
+<pre class="snippet"><code>myproject/
+    main.py
+    utils/
+        __init__.py
+        text.py
+        numbers.py</code></pre>
+<pre class="snippet"><code>from utils import text          # 导入包里的模块
+print(text.clean("  hi  "))</code></pre>
+<div class="callout"><p>提示：标准库、第三方库、自己写的模块，导入方式完全一样。你现在已经会读别人的库文档了。</p></div>
+<h4>示例：既能当脚本又能当模块</h4>
+<pre class="snippet"><code>import statistics
+
+def average(nums):
+    return sum(nums) / len(nums)
+
+def middle(nums):
+    return statistics.median(nums)
+
+if __name__ == "__main__":
+    data = [88, 92, 79, 95, 70]
+    print(f"平均分 {average(data):.1f}")
+    print(f"中位数 {middle(data)}")</code></pre>
+<p>在这个网页里，你的代码是被当作主程序执行的，所以 __name__ 正好等于 __main__，会打印出来。</p>
+<h4>练习 1：练习：借用 statistics 模块</h4>
+<p>导入 <code>statistics</code> 模块，用它的 <code>median</code> 函数求下面数据的中位数并打印：</p>
+<pre class="snippet"><code>中位数 88</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import statistics
+
+data = [88, 92, 79, 95, 70]
+print(f"中位数 {statistics.median(data)}")</code></pre></div>
+<h4>小测验</h4>
+<p>if __name__ == "__main__": 里的代码什么时候会执行？</p><ol>
+<li>任何时候</li>
+<li>只有直接运行这个文件时</li>
+<li>只有被导入时</li>
+<li>永远不执行</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 被导入时 __name__ 是模块名，只有直接运行时才是 __main__。</p>
+</div>
+<div class="lesson">
+<h3>代码规范与调试技巧</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：写出别人看得懂的代码，并掌握三种实用的调试方法。</p>
+<h3>命名规范（PEP 8）</h3>
+<table><thead><tr><th>对象</th><th>写法</th><th>例子</th></tr></thead><tbody><tr><td>变量、函数</td><td>小写加下划线</td><td><code>total_price</code>、<code>find_user</code></td></tr><tr><td>常量</td><td>全大写</td><td><code>TAX_RATE = 0.1</code></td></tr><tr><td>类</td><td>首字母大写</td><td><code>class Student</code></td></tr><tr><td>「内部使用」</td><td>前面加下划线</td><td><code>_helper()</code></td></tr></tbody></table>
+<h3>让代码清爽的几条</h3>
+<ul><li>缩进统一 4 个空格，不要混用 Tab。</li><li>每行别太长，一行超过 100 个字符就该换行。</li><li>函数之间空一行，逻辑分组之间空一行。</li><li>import 放文件最上面，顺序：标准库 → 第三方库 → 自己写的模块。</li><li>别写魔法数字：<code>0.1</code> 直接写在代码里，三个月后没人知道它是什么。提成常量 <code>TAX_RATE = 0.1</code>。</li></ul>
+<h3>三种调试方法</h3>
+<p><strong>方法一：把变量打印出来</strong></p>
+<pre class="snippet"><code>print(f"调试：total = {total}, count = {count}")</code></pre>
+<p><strong>方法二：缩小范围</strong></p>
+<p>把怀疑的一半代码注释掉（前面加 <code>#</code>），如果错误消失，问题就在被注释的那一半里。</p>
+<p><strong>方法三：用 assert 写死你的期待</strong></p>
+<pre class="snippet"><code>def average(nums):
+    result = sum(nums) / len(nums)
+    assert 0 &lt;= result &lt;= 100, f"平均分不合理：{result}"
+    return result</code></pre>
+<p>断言失败会立刻报错并告诉你是哪个值不对，比后面出错再回头找要快得多。</p>
+<h3>坏味道清单</h3>
+<ul><li>同名变量在不同地方代表不同的东西。</li><li>一个函数干三件事，长度超过 50 行。</li><li>复制粘贴三遍的代码——那就该抽成函数了。</li><li>变量名叫 <code>a</code>、<code>x1</code>、<code>temp2</code>。</li></ul>
+<div class="callout"><p>提示：命名想不出来，往往说明这段代码的职责还不清楚。先把名字想清楚再写。参数名也一样重要。</p></div>
+<h4>示例：从坏代码到好代码</h4>
+<pre class="snippet"><code># 坏味道版本：魔法数字 + 名字不清楚
+def f(x):
+    return x * 1.1
+
+# 清爽版本：常量 + 清楚的名字 + 处理小数尾巴
+TAX_RATE = 0.1
+
+def with_tax(price):
+    return round(price * (1 + TAX_RATE), 2)
+
+print(f(100))
+print(with_tax(100))</code></pre>
+<p>两个函数的数学结果一样，但第二个版本三个月后你自己也看得懂。</p>
+<h4>练习 1：练习：消灭魔法数字</h4>
+<p>下面这段代码里税率 0.1 是魔法数字，请把它提成常量 <code>TAX_RATE</code>，</p>
+<p>让 <code>with_tax(80)</code> 返回 <code>88.0</code>。</p>
+<p>（检查时会同时验证常量存在和函数结果）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>TAX_RATE = 0.1
+
+def with_tax(price):
+    return round(price * (1 + TAX_RATE), 2)
+
+print(with_tax(80))</code></pre></div>
+<h4>小测验</h4>
+<p>按 PEP 8，变量名应该怎么写？</p><ol>
+<li>totalPrice</li>
+<li>total_price</li>
+<li>TotalPrice</li>
+<li>TOTALPRICE</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 变量和函数用小写加下划线；类的名字才用大驼峰。</p>
+</div>
+<h2>第 8 章 · 面向对象入门</h2>
+<p class='meta'>把「数据」和「操作数据的方法」打包在一起，写出更像真实世界的代码。</p>
+<div class="lesson">
+<h3>为什么需要类</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：理解类与对象的关系，会写最简单的类和实例。</p>
+<h3>用字典表示学生，问题在哪</h3>
+<pre class="snippet"><code>student = {"name": "小明", "score": 88}
+print(student["name"])</code></pre>
+<p>字典能存数据，但它<strong>没有行为</strong>：想算这学生的等级，还得写一个额外的函数把字典传进去。而且字段名打错（<code>student["nane"]</code>）要到运行时才发现。</p>
+<h3>类：自己定义一种「数据类型」</h3>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+ming = Student("小明", 88)
+print(ming.name, ming.score)      # 小明 88</code></pre>
+<p>两个新词：</p>
+<ul><li><strong>类（class）</strong>：模板，比如「学生」这个概念。<code>Student</code> 本身就是类。</li><li><strong>对象（实例）</strong>：按模板做出来的具体东西。<code>ming</code> 是一个对象。</li></ul>
+<p><code>self</code> 表示「这个对象自己」。<code>__init__</code> 是初始化方法，创建对象时自动调用。</p>
+<h3>类能做的事，字典做不到</h3>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def level(self):
+        if self.score &gt;= 90:
+            return "优秀"
+        elif self.score &gt;= 60:
+            return "及格"
+        return "不及格"
+
+print(ming.level())      # 数据和操作在一起了</code></pre>
+<div class="callout"><p>提示：不要为了用类而用类。数据简单、操作少的时候字典就够了；当「一堆数据总是搭配同样几个操作」时，类会更合适。</p></div>
+<h4>示例：第一个类</h4>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+ming = Student("小明", 88)
+hong = Student("小红", 95)
+
+print(ming.name, ming.score)
+print(hong.name, hong.score)</code></pre>
+<p>同一个类可以造出很多对象，各自的数据互不影响。</p>
+<h4>练习 1：练习：定义 Dog 类</h4>
+<p>定义 <code>Dog</code> 类，初始化时接收 <code>name</code> 和 <code>age</code> 两个参数，分别存到 <code>self.name</code>、<code>self.age</code>。</p>
+<p>然后创建对象 <code>dog = Dog("旺财", 3)</code> 并打印：</p>
+<pre class="snippet"><code>旺财 3</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+dog = Dog("旺财", 3)
+print(dog.name, dog.age)</code></pre></div>
+<h4>小测验</h4>
+<p>创建对象时自动调用的方法是？</p><ol>
+<li>__main__</li>
+<li>__init__</li>
+<li>__call__</li>
+<li>__new__wind</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 创建对象时 Python 会自动调用 __init__ 做初始化。</p>
+</div>
+<div class="lesson">
+<h3>__init__ 与 self 讲透</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：彻底搞清 self 的含义，会给对象加属性和默认值。</p>
+<h3>self 就是「这个对象自己」</h3>
+<pre class="snippet"><code>class Counter:
+    def __init__(self, start=0):
+        self.count = start          # 给这个对象挂一个属性
+
+c1 = Counter()
+c2 = Counter(10)
+print(c1.count, c2.count)          # 0 10</code></pre>
+<p>调用 <code>c1.__init__()</code> 时，Python 偷偷把 <code>c1</code> 作为第一个参数传进去，所以在方法里 <code>self</code> 就是 <code>c1</code>。</p>
+<h3>属性可以随时加、随时改</h3>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score=0):
+        self.name = name
+        self.score = score
+
+s = Student("小明")
+s.score = 88          # 改属性
+s.city = "杭州"        # 加新属性（可行，但不推荐，容易乱）
+print(s.score, s.city)</code></pre>
+<h3>常见的三个错</h3>
+<pre class="snippet"><code>class A:
+    def __init__(self, x):
+        x = x                  # 错：只改了局部变量，对象身上什么都没有
+
+    def show(self):
+        print(self.x)          # 报 AttributeError</code></pre>
+<ul><li>忘了写 <code>self.</code>：数据只活在函数里，对象拿不到。</li><li>忘了在方法定义里写 <code>self</code> 参数：调用时报「参数个数不对」。</li><li>在类里直接写 <code>name = "小明"</code>：那是<strong>所有对象共享</strong>的类属性，不是每个对象自己的。想独立就用 <code>self.name</code>。</li></ul>
+<div class="callout"><p>提示：<code>self</code> 这个名字是习惯，不是关键字，但请别改名，全世界都这么写。</p></div>
+<h4>示例：两个对象互不干扰</h4>
+<pre class="snippet"><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+a = BankAccount("小明", 100)
+b = BankAccount("小红")
+
+a.balance += 50
+print(a.owner, a.balance)
+print(b.owner, b.balance)</code></pre>
+<p>给 a 加钱完全不影响 b，因为余额挂在各自的对象上。</p>
+<h4>练习 1：练习：Rectangle 类</h4>
+<p>定义 <code>Rectangle</code> 类，接收 <code>width</code> 和 <code>height</code>，存成同名属性。</p>
+<p>然后打印 <code>r.width * r.height</code>（面积），输出：<code>12</code></p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+r = Rectangle(3, 4)
+print(r.width * r.height)</code></pre></div>
+<h4>小测验</h4>
+<p>方法定义里的 self 代表什么？</p><ol>
+<li>类本身</li>
+<li>调用这个方法的对象</li>
+<li>一个固定的全局变量</li>
+<li>参数名，随便写</li>
+</ol>
+<p><b>答案：第 2 个</b> —— self 指向调用该方法的那个对象，Python 会自动传入。</p>
+</div>
+<div class="lesson">
+<h3>方法：让对象会做事</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会写带参数和返回值的方法，能用方法修改对象自己的状态。</p>
+<h3>方法就是「写在类里的函数」</h3>
+<pre class="snippet"><code>class Counter:
+    def __init__(self, start=0):
+        self.count = start
+
+    def add(self, n=1):
+        self.count += n
+        return self.count
+
+c = Counter()
+c.add()
+c.add(5)
+print(c.count)      # 6</code></pre>
+<p>方法的第一个参数永远是 <code>self</code>，调用时<strong>不用自己传</strong>。</p>
+<h3>修改对象状态的两种风格</h3>
+<pre class="snippet"><code># 风格一：直接改自己（原地修改）
+def deposit(self, amount):
+    self.balance += amount
+
+# 风格二：不改自己，返回新值（更安全）
+def with_interest(self, rate):
+    return self.balance * (1 + rate)</code></pre>
+<p>两种都能用，一个类里最好保持一致。</p>
+<h3>方法里可以调用别的方法</h3>
+<pre class="snippet"><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def can_afford(self, amount):
+        return amount &lt;= self.balance
+
+    def withdraw(self, amount):
+        if not self.can_afford(amount):
+            return "余额不足"
+        self.balance -= amount
+        return f"取款成功，余额 {self.balance}"</code></pre>
+<div class="callout"><p>提示：方法名用动词或「动词 + 名词」：<code>add</code>、<code>withdraw</code>、<code>can_afford</code>。读起来就像一句话。</p></div>
+<h4>示例：一个能取钱的账户</h4>
+<pre class="snippet"><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
+    def withdraw(self, amount):
+        if amount &gt; self.balance:
+            return "余额不足"
+        self.balance -= amount
+        return f"取款成功，余额 {self.balance}"
+
+acc = BankAccount("小明", 100)
+print(acc.deposit(50))
+print(acc.withdraw(30))
+print(acc.withdraw(1000))</code></pre>
+<p>the withdraw 里用 self.balance 判断和修改，这就是「对象自己管好自己的数据」。</p>
+<h4>练习 1：练习：Counter 计数器</h4>
+<p>定义 <code>Counter</code> 类：</p>
+<ul><li>初始化时可传 <code>start</code>，默认 0，存到 <code>self.count</code></li><li>方法 <code>add(n=1)</code>：把 count 加上 n</li><li>方法 <code>reset()</code>：把 count 归零</li></ul>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class Counter:
+    def __init__(self, start=0):
+        self.count = start
+
+    def add(self, n=1):
+        self.count += n
+
+    def reset(self):
+        self.count = 0</code></pre></div>
+<h4>小测验</h4>
+<p>调用对象的方法时，需要手动传 self 吗？</p><ol>
+<li>需要</li>
+<li>不需要，Python 自动传入</li>
+<li>只有类方法才需要</li>
+<li>看参数数量</li>
+</ol>
+<p><b>答案：第 2 个</b> —— Python 会把这个对象自动作为第一个参数传进去。</p>
+</div>
+<div class="lesson">
+<h3>继承：在别人的基础上改</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会用继承复用代码，会重写父类方法，会用 super()。</p>
+<h3>继承的基本写法</h3>
+<pre class="snippet"><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "..."
+
+class Dog(Animal):          # 括号里写父类
+    def speak(self):        # 重写父类的方法
+        return "汪"
+
+print(Dog("旺财").speak())    # 汪</code></pre>
+<p><code>Dog</code> 自动拥有了 <code>Animal</code> 的一切，只需要写出<strong>不一样</strong>的地方。</p>
+<h3>super()：调用父类的版本</h3>
+<pre class="snippet"><code>class Student(Animal):
+    def __init__(self, name, school):
+        super().__init__(name)     # 先把父类该做的事做了
+        self.school = school</code></pre>
+<p>忘了写 <code>super().__init__(...)</code>，父类里设置的属性就会丢失，后面一用就 <code>AttributeError</code>。</p>
+<h3>判断类型</h3>
+<pre class="snippet"><code>d = Dog("旺财")
+print(isinstance(d, Dog))       # True
+print(isinstance(d, Animal))    # True，子类也是父类的一种</code></pre>
+<h3>什么时候用继承</h3>
+<ul><li>用：几个类确实是「同一类东西，只有细节不同」——猫狗都是动物。</li><li>别用：只是碰巧有几个方法一样——那就把公共部分抽成一个函数或模块，而不是硬套继承。</li></ul>
+<div class="callout warn"><p>注意：继承层级不要超过两三层，超过之后读代码会非常累。组合（把对象放进属性里）往往比深层继承更好。</p></div>
+<h4>示例：动物叫声大会</h4>
+<pre class="snippet"><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "..."
+
+    def intro(self):
+        return f"我是 {self.name}，{self.speak()}"
+
+class Dog(Animal):
+    def speak(self):
+        return "汪"
+
+class Cat(Animal):
+    def speak(self):
+        return "喵"
+
+for a in [Dog("旺财"), Cat("咪咪"), Animal("神秘动物")]:
+    print(a.intro())</code></pre>
+<p>intro 只在父类写了一次，三个子类都能用，这就是继承省下的代码。</p>
+<h4>练习 1：练习：写两个会叫的子类</h4>
+<p>已有父类 <code>Animal</code>（有 <code>name</code> 属性和 <code>speak()</code> 方法）。</p>
+<p>请写两个子类：</p>
+<ul><li><code>Cat</code>：<code>speak()</code> 返回 <code>"喵"</code></li><li><code>Dog</code>：<code>speak()</code> 返回 <code>"汪"</code>，并且构造函数多接收一个 <code>breed</code> 存成属性</li></ul>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "..."
+
+class Cat(Animal):
+    def speak(self):
+        return "喵"
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    def speak(self):
+        return "汪"</code></pre></div>
+<h4>小测验</h4>
+<p>子类构造函数里忘记调用 super().__init__() 会怎样？</p><ol>
+<li>没事，照样能跑</li>
+<li>父类设置的属性不存在，用到就报错</li>
+<li>父类会被删除</li>
+<li>会自动调用</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 父类的初始化不会自动执行，父类属性就缺失了。</p>
+</div>
+<div class="lesson">
+<h3>__str__ 与魔术方法初识</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：让对象打印出来是人话，了解魔术方法的作用。</p>
+<h3>默认打印很难看</h3>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+print(Student("小明", 88))
+# &lt;__main__.Student object at 0x7f8b1c0d4a60&gt;   ← 看不懂</code></pre>
+<h3>__str__ 定义「打印出来长什么样」</h3>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def __str__(self):
+        return f"{self.name}（{self.score} 分）"
+
+print(Student("小明", 88))       # 小明（88 分）
+print(f"学生：{Student('小红', 95)}")</code></pre>
+<h3>其他常用魔术方法</h3>
+<table><thead><tr><th>方法</th><th>触发时机</th><th>例子</th></tr></thead><tbody><tr><td><code>__str__</code></td><td><code>print(对象)</code>、<code>str(对象)</code></td><td>给人看的描述</td></tr><tr><td><code>__repr__</code></td><td>在列表里打印、调试</td><td>给程序员看的描述</td></tr><tr><td><code>__len__</code></td><td><code>len(对象)</code></td><td>返回「长度」</td></tr><tr><td><code>__eq__</code></td><td><code>对象1 == 对象2</code></td><td>自己定义相等规则</td></tr><tr><td><code>__lt__</code></td><td><code>对象1 &lt; 对象2</code></td><td>支持排序</td></tr></tbody></table>
+<pre class="snippet"><code>class Playlist:
+    def __init__(self, songs):
+        self.songs = songs
+
+    def __len__(self):
+        return len(self.songs)
+
+    def __str__(self):
+        return f"歌单（{len(self.songs)} 首）"
+
+print(Playlist(["稻香", "晴天"]))
+print(len(Playlist(["稻香", "晴天"])))</code></pre>
+<div class="callout"><p>提示：日常写代码最常用的就是 <code>__str__</code>。加它三行，调试时能省很多时间。</p></div>
+<h4>示例：让打印变好看</h4>
+<pre class="snippet"><code>class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def __str__(self):
+        return f"{self.name}（{self.score} 分）"
+
+students = [Student("小明", 88), Student("小红", 95)]
+for s in students:
+    print(s)
+print(f"第一名：{students[1]}")</code></pre>
+<p>有了 __str__，对象就能自然地放进 f-string 和 print 里。</p>
+<h4>练习 1：练习：给 Money 加 __str__</h4>
+<p>定义 <code>Money</code> 类，接收 <code>amount</code> 存成属性，并实现 <code>__str__</code> 返回 <code>"50 元"</code> 这种格式。</p>
+<p>最后打印 <code>m</code>，输出 <code>50 元</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>class Money:
+    def __init__(self, amount):
+        self.amount = amount
+
+    def __str__(self):
+        return f"{self.amount} 元"
+
+m = Money(50)
+print(m)</code></pre></div>
+<h4>小测验</h4>
+<p>print(对象) 时会调用哪个方法？</p><ol>
+<li>__init__</li>
+<li>__print__</li>
+<li>__str__</li>
+<li>__main__</li>
+</ol>
+<p><b>答案：第 3 个</b> —— print 会用 __str__ 把对象转成字符串，没有定义时就用默认的地址写法。</p>
+</div>
+<h2>第 9 章 · 数据与文件进阶</h2>
+<p class='meta'>把程序的结果存下来：异常处理进阶、路径与编码、JSON、CSV，最后做一个报表项目。</p>
+<div class="lesson">
+<h3>异常进阶：精确地兜住问题</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会捕获多种异常、写 else/finally、用 raise 主动报错。</p>
+<h3>一个 try 配多个 except</h3>
+<pre class="snippet"><code>try:
+    age = int(input("年龄："))
+    print(10 / age)
+except ValueError:
+    print("请输入数字")
+except ZeroDivisionError:
+    print("年龄不可能是 0")</code></pre>
+<p>Python 会从上往下匹配异常类型，只执行第一个匹配的。</p>
+<h3>一次捕获几种</h3>
+<pre class="snippet"><code>try:
+    do_something()
+except (ValueError, TypeError) as e:
+    print(f"出错了：{e}")</code></pre>
+<p><code>as e</code> 把异常对象接出来，<code>e</code> 里带着原始的错误信息。</p>
+<h3>else 和 finally</h3>
+<pre class="snippet"><code>try:
+    n = int("12")
+except ValueError:
+    print("转换失败")
+else:
+    print("转换成功", n)      # 没出错才执行
+finally:
+    print("无论如何都执行")    # 收尾、关文件、解锁</code></pre>
+<h3>raise：主动抛错</h3>
+<pre class="snippet"><code>def set_age(age):
+    if age &lt; 0:
+        raise ValueError(f"年龄不能是负数：{age}")
+    return age</code></pre>
+<p>自己写函数时，遇到不该出现的输入就 <code>raise</code>，让错误<strong>尽早</strong>暴露，而不是让它在别的地方变成莫名其妙的 bug。</p>
+<h3>自定义异常</h3>
+<pre class="snippet"><code>class NotEnoughMoneyError(Exception):
+    pass
+
+def withdraw(balance, amount):
+    if amount &gt; balance:
+        raise NotEnoughMoneyError(f"余额 {balance} 不足，要取 {amount}")
+    return balance - amount</code></pre>
+<div class="callout warn"><p>注意：别写光秃秃的 <code>except:</code>。它会连键盘中断、程序退出信号一起吞掉，出问题极难排查。至少要写 <code>except Exception:</code>，最好写清楚具体类型。</p></div>
+<h4>示例：安全转换 + 收尾</h4>
+<pre class="snippet"><code>def safe_int(text, default=0):
+    try:
+        return int(text)
+    except ValueError:
+        return default
+    finally:
+        print(f"（处理完 {text!r}）")
+
+print(safe_int("42"))
+print(safe_int("abc", -1))</code></pre>
+<p>finally 里的语句不管成功失败都会执行，所以打印了两行。</p>
+<h4>练习 1：练习：安全转换与主动报错</h4>
+<p>实现两个函数：</p>
+<ol><li><code>safe_int(text, default=0)</code>：能转就返回整数，转不了返回 default</li><li><code>check_age(age)</code>：年龄小于 0 或大于 150 时 <code>raise ValueError</code>，正常时返回 age</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def safe_int(text, default=0):
+    try:
+        return int(text)
+    except ValueError:
+        return default
+
+def check_age(age):
+    if age &lt; 0 or age &gt; 150:
+        raise ValueError(f"不合理的年龄：{age}")
+    return age</code></pre></div>
+<h4>小测验</h4>
+<p>下面哪种 except 写法最好？</p><ol>
+<li>except:</li>
+<li>except Exception:</li>
+<li>except ValueError:</li>
+<li>except ():</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 写清楚具体的异常类型，问题才容易被定位，也不会吞掉不该吞的错误。</p>
+</div>
+<div class="lesson">
+<h3>路径、编码与大文件</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会用 pathlib 处理路径，用正确编码读写文件，安全地逐行处理大文件。</p>
+<h3>路径：用 pathlib 代替手工拼字符串</h3>
+<pre class="snippet"><code>from pathlib import Path
+
+path = Path("data") / "scores.txt"      # 自动用对分隔符
+print(path)                              # data/scores.txt（Windows 上是 data\scores.txt）
+print(path.exists())
+print(path.suffix)                       # .txt
+print(path.parent)</code></pre>
+<p>用 <code>Path("a") / "b.txt"</code> 拼路径，比 <code>"a" + "/" + "b.txt"</code> 靠谱得多。</p>
+<h3>相对路径 vs 绝对路径</h3>
+<ul><li>相对路径 <code>data/scores.txt</code>：相对于程序当前所在目录。</li><li>绝对路径 <code>C:/work/data/scores.txt</code>：从盘符开始，换目录也能找到。</li></ul>
+<p>程序里尽量用相对路径（把文件放在项目里），换电脑才不会失效。</p>
+<h3>编码：中文必须写 utf-8</h3>
+<pre class="snippet"><code>with open("note.txt", "w", encoding="utf-8") as f:
+    f.write("中文内容\n")</code></pre>
+<p>不加 <code>encoding="utf-8"</code>，在 Windows 上读写中文可能报 <code>UnicodeDecodeError</code>。养成习惯：<strong>每次打开文件都写 encoding</strong>。</p>
+<h3>大文件要一行一行读</h3>
+<pre class="snippet"><code># 不太好：一次全读进内存
+text = f.read()
+
+# 更好：逐行处理，内存占用恒定
+for line in f:
+    if "错误" in line:
+        print(line.strip())</code></pre>
+<h3>常用操作速查</h3>
+<table><thead><tr><th>需求</th><th>写法</th></tr></thead><tbody><tr><td>判断存在</td><td><code>Path("a.txt").exists()</code></td></tr><tr><td>新建目录</td><td><code>Path("logs").mkdir(exist_ok=True)</code></td></tr><tr><td>删除文件</td><td><code>Path("a.txt").unlink()</code></td></tr><tr><td>目录列表</td><td><code>for p in Path(".").iterdir(): print(p)</code></td></tr><tr><td>追加内容</td><td><code>open("a.txt", "a", encoding="utf-8")</code></td></tr></tbody></table>
+<div class="callout"><p>提示：这个网页平台里的文件保存在浏览器的虚拟文件系统里，刷新页面就没了。要在硬盘上长期保存，请用本机 Python 运行。</p></div>
+<h4>示例：写日志、查存在、逐行读</h4>
+<pre class="snippet"><code>from pathlib import Path
+
+log = Path("app.log")
+
+with open(log, "a", encoding="utf-8") as f:
+    f.write("INFO 程序启动\n")
+    f.write("ERROR 找不到配置文件\n")
+
+print(f"文件存在吗？{log.exists()}")
+print(f"后缀：{log.suffix}")
+
+with open(log, encoding="utf-8") as f:
+    for line in f:
+        if line.startswith("ERROR"):
+            print("发现问题行：", line.strip())</code></pre>
+<p>用 a 模式追加，所以多次运行会不断往同一个文件里加内容；用 startswith 只挑出错误行。</p>
+<h4>练习 1：练习：追加并读回</h4>
+<p>向 <code>todo.txt</code> <strong>追加</strong>两行内容：</p>
+<pre class="snippet"><code>1. 学文件读写
+2. 写练习</code></pre>
+<p>然后用逐行读取的方式打印出来（不要多打印空行）。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>with open("todo.txt", "w", encoding="utf-8") as f:
+    f.write("1. 学文件读写\n")
+    f.write("2. 写练习\n")
+
+with open("todo.txt", encoding="utf-8") as f:
+    for line in f:
+        print(line.strip())</code></pre></div>
+<h4>小测验</h4>
+<p>打开文件时为什么要写 encoding="utf-8"？</p><ol>
+<li>速度快</li>
+<li>避免中文乱码或报错</li>
+<li>必须写，否则语法错误</li>
+<li>让文件变小</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 不指定编码时会用系统默认编码，跨平台读写中文很容易出错。</p>
+</div>
+<div class="lesson">
+<h3>JSON：和外部世界交换数据</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会用 json 模块读写 JSON，理解序列化和反序列化。</p>
+<h3>JSON 长什么样</h3>
+<pre class="snippet"><code>{
+  "name": "小明",
+  "age": 18,
+  "hobbies": ["编程", "篮球"],
+  "address": {"city": "杭州"}
+}</code></pre>
+<p>它和 Python 的字典、列表长得几乎一样，是互联网上最通用的数据格式（网页接口、配置文件都用它）。</p>
+<h3>字符串 ↔ Python 对象</h3>
+<pre class="snippet"><code>import json
+
+student = {"name": "小明", "age": 18}
+
+# Python 对象 → JSON 字符串（序列化）
+text = json.dumps(student, ensure_ascii=False, indent=2)
+print(text)
+
+# JSON 字符串 → Python 对象（反序列化）
+data = json.loads(text)
+print(data["name"])</code></pre>
+<ul><li><code>ensure_ascii=False</code>：让中文原样显示，而不是变成 <code>\u5c0f\u660e</code>。</li><li><code>indent=2</code>：格式化成好看的缩进版本。</li></ul>
+<h3>读写 JSON 文件</h3>
+<pre class="snippet"><code># 写
+with open("data.json", "w", encoding="utf-8") as f:
+    json.dump(student, f, ensure_ascii=False, indent=2)
+
+# 读
+with open("data.json", encoding="utf-8") as f:
+    data = json.load(f)
+print(data)</code></pre>
+<p>记忆窍门：带 <code>s</code> 的是处理<strong>字符串</strong>（dumps / loads），不带 <code>s</code> 的是处理<strong>文件</strong>（dump / load）。</p>
+<table><thead><tr><th>Python 类型</th><th>JSON 类型</th></tr></thead><tbody><tr><td>dict</td><td>object</td></tr><tr><td>list / tuple</td><td>array</td></tr><tr><td>str</td><td>string</td></tr><tr><td>int / float</td><td>number</td></tr><tr><td>True / False</td><td>true / false</td></tr><tr><td>None</td><td>null</td></tr></tbody></table>
+<div class="callout warn"><p>注意：JSON 的键只能是字符串。字典里用数字当键，<code>json.dumps</code> 会自动转成字符串。</p></div>
+<h4>示例：把成绩存成 JSON 再读回来</h4>
+<pre class="snippet"><code>import json
+
+students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+]
+
+with open("students.json", "w", encoding="utf-8") as f:
+    json.dump(students, f, ensure_ascii=False, indent=2)
+
+with open("students.json", encoding="utf-8") as f:
+    loaded = json.load(f)
+
+print(type(loaded))
+for s in loaded:
+    print(f"{s['name']}：{s['score']}")</code></pre>
+<p>读回来依然是列表里装字典，可以像普通数据一样遍历。</p>
+<h4>练习 1：练习：序列化与反序列化</h4>
+<p>已有字典 <code>student = {"name": "小明", "age": 18, "hobbies": ["编程", "篮球"]}</code>。</p>
+<p>用 <code>json.dumps</code> 把它转成字符串存进变量 <code>text</code>（中文要原样显示，用 ensure_ascii=False），然后 <code>print(json.loads(text)["name"])</code>。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import json
+
+student = {"name": "小明", "age": 18, "hobbies": ["编程", "篮球"]}
+text = json.dumps(student, ensure_ascii=False)
+print(json.loads(text)["name"])</code></pre></div>
+<h4>小测验</h4>
+<p>json.dumps 和 json.dump 的区别是？</p><ol>
+<li>没区别</li>
+<li>dumps 返回字符串，dump 写进文件</li>
+<li>dumps 只能处理列表</li>
+<li>dump 只能处理字典</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 带 s 的（dumps/loads）处理字符串，不带 s 的（dump/load）处理文件对象。</p>
+</div>
+<div class="lesson">
+<h3>CSV：处理表格数据</h3>
+<p class="meta">预计 14 分钟 · 进阶 · 目标：会用 csv 模块读写表格数据，并做简单统计。</p>
+<h3>CSV 就是「逗号分隔的表格」</h3>
+<pre class="snippet"><code>name,score
+小明,88
+小红,92</code></pre>
+<p>Excel 能直接打开它，Python 也能直接处理它，是交换表格数据最省事的格式。</p>
+<h3>读 CSV</h3>
+<pre class="snippet"><code>import csv
+
+with open("scores.csv", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)          # ['name', 'score'] / ['小明', '88']</code></pre>
+<p>也可以从字符串列表读，方便测试：</p>
+<pre class="snippet"><code>lines = ["name,score", "小明,88"]
+for row in csv.reader(lines):
+    print(row)</code></pre>
+<h3>用字典方式读：DictReader</h3>
+<pre class="snippet"><code>with open("scores.csv", encoding="utf-8") as f:
+    for row in csv.DictReader(f):
+        print(row["name"], row["score"])     # 用列名取值，比记下标舒服</code></pre>
+<h3>写 CSV</h3>
+<pre class="snippet"><code>import csv
+
+with open("out.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["name", "score"])
+    writer.writerows([["小明", 88], ["小红", 92]])</code></pre>
+<p>写文件时加 <code>newline=""</code>，否则 Windows 上会出现多余的空行。</p>
+<div class="callout warn"><p>注意：CSV 读出来<strong>全是字符串</strong>，要计算必须自己用 <code>int()</code> 转换。</p></div>
+<h4>示例：从 CSV 字符串算出平均分</h4>
+<pre class="snippet"><code>import csv
+
+lines = ["name,score", "小明,88", "小红,92", "小刚,75"]
+
+total = 0
+count = 0
+for row in csv.reader(lines):
+    if row[0] == "name":       # 跳过表头
+        continue
+    total += int(row[1])
+    count += 1
+
+print(f"平均分 {total / count:.1f}")</code></pre>
+<p>csv.reader 会帮我们处理引号、逗号等细节，比自己写 split(",") 更可靠。</p>
+<h4>练习 1：练习：统计最高分</h4>
+<p>用 <code>csv.reader</code> 处理下面的数据，找出最高分并打印：</p>
+<pre class="snippet"><code>最高分 92 小红</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import csv
+
+lines = ["name,score", "小明,88", "小红,92", "小刚,75"]
+
+best_score = -1
+best_name = ""
+for row in csv.reader(lines):
+    if row[0] == "name":
+        continue
+    score = int(row[1])
+    if score &gt; best_score:
+        best_score = score
+        best_name = row[0]
+
+print(f"最高分 {best_score} {best_name}")</code></pre></div>
+<h4>小测验</h4>
+<p>用 csv.reader 读出来的数字是什么类型？</p><ol>
+<li>int</li>
+<li>float</li>
+<li>str</li>
+<li>自动判断</li>
+</ol>
+<p><b>答案：第 3 个</b> —— CSV 里所有内容都是文本，读出来都是字符串，要参与计算必须自己转换。</p>
+</div>
+<div class="lesson">
+<h3>项目：生成成绩报表</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：把前面学的文件、JSON、CSV、函数组合起来，做一个真正有用的小工具。</p>
+<h3>需求</h3>
+<p>手里有一份成绩数据（程序里写死），要生成两个文件：</p>
+<ul><li><code>report.csv</code>：每行一位学生，「姓名,分数,等级」</li><li><code>summary.json</code>：平均分、最高分、及格人数</li></ul>
+<h3>拆解成函数</h3>
+<pre class="snippet"><code>def level_of(score):
+    if score &gt;= 90:
+        return "优秀"
+    if score &gt;= 60:
+        return "及格"
+    return "不及格"
+
+def build_rows(students):
+    return [[s["name"], s["score"], level_of(s["score"])] for s in students]
+
+def build_summary(students):
+    scores = [s["score"] for s in students]
+    return {
+        "平均分": round(sum(scores) / len(scores), 1),
+        "最高分": max(scores),
+        "及格人数": sum(1 for s in students if s["score"] &gt;= 60),
+    }</code></pre>
+<h3>写文件</h3>
+<pre class="snippet"><code>import csv, json
+
+with open("report.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["姓名", "分数", "等级"])
+    writer.writerows(build_rows(students))
+
+with open("summary.json", "w", encoding="utf-8") as f:
+    json.dump(build_summary(students), f, ensure_ascii=False, indent=2)</code></pre>
+<h3>为什么要拆成小函数</h3>
+<ul><li><code>level_of</code> 只做一件事，好测试、好复用。</li><li><code>build_rows</code> 和 <code>build_summary</code> 只负责把数据变形状，不碰文件。</li><li>写文件的部分集中在最后几行，改格式时只需要动一处。</li></ul>
+<div class="callout"><p>提示：这就是真实项目里的写法——<strong>数据加工</strong>和<strong>输入输出</strong>分开，中间用普通的数据结构（列表、字典）连接。</p></div>
+<h4>示例：完整报表生成器</h4>
+<pre class="snippet"><code>import csv, json
+
+students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 55},
+]
+
+def level_of(score):
+    if score &gt;= 90:
+        return "优秀"
+    if score &gt;= 60:
+        return "及格"
+    return "不及格"
+
+with open("report.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["姓名", "分数", "等级"])
+    for s in students:
+        writer.writerow([s["name"], s["score"], level_of(s["score"])])
+
+with open("report.csv", encoding="utf-8") as f:
+    for row in csv.reader(f):
+        print(row)</code></pre>
+<p>写完文件马上读回来打印一遍，是检查格式是否正确的好习惯。</p>
+<h4>练习 1：练习：写出汇总文件</h4>
+<p>把 <code>students</code> 的平均分和最高分写进 <code>summary.json</code>，然后把文件读回来打印：</p>
+<pre class="snippet"><code>平均分 79.3 最高分 95</code></pre>
+<p>（平均分保留 1 位小数）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import json
+
+students = [
+    {"name": "小明", "score": 88},
+    {"name": "小红", "score": 95},
+    {"name": "小刚", "score": 55},
+]
+
+scores = [s["score"] for s in students]
+summary = {
+    "平均分": round(sum(scores) / len(scores), 1),
+    "最高分": max(scores),
+}
+
+with open("summary.json", "w", encoding="utf-8") as f:
+    json.dump(summary, f, ensure_ascii=False)
+
+with open("summary.json", encoding="utf-8") as f:
+    data = json.load(f)
+
+print(f"平均分 {data['平均分']} 最高分 {data['最高分']}")</code></pre></div>
+<h4>小测验</h4>
+<p>CSV 和 JSON 该怎么选？</p><ol>
+<li>表格、行列数据用 CSV，层级复杂的数据用 JSON</li>
+<li>永远用 JSON</li>
+<li>永远用 CSV</li>
+<li>随便，都一样</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 整齐的表格用 CSV（Excel 友好），嵌套结构用 JSON（表达力强）。</p>
+</div>
+<h2>第 10 章 · 算法与解题训练</h2>
+<p class='meta'>从「会写代码」到「会解决问题」：拆题四步法、经典题型、排序查找、递归和效率直觉。</p>
+<div class="lesson">
+<h3>把题目翻译成代码的四步法</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：掌握拆解陌生问题的固定流程，遇到难题不再发慌。</p>
+<h3>四步法</h3>
+<ol><li><strong>找输入输出</strong>：给什么？要什么？先把类型写出来。</li><li><strong>手算一个例子</strong>：用纸笔写出中间步骤，这步最容易被跳过，也最关键。</li><li><strong>写伪代码</strong>：用中文或半成品代码把步骤写清楚。</li><li><strong>翻译成代码并测试</strong>：先跑最简单的例子，再试边界情况。</li></ol>
+<h3>例题：找出列表中第二大的数</h3>
+<p><strong>第一步</strong>：输入是数字列表，输出是一个数字。</p>
+<p><strong>第二步</strong>：手算 <code>[3, 1, 4, 4, 2]</code>。</p>
+<ul><li>去重后是 <code>[3, 1, 4, 2]</code></li><li>排序后是 <code>[1, 2, 3, 4]</code></li><li>倒数第二个是 <code>3</code>。</li></ul>
+<p><strong>第三步伪代码</strong>：</p>
+<pre class="snippet"><code>去掉重复
+从小到大排序
+如果只剩一个元素 → 说明没有第二大
+返回倒数第二个</code></pre>
+<p><strong>第四步代码</strong>：</p>
+<pre class="snippet"><code>def second_largest(nums):
+    unique = sorted(set(nums))
+    if len(unique) &lt; 2:
+        return None
+    return unique[-2]</code></pre>
+<h3>边界情况：高手和新手的差距在这</h3>
+<ul><li>空列表怎么办？</li><li>只有一个元素怎么办？</li><li>全都是同一个数字怎么办？</li><li>有重复的最大值怎么办？</li></ul>
+<p>写完代码前先问自己这四个问题，能挡掉大部分 bug。</p>
+<div class="callout"><p>提示：先写「能跑通最简单例子」的版本，再补边界处理。不要一开始就想着写最优解。</p></div>
+<h4>示例：同一个问题，三种写法</h4>
+<pre class="snippet"><code>def second_largest_v1(nums):
+    unique = sorted(set(nums))
+    if len(unique) &lt; 2:
+        return None
+    return unique[-2]
+
+def second_largest_v2(nums):
+    """不排序，用一次遍历记录最大和次大"""
+    first = second = None
+    for n in nums:
+        if first is None or n &gt; first:
+            first, second = n, first
+        elif n != first and (second is None or n &gt; second):
+            second = n
+    return second
+
+for data in ([3, 1, 4, 4, 2], [5], [], [7, 7]):
+    print(data, second_largest_v1(data), second_largest_v2(data))</code></pre>
+<p>v1 好懂，v2 快一些但更容易写错。先写 v1，性能不够再优化——这是正确的顺序。</p>
+<h4>练习 1：练习：第二大（去重后）</h4>
+<p>实现 <code>second_largest(nums)</code>：</p>
+<ul><li>返回<strong>去重之后</strong>第二大的数</li><li>不足两个不同的数时返回 <code>None</code></li></ul>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def second_largest(nums):
+    unique = sorted(set(nums))
+    if len(unique) &lt; 2:
+        return None
+    return unique[-2]</code></pre></div>
+<h4>小测验</h4>
+<p>四步法里最容易被跳过、却最关键的是哪一步？</p><ol>
+<li>找输入输出</li>
+<li>手算一个例子</li>
+<li>写伪代码</li>
+<li>翻译成代码</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 手算能暴露你对问题的理解漏洞，比盯着屏幕空想有效得多。</p>
+</div>
+<div class="lesson">
+<h3>字符串与列表经典题</h3>
+<p class="meta">预计 16 分钟 · 进阶 · 目标：掌握反转、回文、去重、计数这些高频小题的套路。</p>
+<h3>反转</h3>
+<pre class="snippet"><code>s = "python"
+print(s[::-1])              # nohtyp     切片翻转
+nums = [1, 2, 3]
+print(nums[::-1])           # [3, 2, 1]
+nums.reverse()              # 原地翻转</code></pre>
+<p><code>[::-1]</code> 的意思是「从头到尾、步长为 -1」，也就是倒着取。</p>
+<h3>回文：正着读反着读一样</h3>
+<pre class="snippet"><code>def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+
+print(is_palindrome("上海自来水来自海上"))    # True</code></pre>
+<h3>去重但保持原顺序</h3>
+<pre class="snippet"><code>def unique_in_order(items):
+    seen = set()
+    result = []
+    for x in items:
+        if x not in seen:
+            seen.add(x)
+            result.append(x)
+    return result</code></pre>
+<p>这里用集合 <code>seen</code> 记录见过的元素：集合查找是"瞬间"完成的，比用列表查找快得多。这个「用集合记住见过的」套路在算法题里非常常见。</p>
+<h3>计数</h3>
+<pre class="snippet"><code>text = "banana"
+counts = {}
+for ch in text:
+    counts[ch] = counts.get(ch, 0) + 1
+print(counts)              # {'b': 1, 'a': 3, 'n': 2}</code></pre>
+<table><thead><tr><th>需求</th><th>套路</th></tr></thead><tbody><tr><td>反转</td><td><code>s[::-1]</code></td></tr><tr><td>回文</td><td>洗干净后和反转比较</td></tr><tr><td>去重保序</td><td>集合记录 + 列表收集</td></tr><tr><td>计数</td><td>字典 + <code>get(x, 0) + 1</code></td></tr><tr><td>找最大</td><td><code>max(数据, key=...)</code></td></tr></tbody></table>
+<div class="callout"><p>提示：切片、字典、集合是这类题的三板斧。想不出来的时候，先问自己「能不能用字典记点什么」。</p></div>
+<h4>示例：三个套路一次看完</h4>
+<pre class="snippet"><code>def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+
+def unique_in_order(items):
+    seen = set()
+    result = []
+    for x in items:
+        if x not in seen:
+            seen.add(x)
+            result.append(x)
+    return result
+
+print(is_palindrome("上海自来水来自海上"))
+print(is_palindrome("Python"))
+print(unique_in_order([3, 1, 3, 2, 1]))</code></pre>
+<p>注意 unique_in_order 返回的顺序是 3, 1, 2——保留了第一次出现的顺序，而不是排序。</p>
+<h4>练习 1：练习：写两个工具函数</h4>
+<p>实现两个函数：</p>
+<ol><li><code>is_palindrome(text)</code>：忽略大小写和空格后判断回文</li><li><code>count_chars(text)</code>：返回一个字典，统计每个字符出现的次数</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+
+def count_chars(text):
+    counts = {}
+    for ch in text:
+        counts[ch] = counts.get(ch, 0) + 1
+    return counts</code></pre></div>
+<h4>小测验</h4>
+<p>s[::-1] 的作用是？</p><ol>
+<li>复制字符串</li>
+<li>反转字符串</li>
+<li>排序</li>
+<li>删除第一个字符</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 步长 -1 表示倒着取，所以得到反转后的序列。</p>
+</div>
+<div class="lesson">
+<h3>查找与排序</h3>
+<p class="meta">预计 16 分钟 · 进阶 · 目标：会写线性查找、二分查找和冒泡排序，知道它们各自的适用场景。</p>
+<h3>线性查找：一个一个看</h3>
+<pre class="snippet"><code>def linear_search(nums, target):
+    for i, n in enumerate(nums):
+        if n == target:
+            return i
+    return -1</code></pre>
+<p>简单，但数据多的时候慢。</p>
+<h3>二分查找：必须是有序的</h3>
+<p>每次砍掉一半：</p>
+<pre class="snippet"><code>def binary_search(nums, target):
+    low, high = 0, len(nums) - 1
+    while low &lt;= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            return mid
+        if nums[mid] &lt; target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1</code></pre>
+<p>10 亿个数据，二分查找最多比较 30 次。前提是数据<strong>已经排好序</strong>。</p>
+<h3>冒泡排序：理解排序是怎么发生的</h3>
+<pre class="snippet"><code>def bubble_sort(nums):
+    arr = nums[:]                      # 复制一份，不改动原列表
+    for i in range(len(arr)):
+        for j in range(len(arr) - 1 - i):
+            if arr[j] &gt; arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr</code></pre>
+<p>相邻两个比较，大的往后挪，一轮下来最大的就沉到末尾了。</p>
+<h3>实际写代码时</h3>
+<pre class="snippet"><code>nums.sort()                 # 原地排序，最快
+sorted(nums)                # 返回新列表</code></pre>
+<p>Python 内置排序是高度优化的，日常写代码直接用它们；自己写排序是为了<strong>理解原理</strong>和应付面试。</p>
+<table><thead><tr><th>算法</th><th>前提</th><th>效率</th></tr></thead><tbody><tr><td>线性查找</td><td>无</td><td>慢，O(n)</td></tr><tr><td>二分查找</td><td>已排序</td><td>快，O(log n)</td></tr><tr><td>冒泡排序</td><td>无</td><td>慢，O(n²)</td></tr><tr><td>内置 sort</td><td>无</td><td>快，O(n log n)</td></tr></tbody></table>
+<div class="callout"><p>提示：<code>a, b = b, a</code> 是 Python 交换两个变量的写法，不需要中间变量。</p></div>
+<h4>示例：三种算法同台</h4>
+<pre class="snippet"><code>def linear_search(nums, target):
+    for i, n in enumerate(nums):
+        if n == target:
+            return i
+    return -1
+
+def binary_search(nums, target):
+    low, high = 0, len(nums) - 1
+    while low &lt;= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            return mid
+        if nums[mid] &lt; target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+data = [11, 23, 35, 47, 59, 62]
+print(linear_search(data, 47))
+print(binary_search(data, 47))
+print(binary_search(data, 100))</code></pre>
+<p>两个函数返回的下标都是 3；找不到时返回 -1。</p>
+<h4>练习 1：练习：实现二分查找</h4>
+<p>实现 <code>binary_search(nums, target)</code>：</p>
+<ul><li><code>nums</code> 已经从小到大排好序</li><li>找到就返回下标，找不到返回 <code>-1</code></li></ul>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def binary_search(nums, target):
+    low, high = 0, len(nums) - 1
+    while low &lt;= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            return mid
+        if nums[mid] &lt; target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1</code></pre></div>
+<h4>小测验</h4>
+<p>二分查找的前提是？</p><ol>
+<li>数据都是整数</li>
+<li>数据已经排好序</li>
+<li>数据不能重复</li>
+<li>列表长度是偶数</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 二分靠「中间值比目标大还是小」来砍一半，没排序就无法判断方向。</p>
+</div>
+<div class="lesson">
+<h3>递归：函数调用自己</h3>
+<p class="meta">预计 16 分钟 · 进阶 · 目标：会写递归函数，理解终止条件的重要性。</p>
+<h3>递归的两个必备部分</h3>
+<pre class="snippet"><code>def factorial(n):
+    if n &lt;= 1:              # 1. 终止条件
+        return 1
+    return n * factorial(n - 1)   # 2. 规模变小地调用自己
+
+print(factorial(5))         # 120</code></pre>
+<p>展开看：</p>
+<pre class="snippet"><code>factorial(5)
+= 5 * factorial(4)
+= 5 * 4 * factorial(3)
+= 5 * 4 * 3 * 2 * 1</code></pre>
+<p>少了终止条件就会「无限递归」，Python 会报 <code>RecursionError: maximum recursion depth exceeded</code>。</p>
+<h3>斐波那契：注意重复计算</h3>
+<pre class="snippet"><code>def fib(n):
+    if n &lt;= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)</code></pre>
+<p>这个写法好懂，但 <code>fib(35)</code> 会非常慢——同一个值被反复计算。改进办法是用循环，或者把算过的结果记下来（这叫记忆化）。</p>
+<pre class="snippet"><code>def fib_fast(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a</code></pre>
+<h3>递归 vs 循环</h3>
+<table><thead><tr><th></th><th>递归</th><th>循环</th></tr></thead><tbody><tr><td>可读性</td><td>处理树、分治问题时更自然</td><td>一般更直观</td></tr><tr><td>效率</td><td>有函数调用开销，可能重复计算</td><td>通常更快</td></tr><tr><td>风险</td><td>层级太深会报错</td><td>容易写出死循环</td></tr></tbody></table>
+<div class="callout"><p>提示：能一眼看懂用循环实现的，就用循环。递归留给「问题本身就是嵌套的」场景，比如目录树、JSON 嵌套结构、汉诺塔。</p></div>
+<h4>示例：阶乘、斐波那契、汉诺塔</h4>
+<pre class="snippet"><code>def factorial(n):
+    if n &lt;= 1:
+        return 1
+    return n * factorial(n - 1)
+
+def fib(n):
+    if n &lt;= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+def hanoi(n, start, middle, end, moves):
+    if n == 1:
+        moves.append(f"{start} -&gt; {end}")
+        return
+    hanoi(n - 1, start, end, middle, moves)
+    moves.append(f"{start} -&gt; {end}")
+    hanoi(n - 1, middle, start, end, moves)
+
+print(factorial(5))
+print([fib(i) for i in range(8)])
+moves = []
+hanoi(3, "A", "B", "C", moves)
+print(f"3 层汉诺塔需要 {len(moves)} 步")
+print(moves[0], "...", moves[-1])</code></pre>
+<p>汉诺塔是递归最经典的例子：n 层的解法里，正好包含两个 n-1 层的子问题。</p>
+<h4>练习 1：练习：阶乘与斐波那契</h4>
+<p>用递归实现两个函数：</p>
+<ol><li><code>factorial(n)</code>：n 的阶乘（<code>factorial(0)</code> 是 1）</li><li><code>fib(n)</code>：斐波那契数列的第 n 项（<code>fib(0) = 0</code>、<code>fib(1) = 1</code>）</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def factorial(n):
+    if n &lt;= 1:
+        return 1
+    return n * factorial(n - 1)
+
+def fib(n):
+    if n &lt;= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)</code></pre></div>
+<h4>小测验</h4>
+<p>递归函数缺少终止条件会怎样？</p><ol>
+<li>返回 None</li>
+<li>自动停止</li>
+<li>报 RecursionError</li>
+<li>变成循环</li>
+</ol>
+<p><b>答案：第 3 个</b> —— 递归层数超过限制会抛 RecursionError，程序必须有一个不再调用自己的出口。</p>
+</div>
+<div class="lesson">
+<h3>算法效率直觉</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会看代码估算快慢，知道嵌套循环为什么危险。</p>
+<h3>三种最常见的复杂度</h3>
+<table><thead><tr><th>复杂度</th><th>名字</th><th>典型代码</th><th>数据量 1 万时</th></tr></thead><tbody><tr><td>O(1)</td><td>常数</td><td>字典取值 <code>d[key]</code>、<code>list[-1]</code></td><td>1 步</td></tr><tr><td>O(n)</td><td>线性</td><td>一次 for 循环</td><td>1 万步</td></tr><tr><td>O(n²)</td><td>平方</td><td>两层嵌套循环</td><td>1 亿步</td></tr></tbody></table>
+<h3>怎么看代码属于哪一种</h3>
+<pre class="snippet"><code>total = sum(nums)                 # O(n)：内部走一遍
+found_in_list = target in nums    # O(n)：从头找到尾
+found_in_set = target in seen     # O(1)：集合查找是瞬间的</code></pre>
+<p>两层循环要小心：</p>
+<pre class="snippet"><code># O(n²)：1 万个元素要做 1 亿次比较，慢到卡住
+for x in nums:
+    for y in nums:
+        ...
+
+# O(n)：用集合换速度
+seen = set(nums)
+for x in nums:
+    if (target - x) in seen:
+        ...</code></pre>
+<p><strong>经验法则</strong>：嵌套循环的层数相乘。一层 O(n)，两层 O(n²)，三层 O(n³)。数据量一大就立刻爆炸。</p>
+<h3>常见优化手段</h3>
+<ul><li>把列表换成集合或字典来查找：O(n) → O(1)。</li><li>提前退出：找到就 <code>break</code>。</li><li>少重复计算：把结果存进变量。</li><li>需要多次查找的数据先排序，再用二分。</li></ul>
+<h3>用时间实测一下</h3>
+<pre class="snippet"><code>import time
+
+start = time.perf_counter()
+total = sum(range(1_000_000))
+print(f"耗时 {time.perf_counter() - start:.4f} 秒")</code></pre>
+<p><code>perf_counter()</code> 是最精确的计时方式，写性能测试时用它。</p>
+<div class="callout"><p>提示：不要过早优化。先保证正确，再测量、再优化最慢的那一段。</p></div>
+<h4>示例：两种写法的速度差距</h4>
+<pre class="snippet"><code>import time
+
+nums = list(range(0, 20000, 2))
+
+start = time.perf_counter()
+count = 0
+for n in nums:
+    if n % 3 == 0:
+        count += 1
+print(f"一次遍历：{time.perf_counter() - start:.4f} 秒，找到 {count} 个")
+
+start = time.perf_counter()
+pairs = 0
+for a in nums[:200]:
+    for b in nums[:200]:
+        if a + b == 1000:
+            pairs += 1
+print(f"两层循环（只取 200 个元素）：{time.perf_counter() - start:.4f} 秒，共 {pairs} 对")</code></pre>
+<p>第二个循环只用了 200 个元素就已经慢了这么多，如果把 20000 个全放进去会慢上千倍。</p>
+<h4>练习 1：练习：用集合把 O(n²) 变成 O(n)</h4>
+<p>实现 <code>has_pair_sum(nums, target)</code>：判断列表里是否存在两个数相加等于 target。</p>
+<p>要求用集合（seen）一次遍历完成，<strong>不要</strong>用两层嵌套循环。</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def has_pair_sum(nums, target):
+    seen = set()
+    for n in nums:
+        if (target - n) in seen:
+            return True
+        seen.add(n)
+    return False</code></pre></div>
+<h4>小测验</h4>
+<p>两层嵌套循环遍历 n 个元素，复杂度大约是多少？</p><ol>
+<li>O(1)</li>
+<li>O(n)</li>
+<li>O(n log n)</li>
+<li>O(n²)</li>
+</ol>
+<p><b>答案：第 4 个</b> —— 外层 n 次、内层 n 次，相乘就是 n²。</p>
+</div>
+<h2>第 11 章 · 日期、正则与自动化</h2>
+<p class='meta'>处理时间和文本，把重复的手工活交给 Python——这一章开始能解决真实问题了。</p>
+<div class="lesson">
+<h3>日期与时间：datetime</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会取当前时间、格式化输出、计算日期间隔。</p>
+<h3>取时间和日期</h3>
+<pre class="snippet"><code>from datetime import datetime, date
+
+now = datetime.now()
+print(now)                       # 运行时真实时间，例如 2026-01-01 21:30:15.123456
+print(now.year, now.month, now.day)
+print(now.hour, now.minute, now.second)
+print(date.today())              # 运行时真实日期</code></pre>
+<h3>铁律：要「今天」就用 date.today()</h3>
+<pre class="snippet"><code>from datetime import date
+
+today = date.today()
+print(today)                                    # 你运行的那一天
+print(today.strftime("%Y年%m月%d日"))            # 格式化成中文写法
+weekdays = ["一", "二", "三", "四", "五", "六", "日"]
+print(f"今天是星期{weekdays[today.weekday()]}")   # weekday()：周一为 0</code></pre>
+<div class="callout warn"><p>注意：<strong>不要把日期写死在代码里</strong>。写了固定日期的程序，第二天就不对了；用 <code>date.today()</code> 取当天，程序永远是对的。本课后面出现的固定日期（比如 <code>2026-01-01</code>），只是为了让你能算出确定的结果。</p></div>
+<h3>格式化：把时间变成想要的文字</h3>
+<pre class="snippet"><code>now = datetime(2026, 1, 1, 21, 30)          # 一个固定的示例时间
+print(now.strftime("%Y-%m-%d"))             # 2026-01-01
+print(now.strftime("%Y年%m月%d日 %H:%M"))    # 2026年01月01日 21:30
+print(now.strftime("%A"))                  # 星期几（英文）</code></pre>
+<table><thead><tr><th>符号</th><th>含义</th><th>例子</th></tr></thead><tbody><tr><td><code>%Y</code></td><td>四位年份</td><td>2026</td></tr><tr><td><code>%m</code></td><td>月份</td><td>01</td></tr><tr><td><code>%d</code></td><td>日期</td><td>01</td></tr><tr><td><code>%H:%M:%S</code></td><td>时分秒</td><td>21:30:15</td></tr><tr><td><code>%Y-%m-%d</code></td><td>最常用的日期格式</td><td><code>2026-01-01</code></td></tr></tbody></table>
+<h3>解析字符串成日期</h3>
+<pre class="snippet"><code>text = "2026-01-01"
+d = datetime.strptime(text, "%Y-%m-%d")
+print(d.year)         # 2026</code></pre>
+<h3>计算日期差</h3>
+<pre class="snippet"><code>from datetime import date
+
+d1 = date(2026, 1, 1)
+d2 = date(2026, 12, 31)
+print((d2 - d1).days)              # 364
+print(d1 + timedelta(days=30))     # 2026-01-31</code></pre>
+<p>把 <code>d2</code> 换成 <code>date.today()</code>，就是「今年已经过去多少天」：</p>
+<pre class="snippet"><code>days = (date.today() - date(date.today().year, 1, 1)).days + 1
+print(f"今天是今年的第 {days} 天")</code></pre>
+<div class="callout warn"><p>注意：<code>strftime</code> 是「时间 → 字符串」，<code>strptime</code> 是「字符串 → 时间」，拼写只差一个 r，方向正好相反。</p></div>
+<h4>示例：用真实的今天算一算</h4>
+<pre class="snippet"><code>from datetime import date, datetime, timedelta
+
+today = date.today()          # 取真实的今天
+weekdays = ["一", "二", "三", "四", "五", "六", "日"]
+
+print(f"今天是 {today}，星期{weekdays[today.weekday()]}")
+
+first_day = date(today.year, 1, 1)
+print(f"今年已经过了 {(today - first_day).days + 1} 天")
+
+next_year = date(today.year + 1, 1, 1)
+print(f"距离下一个元旦还有 {(next_year - today).days} 天")
+print("100 天后是", today + timedelta(days=100))</code></pre>
+<p>这段代码不管哪天运行，结果都是对的——因为它用的是 date.today()，而不是写死的日期。</p>
+<h4>练习 1：练习：格式化与日期差（固定日期）</h4>
+<p>给定两个固定日期 <code>d1 = date(2026, 1, 1)</code>、<code>d2 = date(2026, 12, 31)</code>，输出两行：</p>
+<pre class="snippet"><code>2026-12-31
+相差 364 天</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>from datetime import date
+
+d1 = date(2026, 1, 1)
+d2 = date(2026, 12, 31)
+print(d2.strftime("%Y-%m-%d"))
+print(f"相差 {(d2 - d1).days} 天")</code></pre></div>
+<h4>练习 2：挑战：用真实的今天（不会过期的写法）</h4>
+<p>用 <code>date.today()</code> 取真实的今天，算出今天是今年的第几天，输出一句话：</p>
+<pre class="snippet"><code>今天是 XXXX-XX-XX，今年第 N 天</code></pre>
+<p>（检查时会按你运行那天的真实日期来核对，所以随便哪天做都对。）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>from datetime import date
+
+today = date.today()
+day_of_year = (today - date(today.year, 1, 1)).days + 1
+print(f"今天是 {today}，今年第 {day_of_year} 天")</code></pre></div>
+<h4>小测验</h4>
+<p>把用户输入的日期字符串（例如 input() 读到的内容）变成日期对象，用哪个方法？</p><ol>
+<li>strftime</li>
+<li>strptime</li>
+<li>now</li>
+<li>timedelta</li>
+</ol>
+<p><b>答案：第 2 个</b> —— parse time（解析）用 strptime；format time（格式化）用 strftime。</p>
+</div>
+<div class="lesson">
+<h3>正则表达式入门</h3>
+<p class="meta">预计 16 分钟 · 进阶 · 目标：会用 \d、\w、量词和 findall 从文本里提取信息。</p>
+<h3>正则解决什么问题</h3>
+<p>「找出这段话里所有的电话号码」——用字符串方法写会非常啰嗦，用正则一行就够。</p>
+<h3>最常用的几个符号</h3>
+<table><thead><tr><th>符号</th><th>意思</th><th>例子</th></tr></thead><tbody><tr><td><code>\d</code></td><td>一个数字</td><td><code>\d\d\d</code> 匹配 123</td></tr><tr><td><code>\w</code></td><td>字母、数字、下划线、汉字</td><td><code>\w+</code></td></tr><tr><td><code>\s</code></td><td>空白字符</td><td>空格、Tab</td></tr><tr><td><code>.</code></td><td>任意字符</td><td><code>a.c</code> 匹配 abc</td></tr><tr><td><code>+</code></td><td>前面的内容出现 1 次或更多</td><td><code>\d+</code></td></tr><tr><td><code>*</code></td><td>0 次或更多</td><td><code>\d*</code></td></tr><tr><td><code>?</code></td><td>0 次或 1 次</td><td><code>-?\d+</code></td></tr><tr><td><code>{3}</code> / <code>{2,5}</code></td><td>正好 3 次 / 2 到 5 次</td><td><code>\d{11}</code></td></tr><tr><td><code>^</code> <code>$</code></td><td>开头 / 结尾</td><td><code>^1\d{10}$</code></td></tr></tbody></table>
+<h3>三个常用函数</h3>
+<pre class="snippet"><code>import re
+
+text = "订单 A123，价格 45 元，买了 2 件"
+
+print(re.findall(r"\d+", text))          # ['123', '45', '2']
+print(re.search(r"价格 (\d+)", text))     # 返回匹配对象
+print(re.sub(r"\d+", "*", text))          # 把数字都换成星号</code></pre>
+<h3>两个必须知道的习惯</h3>
+<ul><li>Python 里<strong>一定要写 <code>r"..."</code> 原始字符串</strong>，否则 <code>\d</code> 会被当成转义字符。</li><li>正则里的 <code>()</code> 表示分组，<code>re.search(...).group(1)</code> 可以取出括号里匹配的内容。</li></ul>
+<pre class="snippet"><code>import re
+
+m = re.search(r"价格 (\d+)", text)
+if m:
+    print(m.group(0))     # 价格 45
+    print(m.group(1))     # 45</code></pre>
+<div class="callout"><p>提示：正则不用背。写的时候搜「正则 手机号 校验」这类关键词，找到现成的表达式，再用测试文本验证一遍。</p></div>
+<h4>示例：从一句话里提取信息</h4>
+<pre class="snippet"><code>import re
+
+text = "订单 A123，价格 45 元，买了 2 件，电话 13800000000"
+
+print(re.findall(r"\d+", text))
+
+price = re.search(r"价格 (\d+)", text)
+if price:
+    print(f"价格是 {price.group(1)} 元")
+
+phone = re.search(r"1\d{10}", text)
+if phone:
+    print(f"手机号是 {phone.group(0)}")
+
+print(re.sub(r"\d+", "*", text))</code></pre>
+<p>findall 返回所有匹配的列表；search 只找第一个，用 group 取值。</p>
+<h4>练习 1：练习：提取所有数字</h4>
+<p>用 <code>re.findall</code> 找出下面这句话里的所有数字并打印：</p>
+<pre class="snippet"><code>['123', '45', '2']</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import re
+
+text = "订单 A123，价格 45 元，买了 2 件"
+print(re.findall(r"\d+", text))</code></pre></div>
+<h4>练习 2：挑战：手机号校验</h4>
+<p>实现 <code>is_phone(text)</code>：如果整串正好是「1 开头 + 11 位数字」返回 True，否则 False。</p>
+<p>（提示：完整匹配用 <code>re.fullmatch</code>）</p>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import re
+
+def is_phone(text):
+    return bool(re.fullmatch(r"1\d{10}", text))</code></pre></div>
+<h4>小测验</h4>
+<p>re.findall(r"\d+", "a12b3") 的结果是？</p><ol>
+<li>['12', '3']</li>
+<li>['1', '2', '3']</li>
+<li>15</li>
+<li>'12'</li>
+</ol>
+<p><b>答案：第 1 个</b> —— + 表示连续的数字算一组，所以得到 12 和 3 两段。</p>
+</div>
+<div class="lesson">
+<h3>正则进阶：分组与替换</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：会用分组提取内容、用 sub 做替换和清洗。</p>
+<h3>分组：把匹配拆成几块</h3>
+<pre class="snippet"><code>import re
+
+text = "出生日期：2026-01-01"
+m = re.search(r"(\d{4})-(\d{2})-(\d{2})", text)
+if m:
+    year, month, day = m.groups()
+    print(year, month, day)      # 2026 01 01</code></pre>
+<p><code>m.group(1)</code>、<code>m.group(2)</code>…… 或者直接 <code>m.groups()</code> 拿到元组。</p>
+<h3>命名分组：读起来更清楚</h3>
+<pre class="snippet"><code>m = re.search(r"(?P&lt;year&gt;\d{4})-(?P&lt;month&gt;\d{2})", "2026-01")
+print(m.group("year"))       # 2026</code></pre>
+<h3>sub：查找并替换</h3>
+<pre class="snippet"><code>import re
+
+text = "日期 2026/01/01，另一个 2026/12/31"
+print(re.sub(r"/(\d{2})/", r"-\1-", text))
+# 日期 2026-01-01，另一个 2026-12-31</code></pre>
+<p><code>\1</code> 表示「第 1 个分组匹配到的内容」，可以把原内容的一部分搬到替换结果里。</p>
+<h3>清洗文本：把连续空白变成一个空格</h3>
+<pre class="snippet"><code>text = "  今天   天气    不错  "
+print(re.sub(r"\s+", " ", text).strip())    # 今天 天气 不错</code></pre>
+<h3>常用参数</h3>
+<pre class="snippet"><code>re.findall(r"python", text, flags=re.I)     # 忽略大小写
+re.split(r"[,，;；]", "a,b，c")              # 按多种分隔符切分</code></pre>
+<table><thead><tr><th>任务</th><th>写法</th></tr></thead><tbody><tr><td>提取分组</td><td><code>m.groups()</code></td></tr><tr><td>按组替换</td><td><code>re.sub(r"(\d+)-(\d+)", r"\2-\1", s)</code></td></tr><tr><td>忽略大小写</td><td><code>flags=re.I</code></td></tr><tr><td>多种分隔符切分</td><td><code>re.split(r"[,，;；]", s)</code></td></tr></tbody></table>
+<div class="callout"><p>提示：如果一段正则你自己都看不懂了，就拆成几个简单的、加上注释，或者干脆用字符串方法处理。</p></div>
+<h4>示例：日期格式互转</h4>
+<pre class="snippet"><code>import re
+
+text = "日期 2026/01/01，截止 2026/12/31"
+
+print(re.sub(r"/(\d{2})/", r"-\1-", text))
+
+m = re.search(r"(\d{4})/(\d{2})/(\d{2})", text)
+if m:
+    year, month, day = m.groups()
+    print(f"年：{year}，月：{month}，日：{day}")
+
+messy = "  今天   天气    不错  "
+print(re.sub(r"\s+", " ", messy).strip())</code></pre>
+<p>sub 把斜杠日期换成短横线，groups 把年月日拆成了三个变量。</p>
+<h4>练习 1：练习：格式转换与分组</h4>
+<p>已有 <code>text = "日期 2026/01/01"</code>，输出两行：</p>
+<pre class="snippet"><code>日期 2026-01-01
+2026 01 01</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import re
+
+text = "日期 2026/01/01"
+
+print(re.sub(r"/(\d{2})/", r"-\1-", text))
+
+m = re.search(r"(\d{4})/(\d{2})/(\d{2})", text)
+print(" ".join(m.groups()))</code></pre></div>
+<h4>小测验</h4>
+<p>re.sub(r"(\d+)-(\d+)", r"\2-\1", "12-34") 的结果是？</p><ol>
+<li>12-34</li>
+<li>34-12</li>
+<li>1234</li>
+<li>报错</li>
+</ol>
+<p><b>答案：第 2 个</b> —— \1 和 \2 分别代表两个分组，替换时把它们调换了位置。</p>
+</div>
+<div class="lesson">
+<h3>项目：记账本（含分类统计）</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：用列表套字典 + 函数 + CSV 做一个能记账、能统计的小工具。</p>
+<h3>数据结构先想清楚</h3>
+<p>一条记录需要什么？日期、项目、金额、类型（收入/支出）。</p>
+<pre class="snippet"><code>records = [
+    {"date": "2026-01-05", "item": "工资", "amount": 8000, "type": "收入"},
+    {"date": "2026-01-06", "item": "房租", "amount": 2500, "type": "支出"},
+]</code></pre>
+<h3>拆成三个函数</h3>
+<pre class="snippet"><code>def total_by_type(records, kind):
+    total = 0
+    for r in records:
+        if r["type"] == kind:
+            total += r["amount"]
+    return total
+
+def summarize(records):
+    result = {}
+    for r in records:
+        result[r["item"]] = result.get(r["item"], 0) + r["amount"]
+    return result
+
+def balance(records):
+    return total_by_type(records, "收入") - total_by_type(records, "支出")</code></pre>
+<h3>存成 CSV</h3>
+<pre class="snippet"><code>import csv
+
+with open("money.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["date", "item", "amount", "type"])
+    for r in records:
+        writer.writerow([r["date"], r["item"], r["amount"], r["type"]])</code></pre>
+<h3>加上输入（在本地玩更爽）</h3>
+<pre class="snippet"><code>from datetime import date
+
+while True:
+    item = input("支出项目（直接回车结束）：")
+    if not item:
+        break
+    amount = int(input("金额："))
+    # 记账日期永远取当天，别写死
+    records.append({"date": str(date.today()), "item": item, "amount": amount, "type": "支出"})
+print(f"共支出 {total_by_type(records, '支出')} 元")</code></pre>
+<div class="callout"><p>提示：<code>str(date.today())</code> 会得到 <code>2026-01-01</code> 这种格式的当天日期，这样记账本每天都记对。真实记账本还要处理「金额输错了」「分类有哪些」这些细节，先跑通最小版本，再一点点加功能。</p></div>
+<h4>示例：记账与统计</h4>
+<pre class="snippet"><code>records = [
+    {"date": "2026-01-05", "item": "工资", "amount": 8000, "type": "收入"},
+    {"date": "2026-01-06", "item": "房租", "amount": 2500, "type": "支出"},
+    {"date": "2026-01-07", "item": "吃饭", "amount": 600, "type": "支出"},
+]
+
+def total_by_type(records, kind):
+    return sum(r["amount"] for r in records if r["type"] == kind)
+
+def summarize(records):
+    result = {}
+    for r in records:
+        if r["type"] == "支出":
+            result[r["item"]] = result.get(r["item"], 0) + r["amount"]
+    return result
+
+income = total_by_type(records, "收入")
+expense = total_by_type(records, "支出")
+print(f"收入 {income} 元，支出 {expense} 元，结余 {income - expense} 元")
+
+for item, amount in summarize(records).items():
+    print(f"  {item}: {amount} 元")</code></pre>
+<p>total_by_type 用的是生成器表达式加条件筛选，比手写循环更短。</p>
+<h4>练习 1：练习：两个统计函数</h4>
+<p>实现两个函数：</p>
+<ol><li><code>total_by_type(records, kind)</code>：返回指定类型（收入/支出）的金额合计</li><li><code>summarize(records)</code>：返回「项目 → 金额」的字典（只统计支出）</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>records = [
+    {"date": "2026-01-05", "item": "工资", "amount": 8000, "type": "收入"},
+    {"date": "2026-01-06", "item": "房租", "amount": 2500, "type": "支出"},
+    {"date": "2026-01-07", "item": "吃饭", "amount": 600, "type": "支出"},
+]
+
+def total_by_type(records, kind):
+    total = 0
+    for r in records:
+        if r["type"] == kind:
+            total += r["amount"]
+    return total
+
+def summarize(records):
+    result = {}
+    for r in records:
+        if r["type"] == "支出":
+            result[r["item"]] = result.get(r["item"], 0) + r["amount"]
+    return result</code></pre></div>
+<h4>小测验</h4>
+<p>想统计「每个项目的支出合计」，用哪种结构最合适？</p><ol>
+<li>列表</li>
+<li>字典</li>
+<li>集合</li>
+<li>字符串</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 「项目 → 合计」是典型的键值对，用字典最自然。</p>
+</div>
+<div class="lesson">
+<h3>进阶方向：Excel、Word、邮件自动化</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：知道 Python 能做哪些办公自动化，并明白为什么这些要在本机运行。</p>
+<h3>这一课需要在你自己的电脑上运行</h3>
+<p>下面这些库浏览器里没有，必须先在自己电脑上安装。安装方式在第 12 章会讲。</p>
+<table><thead><tr><th>库</th><th>用途</th><th>安装命令</th></tr></thead><tbody><tr><td><code>openpyxl</code></td><td>读写 Excel（.xlsx）</td><td><code>pip install openpyxl</code></td></tr><tr><td><code>pandas</code></td><td>表格数据分析</td><td><code>pip install pandas</code></td></tr><tr><td><code>python-docx</code></td><td>读写 Word</td><td><code>pip install python-docx</code></td></tr><tr><td><code>python-pptx</code></td><td>生成 PPT</td><td><code>pip install python-pptx</code></td></tr><tr><td><code>smtplib</code>（自带）</td><td>发邮件</td><td>不需要安装</td></tr></tbody></table>
+<h3>读 Excel 的样子</h3>
+<pre class="snippet"><code>from openpyxl import load_workbook
+
+wb = load_workbook("成绩表.xlsx")
+sheet = wb.active
+for row in sheet.iter_rows(min_row=2, values_only=True):
+    print(row)          # ('小明', 88)</code></pre>
+<h3>写 Excel 的样子</h3>
+<pre class="snippet"><code>from openpyxl import Workbook
+
+wb = Workbook()
+sheet = wb.active
+sheet.append(["姓名", "分数"])
+sheet.append(["小明", 88])
+wb.save("输出.xlsx")</code></pre>
+<h3>发邮件的样子（只用标准库）</h3>
+<pre class="snippet"><code>import smtplib
+from email.message import EmailMessage
+
+msg = EmailMessage()
+msg["Subject"] = "每日报告"
+msg["From"] = "me@example.com"
+msg["To"] = "you@example.com"
+msg.set_content("今天一切正常")
+
+with smtplib.SMTP_SSL("smtp.example.com", 465) as server:
+    server.login("me@example.com", "密码请用环境变量，不要写死")
+    server.send_message(msg)</code></pre>
+<div class="callout warn"><p>注意：<strong>永远不要把密码直接写进代码</strong>。用环境变量：<code>import os</code> 之后 <code>os.environ["MAIL_PASSWORD"]</code>。如果代码要上传到 GitHub，写死的密码等于公开泄露。</p></div>
+<h3>自动化能帮你做什么</h3>
+<ul><li>把十几个 Excel 合并成一张表。</li><li>按模板批量生成 Word 合同 / 通知。</li><li>每周定时把数据整理好发邮件给同事。</li><li>把文件夹里几百张图片按日期重命名归类。</li></ul>
+<p>这些任务的共同点：<strong>规则明确、重复、量大</strong>——正是 Python 最擅长的地方。</p>
+<div class="callout"><p>提示：装库前先想清楚「我到底要做什么」。需求越具体，越容易搜到正确的库和示例代码。</p></div>
+<h4>示例：示例：读 Excel 的样子（需要在本机运行）</h4>
+<pre class="snippet"><code># 需要先在本机执行：pip install openpyxl
+from openpyxl import load_workbook
+
+wb = load_workbook("成绩表.xlsx")
+sheet = wb.active
+
+total = 0
+count = 0
+for row in sheet.iter_rows(min_row=2, values_only=True):
+    name, score = row[0], row[1]
+    print(name, score)
+    total += score
+    count += 1
+
+print(f"平均分 {total / count:.1f}")</code></pre>
+<p>浏览器里装不了 openpyxl，所以这段代码请复制到你自己的电脑上运行。第 12 章会教你怎么装。</p>
+<h4>练习 1：练习：用 CSV 代替 Excel</h4>
+<p>Excel 能打开的 CSV，在浏览器里也能处理。</p>
+<p>请把两条数据写成 <code>grades.csv</code>（第一行表头），再读回来打印行数：</p>
+<pre class="snippet"><code>共 3 行（含表头）</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import csv
+
+with open("grades.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["姓名", "分数"])
+    writer.writerow(["小明", 88])
+    writer.writerow(["小红", 95])
+
+with open("grades.csv", encoding="utf-8") as f:
+    rows = list(csv.reader(f))
+
+print(f"共 {len(rows)} 行（含表头）")</code></pre></div>
+<h4>小测验</h4>
+<p>为什么这两课的部分代码要在本机运行？</p><ol>
+<li>网页版 Python 环境里没有装这些第三方库</li>
+<li>浏览器不支持 print</li>
+<li>这些代码语法不对</li>
+<li>本地运行才合法</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 浏览器的 Python 环境默认只带标准库，第三方库需要在本机用 pip 安装。</p>
+</div>
+<h2>第 12 章 · 走向独立开发</h2>
+<p class='meta'>最后一章：第三方库与虚拟环境、写测试、Git、做项目的完整流程，以及你的结业大作业。</p>
+<div class="lesson">
+<h3>pip、虚拟环境与项目结构</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：知道怎么在自己电脑上安装第三方库，并用虚拟环境隔离项目。</p>
+<h3>认识 pip</h3>
+<p>pip 是 Python 的包管理器。下面这些都是<strong>终端命令</strong>，不是在 Python 代码里写：</p>
+<pre class="snippet"><code>pip install requests            安装
+pip install requests==2.31.0    装指定版本
+pip list                        看装了哪些
+pip uninstall requests          卸载
+pip freeze &gt; requirements.txt   导出清单
+pip install -r requirements.txt 按清单安装</code></pre>
+<p>下载慢可以换国内镜像：</p>
+<pre class="snippet"><code>pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple</code></pre>
+<h3>为什么需要虚拟环境</h3>
+<p>项目 A 需要 <code>pandas 1.5</code>，项目 B 需要 <code>pandas 2.0</code>，都装全局就会打架。虚拟环境给每个项目一个独立的「小房间」：</p>
+<pre class="snippet"><code>cd 你的项目目录
+python -m venv .venv          创建
+
+Windows 激活：
+.venv\Scripts\activate
+
+macOS / Linux 激活：
+source .venv/bin/activate
+
+退出：
+deactivate</code></pre>
+<p>激活后命令行前面会出现 <code>(.venv)</code>，这时 <code>pip install</code> 装的东西只属于这个项目。</p>
+<h3>一个规范的项目长什么样</h3>
+<pre class="snippet"><code>myproject/
+    .venv/               虚拟环境（不要提交到 Git）
+    README.md            项目说明：这是什么、怎么运行
+    requirements.txt     依赖清单
+    .gitignore           要忽略的文件
+    main.py              入口
+    utils/               自己写的模块
+        __init__.py</code></pre>
+<div class="callout warn"><p>注意：命令行和 Python 代码是两回事。<code>pip install xxx</code> 要在终端里输入，不能写进 .py 文件。</p></div>
+<h3>顺便认识几个好用的库</h3>
+<table><thead><tr><th>库</th><th>用途</th></tr></thead><tbody><tr><td><code>requests</code></td><td>抓网页、调接口</td></tr><tr><td><code>pandas</code></td><td>表格分析</td></tr><tr><td><code>flask</code></td><td>写网页服务</td></tr><tr><td><code>rich</code></td><td>终端里输出彩色表格</td></tr><tr><td><code>pytest</code></td><td>更好用的测试工具</td></tr></tbody></table>
+<div class="callout"><p>提示：判断一个库靠不靠谱，看它在 PyPI 和 GitHub 上的更新频率、star 数和文档完整度。</p></div>
+<h4>示例：检查自己的 Python 环境</h4>
+<pre class="snippet"><code>import sys, os
+
+print(f"Python 主版本：{sys.version_info.major}")
+print(f"完整版本：{sys.version.split()[0]}")
+print(f"解释器位置：{sys.executable}")
+print(f"当前目录：{os.getcwd()}")
+
+for name in ["json", "csv", "datetime", "statistics"]:
+    print(f"标准库 {name}：可用")</code></pre>
+<p>这段代码在浏览器和本机都能跑。本机运行时路径会是真实的磁盘路径。</p>
+<h4>练习 1：练习：读取版本信息</h4>
+<p>导入 <code>sys</code>，打印主版本号：</p>
+<pre class="snippet"><code>Python 主版本 3</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>import sys
+
+print(f"Python 主版本 {sys.version_info.major}")</code></pre></div>
+<h4>小测验</h4>
+<p>虚拟环境的作用是？</p><ol>
+<li>让 Python 跑得更快</li>
+<li>让每个项目拥有独立的依赖，互不干扰</li>
+<li>备份代码</li>
+<li>自动写文档</li>
+</ol>
+<p><b>答案：第 2 个</b> —— 虚拟环境把依赖隔离在项目内部，避免不同项目之间版本冲突。</p>
+</div>
+<div class="lesson">
+<h3>写测试：让代码改不坏</h3>
+<p class="meta">预计 16 分钟 · 进阶 · 目标：会用 assert 和 unittest 给自己的代码写测试。</p>
+<h3>为什么要写测试</h3>
+<p>你写了一个函数，测试通过；三天后改了别处，这个函数坏了——有测试就能立刻发现，不用等用户来投诉。</p>
+<h3>最轻量的测试：assert</h3>
+<pre class="snippet"><code>def average(nums):
+    return sum(nums) / len(nums)
+
+assert average([1, 2, 3]) == 2
+assert average([10]) == 10
+print("全部测试通过")</code></pre>
+<p><code>assert 条件, "出错信息"</code>：条件不成立就抛 AssertionError 并显示你的说明。</p>
+<h3>正式一点：unittest</h3>
+<pre class="snippet"><code>import unittest
+
+def average(nums):
+    return sum(nums) / len(nums)
+
+class TestAverage(unittest.TestCase):
+    def test_normal(self):
+        self.assertEqual(average([1, 2, 3]), 2)
+
+    def test_one_item(self):
+        self.assertEqual(average([10]), 10)
+
+    def test_empty(self):
+        with self.assertRaises(ZeroDivisionError):
+            average([])
+
+if __name__ == "__main__":
+    unittest.main()</code></pre>
+<p>运行方式：在终端执行 <code>python -m unittest 文件名.py</code>。</p>
+<h3>写好测试的几个要点</h3>
+<ul><li>测试方法名用 <code>test_</code> 开头，unittest 才会自动找到。</li><li>一个测试只验证一件事。</li><li>除了正常情况，一定要测边界：空列表、只有一个元素、负数、重复值。</li><li>期望值写具体数字，别写永远成立的条件。</li></ul>
+<table><thead><tr><th>断言方法</th><th>检查什么</th></tr></thead><tbody><tr><td><code>assertEqual(a, b)</code></td><td>相等</td></tr><tr><td><code>assertTrue(x)</code></td><td>为真</td></tr><tr><td><code>assertIn(a, b)</code></td><td>a 在 b 里</td></tr><tr><td><code>assertRaises(Error)</code></td><td>抛出指定异常</td></tr></tbody></table>
+<div class="callout"><p>提示：最好的写测试时机是「刚写完函数」，因为这时你最清楚它应该做什么。</p></div>
+<h4>示例：给函数配一组测试</h4>
+<pre class="snippet"><code>def level_of(score):
+    if score &gt;= 90:
+        return "优秀"
+    if score &gt;= 60:
+        return "及格"
+    return "不及格"
+
+assert level_of(100) == "优秀"
+assert level_of(90) == "优秀"
+assert level_of(89) == "及格"
+assert level_of(60) == "及格"
+assert level_of(59) == "不及格"
+assert level_of(0) == "不及格"
+
+print("6 条断言全部通过")</code></pre>
+<p>边界值（90、60）最容易写错，所以专门测了 90 和 89、60 和 59 这两对。</p>
+<h4>练习 1：练习：写一个能通过测试的函数</h4>
+<p>实现 <code>average(nums)</code>：</p>
+<ul><li>列表为空时返回 <code>None</code></li><li>否则返回平均值</li></ul>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>def average(nums):
+    if not nums:
+        return None
+    return sum(nums) / len(nums)</code></pre></div>
+<h4>小测验</h4>
+<p>unittest 会自动运行哪些测试方法？</p><ol>
+<li>名字以 test 开头的</li>
+<li>所有方法</li>
+<li>名字里有 check 的</li>
+<li>被 @test 装饰的</li>
+</ol>
+<p><b>答案：第 1 个</b> —— unittest 默认查找名字以 test 开头的方法。</p>
+</div>
+<div class="lesson">
+<h3>Git：给代码装上时间机器</h3>
+<p class="meta">预计 15 分钟 · 进阶 · 目标：理解版本管理，记住最常用的几个 Git 命令。</p>
+<h3>为什么需要 Git</h3>
+<ul><li>改坏了能回到上一个能跑的版本。</li><li>记录每次改了什么、为什么改。</li><li>多人协作不互相覆盖。</li><li>传到 GitHub 就是你的作品集。</li></ul>
+<h3>一次性配置</h3>
+<pre class="snippet"><code>git config --global user.name "你的名字"
+git config --global user.email "你的邮箱"</code></pre>
+<h3>最常用的六条命令</h3>
+<pre class="snippet"><code>git init                          把当前目录变成 Git 仓库
+git status                        看有哪些改动
+git add .                         把改动加入待提交
+git commit -m "说明这次改了什么"    提交，形成一次记录
+git log --oneline                 看提交历史
+git diff                          看具体改了什么</code></pre>
+<h3>忽略不该提交的东西：.gitignore</h3>
+<pre class="snippet"><code>.venv/
+__pycache__/
+*.log
+data.json</code></pre>
+<p>虚拟环境、缓存、日志、私人数据都不要提交。</p>
+<h3>推到 GitHub</h3>
+<pre class="snippet"><code>git remote add origin https://github.com/用户名/仓库名.git
+git branch -M main
+git push -u origin main</code></pre>
+<p>以后改完再推：</p>
+<pre class="snippet"><code>git add .
+git commit -m "新增记账功能"
+git push</code></pre>
+<h3>提交信息怎么写</h3>
+<p>好：<code>修复平均分为空时崩溃的问题</code></p>
+<p>不好：<code>update</code>、<code>修改</code>、<code>111</code></p>
+<div class="callout warn"><p>注意：不要在提交里放密码、密钥、身份证号。一旦推到公开仓库，即使后来删掉，也能从历史记录里翻出来。</p></div>
+<h4>示例：示例：从零开始的 Git 流程（在终端里执行）</h4>
+<pre class="snippet"><code># 这些是终端命令，不是 Python 代码，请逐条在命令行里执行
+cd myproject
+git init
+git status
+git add .
+git commit -m "完成成绩统计功能"
+git log --oneline
+
+# 想撤销还没提交的改动
+git restore 文件名
+
+# 想看看某个文件的每一行是谁改的
+git blame 文件名</code></pre>
+<p>把 Git 想成游戏的存档功能：commit 就是一次存档，随时可以读档。</p>
+<h4>练习 1：练习：用 Python 生成 .gitignore</h4>
+<p>把三条常见规则写进 <code>gitignore.txt</code> 并读回来打印：</p>
+<pre class="snippet"><code>.venv/
+__pycache__/
+*.log</code></pre>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>rules = [".venv/", "__pycache__/", "*.log"]
+
+with open("gitignore.txt", "w", encoding="utf-8") as f:
+    for rule in rules:
+        f.write(rule + "\n")
+
+with open("gitignore.txt", encoding="utf-8") as f:
+    print(f.read(), end="")</code></pre></div>
+<h4>小测验</h4>
+<p>哪条命令会把改动记录成一次提交？</p><ol>
+<li>git status</li>
+<li>git add .</li>
+<li>git commit -m "说明"</li>
+<li>git push</li>
+</ol>
+<p><b>答案：第 3 个</b> —— add 是准备好改动，commit 才是真正记录一次提交，push 是把提交推到远程。</p>
+</div>
+<div class="lesson">
+<h3>独立做一个项目的完整流程</h3>
+<p class="meta">预计 18 分钟 · 综合 · 目标：掌握从想法到成品的六步流程，知道卡住时该怎么办。</p>
+<h3>六步流程</h3>
+<p><strong>第 1 步：把需求写成一句话</strong></p>
+<p>「做一个能记录每日支出、并按项目汇总的记事本程序。」</p>
+<p><strong>第 2 步：拆成最小的功能清单</strong></p>
+<ul><li>能添加一条支出</li><li>能查看全部支出</li><li>能按项目汇总</li><li>能保存到文件</li></ul>
+<p><strong>第 3 步：先设计数据结构</strong></p>
+<pre class="snippet"><code>records = [{"date": "2026-01-01", "item": "午饭", "amount": 25}]</code></pre>
+<p>数据结构想清楚，函数写起来会顺很多。</p>
+<p><strong>第 4 步：实现最小可用版本</strong></p>
+<p>只做「添加 + 查看」，能跑通就行。不要一开始就写菜单、颜色、导出。</p>
+<p><strong>第 5 步：加测试，再加功能</strong></p>
+<p>每加一个功能，先想「怎么验证它对」。写两行 assert 也算测试。</p>
+<p><strong>第 6 步：复盘</strong></p>
+<ul><li>哪一步卡了最久？下次怎么避免？</li><li>有没有重复代码可以抽成函数？</li><li>别人看得懂这些名字吗？</li></ul>
+<h3>卡住时的三个办法</h3>
+<ol><li><strong>缩小问题</strong>：把功能砍到一个最小例子，单独跑通它。</li><li><strong>搜报错原文</strong>：把错误信息的最后一行复制去搜，加上「Python」。</li><li><strong>查官方文档</strong>：搜「Python 官方文档 + 关键词」，比二手教程准确。</li></ol>
+<h3>选题建议</h3>
+<p>选<strong>你自己真的会用</strong>的东西：记账本、待办清单、背单词工具、按日期重命名照片、生日提醒、账单统计。</p>
+<h3>不要做的事</h3>
+<ul><li>一上来就做「大型管理系统」，三天后放弃。</li><li>边写边想新功能，永远做不完。</li><li>抄代码不看懂，改一个地方就崩。</li></ul>
+<div class="callout"><p>提示：能运行的最小版本，胜过写了一半的完美设计。先让它跑起来。</p></div>
+<h4>示例：最小可用版本：待办清单</h4>
+<pre class="snippet"><code>todos = []
+
+def add(title):
+    todos.append({"title": title, "done": False})
+    return len(todos)
+
+def finish(index):
+    if 0 &lt;= index &lt; len(todos):
+        todos[index]["done"] = True
+        return True
+    return False
+
+def show():
+    for i, t in enumerate(todos, start=1):
+        mark = "[x]" if t["done"] else "[ ]"
+        print(f"{i}. {mark} {t['title']}")
+
+add("学函数")
+add("做练习")
+finish(0)
+show()</code></pre>
+<p>四十来行就是一个能用的程序。想加「删除」「截止日期」，在这个基础上加就行。</p>
+<h4>练习 1：练习：给待办清单加统计</h4>
+<p>在 <code>todos</code> 上实现两个函数：</p>
+<ol><li><code>add(title)</code>：添加一条待办（<code>done</code> 为 False），返回当前总数</li><li><code>count_done()</code>：返回已完成的数量</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>todos = []
+
+def add(title):
+    todos.append({"title": title, "done": False})
+    return len(todos)
+
+def count_done():
+    return sum(1 for t in todos if t["done"])</code></pre></div>
+<h4>小测验</h4>
+<p>做项目时，最推荐的起步方式是？</p><ol>
+<li>先实现能跑通的最小版本</li>
+<li>先把所有功能设计完整再动手</li>
+<li>直接抄一个完整的项目</li>
+<li>先学完所有语法</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 最小可用版本能最快给你反馈，后面每个功能都在能跑的代码上加。</p>
+</div>
+<div class="lesson">
+<h3>结业大作业与下一步</h3>
+<p class="meta">预计 20 分钟 · 综合 · 目标：独立完成一个综合项目，并规划学完之后的路。</p>
+<h3>三个可选的结业项目</h3>
+<p><strong>项目 A：命令行通讯录</strong></p>
+<ul><li>添加联系人（姓名、电话、城市）</li><li>按姓名查找、按城市筛选、删除联系人</li><li>数据保存到 <code>contacts.json</code>，下次打开还在</li><li>验收：添加三个人 → 关掉程序 → 重新运行 → 数据还在</li></ul>
+<p><strong>项目 B：成绩分析器</strong></p>
+<ul><li>从 <code>scores.csv</code> 读成绩</li><li>输出平均分、最高分、最低分、及格率</li><li>按分数从高到低生成 <code>ranking.txt</code></li><li>验收：换一份新的 CSV 也能正常运行</li></ul>
+<p><strong>项目 C：文本处理小工具</strong></p>
+<ul><li>读入一段文本或一个 txt 文件</li><li>统计字符数、单词数、出现最多的 5 个词</li><li>把结果写成 <code>report.json</code></li><li>验收：中文和英文都能处理</li></ul>
+<h3>做完之后的自我检查清单</h3>
+<ul><li>函数名看得懂吗？有没有超过 50 行的函数？</li><li>边界情况试过吗（空数据、错误格式）？</li><li>出错了会不会直接崩溃？有没有用 try/except 兜住？</li><li>有没有写两行 assert 自测？</li><li>README 里写清楚「怎么运行」了吗？</li><li>提交到 Git 了吗？</li></ul>
+<h3>学完之后往哪走</h3>
+<table><thead><tr><th>方向</th><th>下一步学什么</th><th>适合想做什么的人</th></tr></thead><tbody><tr><td>数据处理</td><td>pandas、numpy、matplotlib</td><td>分析表格、画图、做报表</td></tr><tr><td>网页开发</td><td>Flask / FastAPI</td><td>做网站、写接口服务</td></tr><tr><td>自动化办公</td><td>openpyxl、python-docx</td><td>替代重复的手工操作</td></tr><tr><td>爬虫与接口</td><td>requests、BeautifulSoup</td><td>采集公开数据</td></tr><tr><td>算法与面试</td><td>数据结构、LeetCode 简单题</td><td>想进大厂或做底层</td></tr><tr><td>人工智能</td><td>numpy → scikit-learn → 深度学习</td><td>对 AI 感兴趣</td></tr></tbody></table>
+<h3>长期有效的三条</h3>
+<ol><li><strong>每天写一点</strong>：20 分钟胜过周末突击 5 小时。</li><li><strong>做给自己用的东西</strong>：有真实需求，你才会坚持把 bug 修完。</li><li><strong>看懂再抄</strong>：抄完自己重写一遍，那才算学会。</li></ol>
+<div class="callout"><p>提示：你现在已经会输入输出、判断循环、数据结构、函数、类、异常、文件、JSON/CSV、正则、测试和 Git——这是一个能独立写小工具的完整基础，剩下的是拿去用。</p></div>
+<h4>示例：结业示范：最简版通讯录</h4>
+<pre class="snippet"><code>import json
+
+contacts = {
+    "小明": {"phone": "13800000001", "city": "杭州"},
+    "小红": {"phone": "13900000002", "city": "上海"},
+}
+
+def add(name, phone, city):
+    contacts[name] = {"phone": phone, "city": city}
+    return contacts[name]
+
+def find(name):
+    return contacts.get(name)
+
+def in_city(city):
+    return [name for name, info in contacts.items() if info["city"] == city]
+
+def save(path="contacts.json"):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(contacts, f, ensure_ascii=False, indent=2)
+
+add("小刚", "13700000003", "杭州")
+print(find("小明"))
+print(in_city("杭州"))
+save()
+
+with open("contacts.json", encoding="utf-8") as f:
+    loaded = json.load(f)
+print(f"文件里一共 {len(loaded)} 位联系人")</code></pre>
+<p>字典 + 函数 + JSON 保存，这就是一个完整小项目的骨架。试着加上「删除」和「按城市排序」。</p>
+<h4>练习 1：毕业小测：通讯录的三个函数</h4>
+<p>实现三个函数：</p>
+<ol><li><code>add_contact(name, phone)</code>：把联系人存进字典并返回联系人信息</li><li><code>find_contact(name)</code>：找到就返回电话，找不到返回 <code>None</code></li><li><code>delete_contact(name)</code>：删除成功返回 True，不存在返回 False</li></ol>
+<div class="answer"><b>参考答案</b><pre class="snippet"><code>contacts = {}
+
+def add_contact(name, phone):
+    contacts[name] = {"phone": phone}
+    return contacts[name]
+
+def find_contact(name):
+    info = contacts.get(name)
+    if info is None:
+        return None
+    return info["phone"]
+
+def delete_contact(name):
+    if name in contacts:
+        del contacts[name]
+        return True
+    return False</code></pre></div>
+<h4>小测验</h4>
+<p>结业之后，最有效的继续进步方式是？</p><ol>
+<li>做自己真正会用的小项目，遇到问题就查文档和搜索</li>
+<li>把 12 章的语法再背三遍</li>
+<li>等学完所有高级语法再动手</li>
+<li>只看视频，不写代码</li>
+</ol>
+<p><b>答案：第 1 个</b> —— 真实需求会带来真实问题，解决问题的能力才是编程的核心。</p>
+</div>
+</body></html>
