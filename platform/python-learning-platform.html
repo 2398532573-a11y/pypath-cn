@@ -1371,6 +1371,7 @@ details.faq p {
             last: null,
             theme: "dark",
             collapsed: {},
+            planStart: null,
         };
         try {
             var raw = localStorage.getItem(STORE_KEY);
@@ -1462,6 +1463,39 @@ details.faq p {
         var m = d.getMonth() + 1;
         var day = d.getDate();
         return d.getFullYear() + "-" + (m < 10 ? "0" + m : m) + "-" + (day < 10 ? "0" + day : day);
+    }
+
+    function dateOnly(key) {
+        return new Date(key + "T00:00:00");
+    }
+
+    function dateKey(d) {
+        var m = d.getMonth() + 1;
+        var day = d.getDate();
+        return d.getFullYear() + "-" + (m < 10 ? "0" + m : m) + "-" + (day < 10 ? "0" + day : day);
+    }
+
+    function addDays(key, n) {
+        var d = dateOnly(key);
+        d.setDate(d.getDate() + n);
+        return dateKey(d);
+    }
+
+    function formatShort(key) {
+        return key.slice(5).replace("-", "/");
+    }
+
+    function planStartKey() {
+        if (!state.planStart) {
+            state.planStart = todayStr();
+            saveState();
+        }
+        return state.planStart;
+    }
+
+    function planWeekRange(wi) {
+        var start = planStartKey();
+        return formatShort(addDays(start, wi * 7)) + " ～ " + formatShort(addDays(start, wi * 7 + 6));
     }
 
     function touchDay() {
@@ -3372,6 +3406,26 @@ details.faq p {
             current = i;
         }
 
+        var planStart = planStartKey();
+        var dayIndex = Math.floor((dateOnly(todayStr()) - dateOnly(planStart)) / 86400000);
+        if (dayIndex < 0) dayIndex = 0;
+        var planWeekIndex = Math.min(DATA.plan.length, Math.floor(dayIndex / 7) + 1);
+        var planDayIndex = (dayIndex % 7) + 1;
+        var startCard = el("div", "card");
+        startCard.appendChild(el("h3", "", "计划开始日期"));
+        startCard.appendChild(
+            el("p", "status", "从 " + esc(planStart) + " 开始 · 今天是第 " + planWeekIndex + " 周第 " + planDayIndex + " 天")
+        );
+        var resetPlan = el("button", "btn small ghost", "从今天重新开始");
+        resetPlan.type = "button";
+        resetPlan.addEventListener("click", function () {
+            state.planStart = todayStr();
+            saveState(true);
+            render();
+            toast("学习计划已从今天重新开始");
+        });
+        startCard.appendChild(resetPlan);
+        wrap.appendChild(startCard);
         wrap.appendChild(
             el(
                 "p",
@@ -3397,7 +3451,7 @@ details.faq p {
             var pct = total ? Math.round((finished / total) * 100) : 0;
             var card = el("div", "card" + (wi === current ? " current-week" : ""));
             card.appendChild(
-                el("h3", "", esc(w.week) + " · " + esc(w.theme) + (wi === current ? " ← 你在这里" : ""))
+                el("h3", "", esc(w.week) + " · " + esc(planWeekRange(wi)) + " · " + esc(w.theme) + (wi === current ? " ← 你在这里" : ""))
             );
             card.appendChild(el("p", "status", esc(w.hours) + " · 本章节 " + finished + " / " + total + " 课"));
             var bar = el("div", "bar");
