@@ -282,6 +282,12 @@ pre.snippet code {
     color: var(--green);
 }
 
+.cal-cell.today {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+    color: var(--accent);
+}
+
 .task-row {
     display: flex;
     align-items: center;
@@ -2266,16 +2272,16 @@ details.faq p {
                     streakDays() +
                     " 天 · 累计 " +
                     totalActiveDays() +
-                    " 天有学习记录 · 最近 14 天（数字是当天完成的课程数）"
+                    " 天有学习记录 · 从今天开始的 14 天（数字是当天完成的课程数）"
             )
         );
         var strip = el("div", "calendar");
-        for (var d = 13; d >= 0; d--) {
-            var key = todayStr(-d);
+        for (var d = 0; d < 14; d++) {
+            var key = todayStr(d);
             var n = state.days[key] || 0;
             var on = state.active[key] || n;
-            var cell = el("div", "cal-cell" + (on ? " on" : "") + (n >= 4 ? " hot" : ""), "");
-            cell.appendChild(el("span", "", key.slice(5)));
+            var cell = el("div", "cal-cell" + (on ? " on" : "") + (n >= 4 ? " hot" : "") + (d === 0 ? " today" : ""), "");
+            cell.appendChild(el("span", "", d === 0 ? "今天" : key.slice(5)));
             cell.appendChild(el("b", "", n ? String(n) : "·"));
             cell.title = key + "：完成 " + n + " 节课";
             strip.appendChild(cell);
