@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://2398532573-a11y.github.io/pyqihang/sitemap.xml
+Sitemap: https://2398532573-a11y.github.io/pypath-cn/sitemap.xml

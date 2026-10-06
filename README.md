@@ -138,7 +138,7 @@ pypath
 临时 GitHub Pages 地址：
 
 ```text
-https://2398532573-a11y.github.io/pyqihang/
+https://2398532573-a11y.github.io/pypath-cn/
 ```
 
 首次推送后，在仓库：
@@ -152,7 +152,7 @@ https://2398532573-a11y.github.io/pyqihang/
 如果本机安装了 GitHub CLI 并已登录，可以在站点目录执行：
 
 ```powershell
-gh repo create pyqihang --public --source=. --remote=origin --push
+gh repo create pypath-cn --public --source=. --remote=origin --push
 ```
 
 ### 以后绑定 pypath.cn
